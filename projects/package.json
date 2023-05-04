@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs --debug",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.7",
+    "vuepress-theme-vdoing": "^1.12.8"
+  }
+}

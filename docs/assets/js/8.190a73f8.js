@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{315:function(t,s,n){"use strict";n.r(s);var e=n(7),a=Object(e.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[t("img",{attrs:{src:"/images/iOS/catalogue.svg",alt:"多线程应用"}})])])}),[],!1,null,null,null);s.default=a.exports}}]);
