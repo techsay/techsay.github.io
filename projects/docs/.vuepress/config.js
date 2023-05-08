@@ -2,7 +2,7 @@ module.exports ={
     //这里面路径最开始的/是指向.vuepress/public/的
     base:'/',//部署站点的基础路径,默认/
     lang: 'zh-CN',//语言设置
-    title: 'Knowledge\'s 导图！',//所有页面标题的后缀，并且在默认主题的导航栏中显示
+    title: '知识导图',//所有页面标题的后缀，并且在默认主题的导航栏中显示
     description: '复杂的知识体系需要一套精简的知识导图作参考和索引',//站点描述，它会被每个页面的 Frontmatter 中的 description 字段覆盖
     head: [['link', { rel: 'icon', href: '/images/logo.PNG' }]],//站点头部的icon
     theme: 'vdoing',
@@ -19,11 +19,11 @@ module.exports ={
                 link: '/pages/603316/'
             },
             {
-                text: "相关链接",
+                text: "友情链接",
                 items: [
                     {
-                    text: "测试百度的链接",
-                    link: "https://www.baidu.com",
+                    text: "小林Coding",
+                    link: "https://www.xiaolincoding.com",
                     },
                 ],
             },

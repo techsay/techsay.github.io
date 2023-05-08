@@ -3,6 +3,7 @@
 bak_dir="docs.bak"
 dest_dir="docs"
 src_dir="projects/docs/.vuepress/dist"
+src_gitee_dir="../techsay.gitee.io/techsay"
  # /Users/v-niexiaobo/Downloads/sites/
 
 if [ -d ${bak_dir} ]; then
@@ -24,3 +25,8 @@ if [ -d ${src_dir} ]&&[ -e ${src_dir} ]; then
   echo "复制文件成功"
 fi
  
+
+if [ -d ${src_dir} ]&&[ -e ${src_dir} ]; then
+  cp -R ${src_dir}/. ${src_gitee_dir}/
+  echo "复制文件成功"
+fi
