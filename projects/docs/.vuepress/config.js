@@ -12,7 +12,7 @@ module.exports ={
             { text: "首页", link: "/" },
             {
                 text: 'iOS知识',
-                link: '/pages/5df6c2/'
+                link: '/pages/3468b2/'
             },
             {
                 text: '计算机知识',
@@ -22,14 +22,23 @@ module.exports ={
                 text: "友情链接",
                 items: [
                     {
+                    text: "即时通讯网",
+                    link: "http://www.52im.net/index.php",
+                    },
+                    {
+                    text: "开发常用网站",
+                    link: "https://zhuanlan.zhihu.com/p/409277420",
+                    },
+                    {
                     text: "小林Coding",
                     link: "https://www.xiaolincoding.com",
                     },
+                    
                 ],
             },
         ],
         sidebar: { mode: 'structuring', collapsable: true} ,//  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义
-        sidebarDepth: 2,//侧边栏自动提取文章的几层标题
+        sidebarDepth: 3,//侧边栏自动提取文章的几层标题
         sidebarOpen: true, // 初始状态是否打开侧边栏，默认true
         updateBar: {
             // 最近更新栏
