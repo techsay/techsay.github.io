@@ -9,6 +9,10 @@
   },
   "devDependencies": {
     "vuepress": "^1.9.7",
+    "vuepress-plugin-mermaidjs": "^1.9.1",
     "vuepress-theme-vdoing": "^1.12.8"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1"
   }
 }

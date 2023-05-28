@@ -1,3 +1,4 @@
+
 module.exports ={
     //这里面路径最开始的/是指向.vuepress/public/的
     base:'/',//部署站点的基础路径,默认/
@@ -15,7 +16,7 @@ module.exports ={
                 link: '/pages/3468b2/'
             },
             {
-                text: '计算机知识',
+                text: '计算机软件',
                 link: '/pages/603316/'
             },
             {
@@ -28,10 +29,6 @@ module.exports ={
                     {
                     text: "开发常用网站",
                     link: "https://zhuanlan.zhihu.com/p/409277420",
-                    },
-                    {
-                    text: "小林Coding",
-                    link: "https://www.xiaolincoding.com",
                     },
                     
                 ],
@@ -48,5 +45,8 @@ module.exports ={
         category: false, // 是否打开分类功能，默认true。 如打开，会做的事情有：1. 自动生成的front matter包含分类字段 2.页面中显示与分类相关的信息和模块 3.自动生成分类页面（在@pages文件夹）。如关闭，则反之。
         tag: true, // 是否打开标签功能，默认true。 如打开，会做的事情有：1. 自动生成的front matter包含标签字段 2.页面中显示与标签相关的信息和模块 3.自动生成标签页面（在@pages文件夹）。如关闭，则反之。
         archive: true,// 是否打开归档功能，默认true。 如打开，会做的事情有：1.自动生成归档页面（在@pages文件夹）。如关闭，则反之。
-    }
+    },
+    plugins: [
+        'vuepress-plugin-mermaidjs'
+    ]
 }

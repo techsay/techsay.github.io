@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>C语法Day3-结构 | 知识导图</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/images/logo.PNG">
+    <meta name="description" content="复杂的知识体系需要一套精简的知识导图作参考和索引">
+    
+    <link rel="preload" href="/assets/css/0.styles.f55df645.css" as="style"><link rel="preload" href="/assets/js/app.106733fc.js" as="script"><link rel="preload" href="/assets/js/2.d54d51d6.js" as="script"><link rel="preload" href="/assets/js/74.a619d656.js" as="script"><link rel="prefetch" href="/assets/js/10.615d3423.js"><link rel="prefetch" href="/assets/js/11.94dc8a54.js"><link rel="prefetch" href="/assets/js/12.00e9bdb4.js"><link rel="prefetch" href="/assets/js/13.8d97213a.js"><link rel="prefetch" href="/assets/js/14.3864ca76.js"><link rel="prefetch" href="/assets/js/15.accf01d6.js"><link rel="prefetch" href="/assets/js/16.ea689f78.js"><link rel="prefetch" href="/assets/js/17.b5087c46.js"><link rel="prefetch" href="/assets/js/18.17c361c7.js"><link rel="prefetch" href="/assets/js/19.15e1939b.js"><link rel="prefetch" href="/assets/js/20.6354eeb1.js"><link rel="prefetch" href="/assets/js/21.592bbe59.js"><link rel="prefetch" href="/assets/js/22.baefef60.js"><link rel="prefetch" href="/assets/js/23.eea2f134.js"><link rel="prefetch" href="/assets/js/24.a42ee91b.js"><link rel="prefetch" href="/assets/js/25.632d40b8.js"><link rel="prefetch" href="/assets/js/26.03f61e05.js"><link rel="prefetch" href="/assets/js/27.675cdb00.js"><link rel="prefetch" href="/assets/js/28.c71f53d9.js"><link rel="prefetch" href="/assets/js/29.d87a2e71.js"><link rel="prefetch" href="/assets/js/3.ab8dae5c.js"><link rel="prefetch" href="/assets/js/30.0b558aad.js"><link rel="prefetch" href="/assets/js/31.67451f2e.js"><link rel="prefetch" href="/assets/js/32.869040a2.js"><link rel="prefetch" href="/assets/js/33.f95e4095.js"><link rel="prefetch" href="/assets/js/34.d24d1e65.js"><link rel="prefetch" href="/assets/js/35.2378132d.js"><link rel="prefetch" href="/assets/js/36.f8e8848d.js"><link rel="prefetch" href="/assets/js/37.e817d0de.js"><link rel="prefetch" href="/assets/js/38.7bdfda84.js"><link rel="prefetch" href="/assets/js/39.16d4b982.js"><link rel="prefetch" href="/assets/js/4.dd3209f8.js"><link rel="prefetch" href="/assets/js/40.013887ba.js"><link rel="prefetch" href="/assets/js/41.e1956824.js"><link rel="prefetch" href="/assets/js/42.7d40562d.js"><link rel="prefetch" href="/assets/js/43.0475397d.js"><link rel="prefetch" href="/assets/js/44.010841e9.js"><link rel="prefetch" href="/assets/js/45.1bdca865.js"><link rel="prefetch" href="/assets/js/46.a76a4840.js"><link rel="prefetch" href="/assets/js/47.86d4e991.js"><link rel="prefetch" href="/assets/js/48.bd79ad37.js"><link rel="prefetch" href="/assets/js/49.7327a141.js"><link rel="prefetch" href="/assets/js/5.4061c7b2.js"><link rel="prefetch" href="/assets/js/50.a59e1e5c.js"><link rel="prefetch" href="/assets/js/51.d6e1da9d.js"><link rel="prefetch" href="/assets/js/52.13e78d7d.js"><link rel="prefetch" href="/assets/js/53.55775557.js"><link rel="prefetch" href="/assets/js/54.8f04fd00.js"><link rel="prefetch" href="/assets/js/55.b4365d4b.js"><link rel="prefetch" href="/assets/js/56.45b487b5.js"><link rel="prefetch" href="/assets/js/57.56a8dfa3.js"><link rel="prefetch" href="/assets/js/58.137e5c6c.js"><link rel="prefetch" href="/assets/js/59.329b25ab.js"><link rel="prefetch" href="/assets/js/6.89d63062.js"><link rel="prefetch" href="/assets/js/60.fcf90991.js"><link rel="prefetch" href="/assets/js/61.70cd335e.js"><link rel="prefetch" href="/assets/js/62.1cf32bf6.js"><link rel="prefetch" href="/assets/js/63.a259b0e9.js"><link rel="prefetch" href="/assets/js/64.021b754d.js"><link rel="prefetch" href="/assets/js/65.73d288ae.js"><link rel="prefetch" href="/assets/js/66.9d7bfa4d.js"><link rel="prefetch" href="/assets/js/67.c942bf89.js"><link rel="prefetch" href="/assets/js/68.e0621228.js"><link rel="prefetch" href="/assets/js/69.c44ed0b0.js"><link rel="prefetch" href="/assets/js/7.0db51838.js"><link rel="prefetch" href="/assets/js/70.4123300d.js"><link rel="prefetch" href="/assets/js/71.54bc27a3.js"><link rel="prefetch" href="/assets/js/72.10ac95dd.js"><link rel="prefetch" href="/assets/js/73.f3591f46.js"><link rel="prefetch" href="/assets/js/75.d3259754.js"><link rel="prefetch" href="/assets/js/76.63c8e003.js"><link rel="prefetch" href="/assets/js/77.de254bd3.js"><link rel="prefetch" href="/assets/js/78.3ba71495.js"><link rel="prefetch" href="/assets/js/79.3b4a8dbc.js"><link rel="prefetch" href="/assets/js/8.deaf7e13.js"><link rel="prefetch" href="/assets/js/80.01bce961.js"><link rel="prefetch" href="/assets/js/81.17969c01.js"><link rel="prefetch" href="/assets/js/82.75f84cb7.js"><link rel="prefetch" href="/assets/js/83.04dce5f4.js"><link rel="prefetch" href="/assets/js/84.6e0f7729.js"><link rel="prefetch" href="/assets/js/9.97f70a04.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f55df645.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.PNG" alt="知识导图" class="logo"> <span class="site-name can-hide">知识导图</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/3468b2/" class="nav-link">iOS知识</a></div><div class="nav-item"><a href="/pages/603316/" class="nav-link">计算机软件</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><!----> <span class="title" style="display:;">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.52im.net/index.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  即时通讯网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zhuanlan.zhihu.com/p/409277420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发常用网站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/3468b2/" class="nav-link">iOS知识</a></div><div class="nav-item"><a href="/pages/603316/" class="nav-link">计算机软件</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><!----> <span class="title" style="display:;">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.52im.net/index.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  即时通讯网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zhuanlan.zhihu.com/p/409277420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发常用网站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MD</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>C语音</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/5cfafd/" class="sidebar-link">C语法Day1-函数</a></li><li><a href="/pages/f184ee/" class="sidebar-link">C语法Day2-运算</a></li><li><a href="/pages/60d71f/" aria-current="page" class="active sidebar-link">C语法Day3-结构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#数组" class="sidebar-link">数组</a></li><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#枚举-enum" class="sidebar-link">枚举 Enum</a></li><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#字符串" class="sidebar-link">字符串</a></li><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#结构体" class="sidebar-link">结构体</a></li><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#共用体" class="sidebar-link">共用体</a></li><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#位域结构" class="sidebar-link">位域结构</a></li><li class="sidebar-sub-header level2"><a href="/pages/60d71f/#作用域" class="sidebar-link">作用域</a></li></ul></li><li><a href="/pages/555d7e/" class="sidebar-link">C语法Day4-指针</a></li><li><a href="/pages/939f32/" class="sidebar-link">C语法Day5-预处理</a></li><li><a href="/pages/89c272/" class="sidebar-link">C语法Day6-文件</a></li><li><a href="/pages/b6ac10/" class="sidebar-link">C语法Day7-标准库</a></li><li><a href="/pages/ae31da/" class="sidebar-link">C语法Day8-编译</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><span data-v-06225672>软件编程及算法</span></li><li data-v-06225672><span data-v-06225672>C语音</span></li></ul> <div class="info" data-v-06225672><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-05-28</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">C语法Day3-结构<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h2 id="数组"><a href="#数组" class="header-anchor">#</a> 数组</h2> <h4 id="一维数组"><a href="#一维数组" class="header-anchor">#</a> 一维数组</h4> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 声明数组，需指定数量</span>
+double balance[10]<span class="token punctuation">;</span> 
+
+<span class="token comment">/*
+数组分配空间的时候是连续的内存地址，所声明和初始化时需要知道最大容量。
+数组内存空间是连续的，通常以下标0开始，因为地址连续，可以通过下标找到对应的数据。
+*/</span> 
+
+<span class="token comment">// 初始化数组</span>
+double balance[5] = <span class="token punctuation">{</span>1000.0<span class="token punctuation">,</span> 2.0<span class="token punctuation">,</span> 3.4<span class="token punctuation">,</span> 7.0<span class="token punctuation">,</span> 50.0<span class="token punctuation">}</span><span class="token punctuation">;</span>
+或者
+double balance[] = <span class="token punctuation">{</span>1000.0<span class="token punctuation">,</span> 2.0<span class="token punctuation">,</span> 3.4<span class="token punctuation">,</span> 7.0<span class="token punctuation">,</span> 50.0<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 赋值</span>
+balance[4] = 50.0<span class="token punctuation">;</span>
+
+<span class="token comment">// 取值</span>
+double salary = balance[3]<span class="token punctuation">;</span>
+</code></pre></div><h4 id="多维数组"><a href="#多维数组" class="header-anchor">#</a> 多维数组</h4> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 声明 一个二维数组，包含 3 行和 4 列：</span>
+int x[3][4]<span class="token punctuation">;</span>
+
+<span class="token comment">// 初始化二维数组</span>
+<span class="token selector">int a[3][4] = </span><span class="token punctuation">{</span>  
+ <span class="token punctuation">{</span>0<span class="token punctuation">,</span> 1<span class="token punctuation">,</span> 2<span class="token punctuation">,</span> 3<span class="token punctuation">}</span> <span class="token punctuation">,</span>   <span class="token comment">/*  初始化索引号为 0 的行 */</span>
+ <span class="token punctuation">{</span>4<span class="token punctuation">,</span> 5<span class="token punctuation">,</span> 6<span class="token punctuation">,</span> 7<span class="token punctuation">}</span> <span class="token punctuation">,</span>   <span class="token comment">/*  初始化索引号为 1 的行 */</span>
+ <span class="token punctuation">{</span>8<span class="token punctuation">,</span> 9<span class="token punctuation">,</span> 10<span class="token punctuation">,</span> 11<span class="token punctuation">}</span>   <span class="token comment">/*  初始化索引号为 2 的行 */</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 内部嵌套的括号是可选的，下面的初始化与上面是等同的：</span>
+int a[3][4] = <span class="token punctuation">{</span>0<span class="token punctuation">,</span>1<span class="token punctuation">,</span>2<span class="token punctuation">,</span>3<span class="token punctuation">,</span>4<span class="token punctuation">,</span>5<span class="token punctuation">,</span>6<span class="token punctuation">,</span>7<span class="token punctuation">,</span>8<span class="token punctuation">,</span>9<span class="token punctuation">,</span>10<span class="token punctuation">,</span>11<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 访问二维数组元素，第3行，第4列</span>
+int val = a[2][3]<span class="token punctuation">;</span>
+
+<span class="token comment">// 声明创建了一个三维 5 . 10 . 4 整型数组：</span>
+int threedim[5][10][4]<span class="token punctuation">;</span>
+</code></pre></div><h4 id="传递数组参数给函数"><a href="#传递数组参数给函数" class="header-anchor">#</a> 传递数组参数给函数</h4> <div class="language-scss extra-class"><pre class="language-scss"><code>以下三种声明方式的结果是一样的：
+  
+1、形式参数是一个指针  
+ void <span class="token function">myFunction</span><span class="token punctuation">(</span>int *param<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 如果实际传递对象类型不一致会报错</span>
+		...
+ <span class="token punctuation">}</span> 
+
+2、形式参数是一个已定义大小的数组
+  void <span class="token function">myFunction</span><span class="token punctuation">(</span>int param[10]<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		...
+ <span class="token punctuation">}</span> 
+  
+3、形式参数是一个未定义大小的数组：
+  void <span class="token function">myFunction</span><span class="token punctuation">(</span>int param[]<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		...
+ <span class="token punctuation">}</span> 
+</code></pre></div><h4 id="从函数返回数组"><a href="#从函数返回数组" class="header-anchor">#</a> 从函数返回数组</h4> <p>数组做参数时可以直接声明使用数组也可以使用指针，但是，返回值声明只能使用指针</p> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+<span class="token comment">/* 函数要生成和返回随机数的数组r */</span>
+int <span class="token operator">*</span> <span class="token function">getRandom</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  static int  r[10]<span class="token punctuation">;</span>
+  int i<span class="token punctuation">;</span>
+ 
+  <span class="token comment">/* 设置种子 */</span>
+  <span class="token function">srand</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>unsigned<span class="token punctuation">)</span><span class="token function">time</span><span class="token punctuation">(</span> NULL <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  for <span class="token punctuation">(</span> i = 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 10<span class="token punctuation">;</span> ++i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     r[i] = <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+ 
+  return r<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 要调用上面定义函数的主函数 */</span>
+int main <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   int *p<span class="token punctuation">;</span> <span class="token comment">/* 一个指向整数的指针 */</span>
+   int i<span class="token punctuation">;</span>
+ 
+   p = <span class="token function">getRandom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   for <span class="token punctuation">(</span> i = 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 10<span class="token punctuation">;</span> i++ <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;*(p + %d) : %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> *<span class="token punctuation">(</span>p <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ 
+   return 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="枚举-enum"><a href="#枚举-enum" class="header-anchor">#</a> 枚举 Enum</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 不用枚举可以使用宏定义一些常量</span>
+#define MON  1
+#define TUE  2
+#define WED  3
+#define THU  4
+#define FRI  5
+#define SAT  6
+#define SUN  7
+
+-------- 声明 --------
+  
+<span class="token comment">// 枚举语法声明格式为：</span>
+enum　枚举名　<span class="token punctuation">{</span>枚举元素1<span class="token punctuation">,</span>枚举元素2<span class="token punctuation">,</span>……<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 声明DAY 枚举，表示星期</span>
+<span class="token selector">enum DAY
+</span><span class="token punctuation">{</span>
+      MON=1<span class="token punctuation">,</span> TUE<span class="token punctuation">,</span> WED<span class="token punctuation">,</span> THU<span class="token punctuation">,</span> FRI<span class="token punctuation">,</span> SAT<span class="token punctuation">,</span> SUN
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 默认0开始递增，可以自定义值 ： summer=3</span>
+enum season <span class="token punctuation">{</span>spring<span class="token punctuation">,</span> summer=3<span class="token punctuation">,</span> autumn<span class="token punctuation">,</span> winter<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+--------- 定义 ---------
+  
+<span class="token comment">// 定义一个枚举变量</span>
+enum DAY day<span class="token punctuation">;</span>
+
+<span class="token comment">// 定义枚举类型DAY的同时，定义枚举变量day 【这里也可以省略 DAY，建议加上】</span>
+<span class="token selector">enum DAY
+</span><span class="token punctuation">{</span>
+      MON=1<span class="token punctuation">,</span> TUE<span class="token punctuation">,</span> WED<span class="token punctuation">,</span> THU<span class="token punctuation">,</span> FRI<span class="token punctuation">,</span> SAT<span class="token punctuation">,</span> SUN
+<span class="token punctuation">}</span> day<span class="token punctuation">;</span>
+
+
+<span class="token comment">// 结合switch</span>
+switch <span class="token punctuation">(</span>day<span class="token punctuation">)</span>
+ <span class="token punctuation">{</span>
+    case <span class="token property">SAT</span><span class="token punctuation">:</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;星期六&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        break<span class="token punctuation">;</span>
+    case <span class="token property">SUN</span><span class="token punctuation">:</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;星期天&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        break<span class="token punctuation">;</span>
+    <span class="token property">default</span><span class="token punctuation">:</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;工作日&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+--------- 强制转换 ---------
+
+<span class="token comment">// 将整数转换为枚举：</span>
+int a = 6<span class="token punctuation">;</span>
+enum DAY weekend<span class="token punctuation">;</span>
+weekend = <span class="token punctuation">(</span>enum DAY<span class="token punctuation">)</span> a<span class="token punctuation">;</span>  <span class="token comment">//类型转换</span>
+<span class="token comment">//weekend = a; //错误</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;weekend:%d&quot;</span><span class="token punctuation">,</span>weekend<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="回调函数"><a href="#回调函数" class="header-anchor">#</a> 回调函数</h4> <p>回调函数：函数的入参是 函数指针，这样在一个函数内部能拿到其它函数，并进行调用。</p> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdlib.h&gt;  
+#include &lt;stdio.h&gt;
+ 
+<span class="token comment">// 初始化数组：数组指针，数组长度，一个随机函数指针</span>
+void populate_<span class="token function">array</span><span class="token punctuation">(</span>int *array<span class="token punctuation">,</span> size_t arraySize<span class="token punctuation">,</span> int <span class="token punctuation">(</span>*getNextValue<span class="token punctuation">)</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    for <span class="token punctuation">(</span>size_t i=0<span class="token punctuation">;</span> i&lt;arraySize<span class="token punctuation">;</span> i++<span class="token punctuation">)</span>
+        array[i] = <span class="token function">getNextValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token comment">// 获取随机值</span>
+int <span class="token function">getNextRandomValue</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    return <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+int <span class="token function">main</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    int myarray[10]<span class="token punctuation">;</span>
+    <span class="token comment">/* getNextRandomValue 不能加括号，否则无法编译，因为加上括号之后相当于传入此参数时传入了 int , 而不是函数指针*/</span>
+    populate_<span class="token function">array</span><span class="token punctuation">(</span>myarray<span class="token punctuation">,</span> 10<span class="token punctuation">,</span> getNextRandomValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">for</span><span class="token punctuation">(</span>int i = 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> 10<span class="token punctuation">;</span> i++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d &quot;</span><span class="token punctuation">,</span> myarray[i]<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    return 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="字符串"><a href="#字符串" class="header-anchor">#</a> 字符串</h2> <p>在 C 语言中，字符串实际上是使用空字符 <strong>\0</strong> 结尾的一维字符数组。因此，<strong>\0</strong> 是用于标记字符串的结束。</p> <p><strong>空字符（Null character</strong>）又称结束符，缩写 <strong>NUL</strong>，是一个数值为 <strong>0</strong> 的控制字符，<strong>\0</strong> 是转义字符，意思是告诉编译器，这不是字符 <strong>0</strong>，而是空字符。</p> <p>下面的声明和初始化创建了一个 <strong>RUNOOB</strong> 字符串。由于在数组的末尾存储了空字符 <strong>\0</strong>，所以字符数组的大小比单词 <strong>RUNOOB</strong> 的字符数多一个。</p> <div class="language-scss extra-class"><pre class="language-scss"><code>char site[7] = <span class="token punctuation">{</span><span class="token string">'R'</span><span class="token punctuation">,</span> <span class="token string">'U'</span><span class="token punctuation">,</span> <span class="token string">'N'</span><span class="token punctuation">,</span> <span class="token string">'O'</span><span class="token punctuation">,</span> <span class="token string">'O'</span><span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'\0'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+char site[7] = <span class="token punctuation">{</span><span class="token string">'R'</span><span class="token punctuation">,</span> <span class="token string">'U'</span><span class="token punctuation">,</span> <span class="token string">'N'</span><span class="token punctuation">,</span> <span class="token string">'O'</span><span class="token punctuation">,</span> <span class="token string">'O'</span><span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// 长度至少比值长度大一，最后要留一个位置给编译器添加</span>
+char site[] = <span class="token string">&quot;RUNOOB&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>以下是 C/C++ 中定义的字符串的内存表示：</p> <p><img src="https://www.runoob.com/wp-content/uploads/2014/09/c-strings-2020-12-21.png" alt="C/C++ 中的字符串表示"></p> <p>字符串的函数：</p> <table><thead><tr><th style="text-align:left;">序号</th> <th style="text-align:left;">函数 &amp; 目的</th></tr></thead> <tbody><tr><td style="text-align:left;">1</td> <td style="text-align:left;"><strong>strcpy(s1, s2);</strong> 复制字符串 s2 到字符串 s1。</td></tr> <tr><td style="text-align:left;">2</td> <td style="text-align:left;"><strong>strcat(s1, s2);</strong> 连接字符串 s2 到字符串 s1 的末尾。</td></tr> <tr><td style="text-align:left;">3</td> <td style="text-align:left;"><strong>strlen(s1);</strong> 返回字符串 s1 的长度。</td></tr> <tr><td style="text-align:left;">4</td> <td style="text-align:left;"><strong>strcmp(s1, s2);</strong> 如果 s1 和 s2 是相同的，则返回 0；如果 s1&lt;s2 则返回小于 0；如果 s1&gt;s2 则返回大于 0。</td></tr> <tr><td style="text-align:left;">5</td> <td style="text-align:left;"><strong>strchr(s1, ch);</strong> 返回一个指针，指向字符串 s1 中字符 ch 的第一次出现的位置。</td></tr> <tr><td style="text-align:left;">6</td> <td style="text-align:left;"><strong>strstr(s1, s2);</strong> 返回一个指针，指向字符串 s1 中字符串 s2 的第一次出现的位置。</td></tr></tbody></table> <p>测试：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+int main <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   char str1[14] = <span class="token string">&quot;runoob&quot;</span><span class="token punctuation">;</span>
+   char str2[14] = <span class="token string">&quot;google&quot;</span><span class="token punctuation">;</span>
+   char str3[14]<span class="token punctuation">;</span>
+   int  len <span class="token punctuation">;</span>
+ 
+   <span class="token comment">/* 复制 str1 到 str3 */</span>
+   <span class="token function">strcpy</span><span class="token punctuation">(</span>str3<span class="token punctuation">,</span> str1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;strcpy( str3, str1) :  %s\n&quot;</span><span class="token punctuation">,</span> str3 <span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+   <span class="token comment">/* 连接 str1 和 str2 */</span>
+   <span class="token function">strcat</span><span class="token punctuation">(</span> str1<span class="token punctuation">,</span> str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;strcat( str1, str2):   %s\n&quot;</span><span class="token punctuation">,</span> str1 <span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+   <span class="token comment">/* 连接后，str1 的总长度 */</span>
+   len = <span class="token function">strlen</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;strlen(str1) :  %d\n&quot;</span><span class="token punctuation">,</span> len <span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+   return 0<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 结果</span>
+<span class="token function">strcpy</span><span class="token punctuation">(</span> str3<span class="token punctuation">,</span> str1<span class="token punctuation">)</span> <span class="token punctuation">:</span>  runoob
+<span class="token function">strcat</span><span class="token punctuation">(</span> str1<span class="token punctuation">,</span> str2<span class="token punctuation">)</span><span class="token punctuation">:</span>   runoobgoogle
+<span class="token function">strlen</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span> <span class="token punctuation">:</span>  12
+</code></pre></div><h2 id="结构体"><a href="#结构体" class="header-anchor">#</a> 结构体</h2> <p><strong>数组</strong>：允许定义可存储相同类型数据项的变量，</p> <p>**结构体：**是 C 编程中另一种用户自定义的可用的数据类型，它允许您存储不同类型的数据项。</p> <h4 id="创建结构体"><a href="#创建结构体" class="header-anchor">#</a> 创建结构体：</h4> <div class="language-scss extra-class"><pre class="language-scss"><code>---- 1、声明结构体，声明变量 ----
+  
+<span class="token comment">//此声明声明了拥有3个成员的结构体，分别为整型的a，字符型的b和双精度的c</span>
+<span class="token comment">//结构体的标签被命名为SIMPLE,没有声明变量</span>
+<span class="token selector">struct SIMPLE
+</span><span class="token punctuation">{</span>
+    int a<span class="token punctuation">;</span>
+    char b<span class="token punctuation">;</span>
+    double c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//用SIMPLE标签的结构体，另外声明了变量t1、t2、t3</span>
+struct SIMPLE t1<span class="token punctuation">,</span> t2[20]<span class="token punctuation">,</span> *t3<span class="token punctuation">;</span>
+ 
+---- 2、声明结构体，同时声明变量 ----
+  
+<span class="token comment">// 或者直接声明变量</span>
+<span class="token selector">struct SIMPLE
+</span><span class="token punctuation">{</span>
+   int a<span class="token punctuation">;</span>
+   char b<span class="token punctuation">;</span>
+   double c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> t1<span class="token punctuation">;</span>
+
+---- 3、声明结构体，同时声明变量，但是没有标签 ----
+  
+<span class="token comment">//此声明声明了拥有3个成员的结构体，分别为整型的a，字符型的b和双精度的c</span>
+<span class="token comment">//同时又声明了结构体变量s1</span>
+<span class="token comment">//这个结构体并没有标明其标签</span>
+<span class="token selector">struct 
+</span><span class="token punctuation">{</span>
+    int a<span class="token punctuation">;</span>
+    char b<span class="token punctuation">;</span>
+    double c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> s1<span class="token punctuation">;</span>
+ 
+⚠️ 注意： 这里的s1 不等于 前面的t1
+
+---- 4、自定义结构体，声明变量 ----
+  
+<span class="token comment">//也可以用typedef创建新类型</span>
+<span class="token selector">typedef struct
+</span><span class="token punctuation">{</span>
+    int a<span class="token punctuation">;</span>
+    char b<span class="token punctuation">;</span>
+    double c<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> Simple2<span class="token punctuation">;</span>
+<span class="token comment">//现在可以用Simple2作为类型声明新的结构体变量</span>
+Simple2 u1<span class="token punctuation">,</span> u2[20]<span class="token punctuation">,</span> *u3<span class="token punctuation">;</span>
+
+
+---- 5、结构体包含自己 ----
+
+<span class="token comment">// 结构体的成员可以包含其他结构体，也可以包含指向自己结构体类型的指针，而通常这种指针的应用是为了实现一些更高级的数据结构如链表和树等。</span>
+  
+<span class="token comment">//此结构体的声明包含了指向自己类型的指针，典型的链表结构</span>
+<span class="token selector">struct NODE
+</span><span class="token punctuation">{</span>
+    char string[100]<span class="token punctuation">;</span>
+    struct NODE *next_node<span class="token punctuation">;</span> <span class="token comment">// 链表，包含自己</span>
+  
+  	struct SIMPLE a<span class="token punctuation">;</span> <span class="token comment">// 也可以包含其它结构体</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+
+</code></pre></div><h4 id="结构体互相包含"><a href="#结构体互相包含" class="header-anchor">#</a> 结构体互相包含</h4> <p>则需要对其中一个结构体进行不完整声明，如下所示：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>struct B<span class="token punctuation">;</span> <span class="token comment">// ⚠️ 对结构体B进行不完整声明，否则结构体A无法使用B做属性变量</span>
+ 
+<span class="token comment">//结构体A中包含指向结构体B的指针</span>
+<span class="token selector">struct A
+</span><span class="token punctuation">{</span>
+    struct B *partner<span class="token punctuation">;</span>
+    <span class="token comment">//other members;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">//结构体B中包含指向结构体A的指针，在A声明完后，B也随之进行声明</span>
+<span class="token selector">struct B
+</span><span class="token punctuation">{</span>
+    struct A *partner<span class="token punctuation">;</span>
+    <span class="token comment">//other members;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="结构体变量初始化"><a href="#结构体变量初始化" class="header-anchor">#</a> 结构体变量初始化：</h4> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+ 
+<span class="token comment">// 结构体声明必需在使用结构体函数之前声明，不能在函数的后面，</span>
+<span class="token comment">// 函数内调用的结构体必需在其前面先声明，不能通过 结构体不完整声明编译成功。</span>
+<span class="token selector">struct Books
+</span><span class="token punctuation">{</span>
+   char  title[50]<span class="token punctuation">;</span>
+   char  author[50]<span class="token punctuation">;</span>
+   char  subject[100]<span class="token punctuation">;</span>
+   int   book_id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> book = <span class="token punctuation">{</span><span class="token string">&quot;C 语言&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;RUNOOB&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;编程语言&quot;</span><span class="token punctuation">,</span> 123456<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+int <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;title : %s\nauthor: %s\nsubject: %s\nbook_id: %d\n&quot;</span><span class="token punctuation">,</span> book.title<span class="token punctuation">,</span> book.author<span class="token punctuation">,</span> book.subject<span class="token punctuation">,</span> book.book_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>⚠️ 注意点：</p> <p>1、结构体声明时可以使用后面定义的结构体，只需要提前 声明不完整结构体</p> <p>2、函数中使用的结构体，必需已经声明，不能是不完整声明</p> <p>3、函数中使用的其他函数，可以使用后面实现的函数，但是需要在之前进行方法声明。</p> <h4 id="访问结构的成员"><a href="#访问结构的成员" class="header-anchor">#</a> 访问结构的成员</h4> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+
+struct Books
+</span><span class="token punctuation">{</span>
+   char  title[50]<span class="token punctuation">;</span>
+   char  author[50]<span class="token punctuation">;</span>
+   char  subject[100]<span class="token punctuation">;</span>
+   int   book_id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+int <span class="token function">main</span><span class="token punctuation">(</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   struct Books Book1<span class="token punctuation">;</span>        <span class="token comment">/* 声明 Book1，类型为 Books */</span>
+ 
+   <span class="token comment">/* Book1 详述 */</span>
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> Book1.title<span class="token punctuation">,</span> <span class="token string">&quot;C Programming&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> Book1.author<span class="token punctuation">,</span> <span class="token string">&quot;Nuha Ali&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> Book1.subject<span class="token punctuation">,</span> <span class="token string">&quot;C Programming Tutorial&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   Book1.book_id = 6495407<span class="token punctuation">;</span>
+ 
+   <span class="token comment">// 错误的写法，c 中不能像 oc 一样直接字符串赋值，要使用 strcopy</span>
+   <span class="token comment">// Book1.subject = &quot;C Programming Tutorial&quot;;</span>
+  
+   <span class="token comment">/* 输出 Book1 信息 */</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book 1 title : %s\n&quot;</span><span class="token punctuation">,</span> Book1.title<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book 1 author : %s\n&quot;</span><span class="token punctuation">,</span> Book1.author<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book 1 subject : %s\n&quot;</span><span class="token punctuation">,</span> Book1.subject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book 1 book_id : %d\n&quot;</span><span class="token punctuation">,</span> Book1.book_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+   return 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="结构作为函数参数"><a href="#结构作为函数参数" class="header-anchor">#</a> 结构作为函数参数</h4> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+<span class="token comment">// 结构体声明必需在使用函数之前完成</span>
+<span class="token selector">struct Books
+</span><span class="token punctuation">{</span>
+   char  title[50]<span class="token punctuation">;</span>
+   char  author[50]<span class="token punctuation">;</span>
+   char  subject[100]<span class="token punctuation">;</span>
+   int   book_id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">/* 函数声明：函数实现在后面，但是必需提前声明函数方法 */</span>
+void <span class="token function">printBook</span><span class="token punctuation">(</span> struct Books book <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+int <span class="token function">main</span><span class="token punctuation">(</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   struct Books Book1<span class="token punctuation">;</span>        <span class="token comment">/* 声明 Book1，类型为 Books */</span>
+ 
+   <span class="token comment">/* Book1 详述 */</span>
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> Book1.title<span class="token punctuation">,</span> <span class="token string">&quot;C Programming&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> Book1.author<span class="token punctuation">,</span> <span class="token string">&quot;Nuha Ali&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> Book1.subject<span class="token punctuation">,</span> <span class="token string">&quot;C Programming Tutorial&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   Book1.book_id = 6495407<span class="token punctuation">;</span>
+ 
+   <span class="token comment">/* 输出 Book1 信息，传入结构体变量 */</span>
+   <span class="token function">printBook</span><span class="token punctuation">(</span> Book1 <span class="token punctuation">)</span><span class="token punctuation">;</span>
+   return 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 函数实现，结构体作参数，传入的是结构体变量名，而不是指针</span>
+void <span class="token function">printBook</span><span class="token punctuation">(</span> struct Books book <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book title : %s\n&quot;</span><span class="token punctuation">,</span> book.title<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book author : %s\n&quot;</span><span class="token punctuation">,</span> book.author<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book subject : %s\n&quot;</span><span class="token punctuation">,</span> book.subject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Book book_id : %d\n&quot;</span><span class="token punctuation">,</span> book.book_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="共用体"><a href="#共用体" class="header-anchor">#</a> <strong>共用体</strong></h2> <p>在介绍共用体结构之前，先回顾一下前面介绍的数据类型：</p> <p>1、int 整形</p> <p>2、数组：一纬度或者多维，但是存储的内容是单一的。字符串是\0结尾的一纬数组</p> <p>3、结构体：可以存储不同类型的变量值，每个变量都可以初始化。</p> <p>4、指针：一种特殊的结构，指向地址的变量</p> <p>5、共用体：可以定义不同类型的成员变量，但是只能有一个变量初始化，这样可以达到节省内存的作用，OC里的指针isa就是共用体结构</p> <p><strong>代码举例</strong>：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+
+<span class="token comment">// 1、声明一个共用体Data，包含一个整形，浮点型，和字符串</span>
+<span class="token selector">union Data
+</span><span class="token punctuation">{</span>
+   int i<span class="token punctuation">;</span>
+   float f<span class="token punctuation">;</span>
+   char  str[20]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+int <span class="token function">main</span><span class="token punctuation">(</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   union Data data<span class="token punctuation">;</span>        
+ 
+   <span class="token comment">// 2、共用体占用的总内存大小： 以成员变量最大的为准。这样保证都能初始化</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;Memory size occupied by data : %d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">sizeof</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+   <span class="token comment">// 3、所有变量赋值完成后立即打印结果</span>
+   data.i = 10<span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;data.i : %d\n&quot;</span><span class="token punctuation">,</span> data.i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   
+   data.f = 220.5<span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;data.f : %f\n&quot;</span><span class="token punctuation">,</span> data.f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   
+   <span class="token function">strcpy</span><span class="token punctuation">(</span> data.str<span class="token punctuation">,</span> <span class="token string">&quot;C Programming&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;data.str : %s\n&quot;</span><span class="token punctuation">,</span> data.str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+   <span class="token comment">// 4、全部打印一遍呢？</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;data.i : %d\n&quot;</span><span class="token punctuation">,</span> data.i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;data.f : %f\n&quot;</span><span class="token punctuation">,</span> data.f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">&quot;data.str : %s\n&quot;</span><span class="token punctuation">,</span> data.str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+   return 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>结果：</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 立即打印</span>
+data.<span class="token property">i</span> <span class="token punctuation">:</span> 10
+data.<span class="token property">f</span> <span class="token punctuation">:</span> 220.500000
+data.<span class="token property">str</span> <span class="token punctuation">:</span> C Programming
+<span class="token comment">// 最后全部打印</span>
+data.<span class="token property">i</span> <span class="token punctuation">:</span> 1917853763
+data.<span class="token property">f</span> <span class="token punctuation">:</span> 4122360580327794860452759994368.000000
+data.<span class="token property">str</span> <span class="token punctuation">:</span> C Programming
+</code></pre></div><p>可以看到共用体的 <strong>i</strong> 和 <strong>f</strong> 成员的值有损坏，因为最后赋给变量的值占用了内存位置</p> <p>这样印证共用体只有最后一次赋值的变量能正确取值</p> <h2 id="位域结构"><a href="#位域结构" class="header-anchor">#</a> 位域结构</h2> <p>前面介绍了共用体结构，目的是节省内存，声明了多个成员变量，但是同时就会有一个有值。</p> <p>那么位域是什么结构呢？</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 1、比如结构体声明如下：</span>
+<span class="token selector">struct STATUS
+</span><span class="token punctuation">{</span>
+  unsigned int tag1<span class="token punctuation">;</span> <span class="token comment">// 值是0 或者 1</span>
+  unsigned int tag2<span class="token punctuation">;</span> <span class="token comment">// 值小于 3</span>
+  unsigned int tag3<span class="token punctuation">;</span> <span class="token comment">// 值小于 8</span>
+  unsigned int tag4<span class="token punctuation">;</span> <span class="token comment">// 值是0 或者 1</span>
+<span class="token punctuation">}</span> sta1<span class="token punctuation">;</span>
+
+那么4个变量占用4*4=16字节 = 16*8 = 128位
+  
+<span class="token comment">// 2、但是实际上只用到了4位有效位数，针对这种场景可以进行进一步优化，就是位域结构：</span>
+  
+<span class="token selector">struct STATUS
+</span><span class="token punctuation">{</span>
+  <span class="token comment">// 位域声明： type + 变量名 + 冒号 + 占用位数</span>
+  unsigned int <span class="token property">tag1</span> <span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token comment">// 占用1位（值是0 或者 1）</span>
+  unsigned int <span class="token property">tag2</span> <span class="token punctuation">:</span> 2<span class="token punctuation">;</span> <span class="token comment">// 占用2位（值小于 3）</span>
+  unsigned int <span class="token property">tag3</span> <span class="token punctuation">:</span> 3<span class="token punctuation">;</span> <span class="token comment">// 占用3位（值小于 8）</span>
+  unsigned int <span class="token property">tag4</span> <span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token comment">// 占用1位（值是0 或者 1）</span>
+<span class="token punctuation">}</span> sta2<span class="token punctuation">;</span>
+
+那么这4个变量一共占用 1+2+3+1 = 7位，也就是一个字节就够用了，但是实际分配就是一个int的占用，也就是4字节。
+  
+  
+<span class="token comment">// 3、位域可以是无名位域，这时它只用来作填充或调整位置。无名的位域是不能使用的</span>
+ <span class="token selector">struct STATUS
+</span><span class="token punctuation">{</span>
+  unsigned int <span class="token property">tag1</span> <span class="token punctuation">:</span> 1<span class="token punctuation">;</span> 
+  unsigned <span class="token property">int</span> 			<span class="token punctuation">:</span> 7<span class="token punctuation">;</span> <span class="token comment">// 占用7位，不使用</span>
+  unsigned int <span class="token property">tag3</span> <span class="token punctuation">:</span> 3<span class="token punctuation">;</span> 
+  unsigned int <span class="token property">tag4</span> <span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> sta3<span class="token punctuation">;</span> 
+ 
+
+<span class="token comment">// 4、位域声明最大长度不能超过类型最大位数，并且赋值的时候，也不能超过最大范围。</span>
+<span class="token selector">struct STATUS
+</span><span class="token punctuation">{</span>
+  unsigned int <span class="token property">tag1</span> <span class="token punctuation">:</span> 33<span class="token punctuation">;</span>  <span class="token comment">// ❌ 33 位就是超过最大范围了，int最大32位。</span>
+  unsigned int <span class="token property">tag2</span> <span class="token punctuation">:</span> 2<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> sta4<span class="token punctuation">;</span> 
+
+赋值：
+  sta4.tag2 = 100<span class="token punctuation">;</span> <span class="token comment">//❌错误，超过最大值了。2位只能赋值0，1，2，3 4种情况</span>
+
+
+
+</code></pre></div><p>位域的使用和结构成员的使用相同，其一般形式为：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>位域变量名.位域名
+位域变量名-&gt;位域名
+</code></pre></div><p>用例：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+ 
+int <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token selector">struct bs</span><span class="token punctuation">{</span>
+        unsigned <span class="token property">a</span><span class="token punctuation">:</span>1<span class="token punctuation">;</span>
+        unsigned <span class="token property">b</span><span class="token punctuation">:</span>3<span class="token punctuation">;</span>
+        unsigned <span class="token property">c</span><span class="token punctuation">:</span>4<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> bit<span class="token punctuation">,</span>*pbit<span class="token punctuation">;</span>
+    bit.a=1<span class="token punctuation">;</span>    <span class="token comment">/* 给位域赋值（应注意赋值不能超过该位域的允许范围） */</span>
+    bit.b=7<span class="token punctuation">;</span>    <span class="token comment">/* 给位域赋值（应注意赋值不能超过该位域的允许范围） */</span>
+    bit.c=15<span class="token punctuation">;</span>    <span class="token comment">/* 给位域赋值（应注意赋值不能超过该位域的允许范围） */</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d,%d,%d\n&quot;</span><span class="token punctuation">,</span>bit.a<span class="token punctuation">,</span>bit.b<span class="token punctuation">,</span>bit.c<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">/* 以整型量格式输出三个域的内容 */</span>
+    pbit=&amp;bit<span class="token punctuation">;</span>    <span class="token comment">/* 把位域变量 bit 的地址送给指针变量 pbit */</span>
+    pbit-&gt;a=0<span class="token punctuation">;</span>    <span class="token comment">/* 用指针方式给位域 a 重新赋值，赋为 0 */</span>
+    pbit-&gt;b&amp;=3<span class="token punctuation">;</span>    <span class="token comment">/* 使用了复合的位运算符 &quot;&amp;=&quot;，相当于：pbit-&gt;b=pbit-&gt;b&amp;3，位域 b 中原有值为 7，与 3 作按位与运算的结果为 3（111&amp;011=011，十进制值为 3） */</span>
+    pbit-&gt;c|=1<span class="token punctuation">;</span>    <span class="token comment">/* 使用了复合位运算符&quot;|=&quot;，相当于：pbit-&gt;c=pbit-&gt;c|1，其结果为 15 */</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d,%d,%d\n&quot;</span><span class="token punctuation">,</span>pbit-&gt;a<span class="token punctuation">,</span>pbit-&gt;b<span class="token punctuation">,</span>pbit-&gt;c<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">/* 用指针方式输出了这三个域的值 */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="作用域"><a href="#作用域" class="header-anchor">#</a> 作用域</h2> <p><strong>全局变量与局部变量在内存中的区别</strong>：</p> <ul><li>全局变量保存在内存的全局存储区中，占用静态的存储单元；</li> <li>局部变量保存在栈中，只有在所在函数被调用时才动态地为变量分配存储单元。</li></ul> <p>局部变量优先级 &gt; 全局变量</p> <div class="language-scss extra-class"><pre class="language-scss"><code>#include &lt;stdio.h&gt;
+ 
+<span class="token comment">/* 全局变量声明: 作用域整个文件 */</span>
+int a = 20<span class="token punctuation">;</span>
+ 
+int main <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token comment">/* 在主函数中的局部变量声明：作用域函数内 */</span>
+  int a = 10<span class="token punctuation">;</span>
+  int b = 20<span class="token punctuation">;</span>
+  int c = 0<span class="token punctuation">;</span>
+  int <span class="token function">sum</span><span class="token punctuation">(</span>int<span class="token punctuation">,</span> int<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+  printf <span class="token punctuation">(</span><span class="token string">&quot;value of a in main() = %d\n&quot;</span><span class="token punctuation">,</span>  a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  c = <span class="token function">sum</span><span class="token punctuation">(</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  printf <span class="token punctuation">(</span><span class="token string">&quot;value of c in main() = %d\n&quot;</span><span class="token punctuation">,</span>  c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+  return 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token comment">/* 形式参数啊啊a，b ：形式参数作用域在函数内，优先级高于全局变量 */</span>
+int <span class="token function">sum</span><span class="token punctuation">(</span>int a<span class="token punctuation">,</span> int b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    printf <span class="token punctuation">(</span><span class="token string">&quot;value of a in sum() = %d\n&quot;</span><span class="token punctuation">,</span>  a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    printf <span class="token punctuation">(</span><span class="token string">&quot;value of b in sum() = %d\n&quot;</span><span class="token punctuation">,</span>  b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    return a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>编译： 从文件开头依次遍历，所以声明在前面的函数拿不到后面的函数声明实现</p> <p>⚠️  在上面的例子中，除了全局变量和局部变量作用域区别之外，还有函数的作用域，</p> <p>main 函数在调用后面声明的sum 函数之前，必须要先声明一下sum函数方法： int sum(int, int);</p> <p>否则在编译器会找不到sum 函数声明报错，如果直接将函数声明定义放在main函数之前不用。</p> <p>⚠️ 那么结构体也可以声明在main函数之后，然后在mian函数内部使用吗？</p> <p>不可以！结构体必需在调用函数使用之前声明，不能滞后。</p> <p>问？ 为什么两者有区别？</p></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/f184ee/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">C语法Day2-运算</div></a> <a href="/pages/555d7e/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">C语法Day4-指针</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/f184ee/" class="prev">C语法Day2-运算</a></span> <span class="next"><a href="/pages/555d7e/">C语法Day4-指针</a>→
+      </span></p></div></div></div> <!----></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.106733fc.js" defer></script><script src="/assets/js/2.d54d51d6.js" defer></script><script src="/assets/js/74.a619d656.js" defer></script>
+  </body>
+</html>
