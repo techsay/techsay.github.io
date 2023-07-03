@@ -8,7 +8,7 @@ module.exports ={
     head: [['link', { rel: 'icon', href: '/images/logo.PNG' }]],//站点头部的icon
     theme: 'vdoing',
     themeConfig: {
-        logo: '/images/logo.PNG',
+        logo: '/images/logo2.PNG',
         nav:[
             { text: "首页", link: "/" },
             {
