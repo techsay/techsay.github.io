@@ -13,7 +13,7 @@ module.exports ={
             { text: "首页", link: "/" },
             {
                 text: 'iOS知识',
-                link: '/pages/3468b2/'
+                link: '/pages/7004ee/'
             },
             {
                 text: '计算机软件',
