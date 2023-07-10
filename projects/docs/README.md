@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/logo.PNG
+heroImage: /images/logo2.png
 heroText: 技术知识导图
 tagline: 知识导图，方便、快速复习关键知识点
 actionText: 开启篇章 →

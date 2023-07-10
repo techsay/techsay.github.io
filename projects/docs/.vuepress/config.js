@@ -5,15 +5,15 @@ module.exports ={
     lang: 'zh-CN',//语言设置
     title: '知识导图',//所有页面标题的后缀，并且在默认主题的导航栏中显示
     description: '复杂的知识体系需要一套精简的知识导图作参考和索引',//站点描述，它会被每个页面的 Frontmatter 中的 description 字段覆盖
-    head: [['link', { rel: 'icon', href: '/images/hlogo.png' }]],//站点头部的icon
+    head: [['link', { rel: 'icon', href: '/images/logo2.png' }]],//站点头部的icon
     theme: 'vdoing',
     themeConfig: {
-        logo: '/images/logo2.png',
+        logo: '/images/hlogo.png',
         nav:[
             { text: "首页", link: "/" },
             {
                 text: 'iOS知识',
-                link: '/pages/7004ee/'
+                link: '/pages/3468b2/'
             },
             {
                 text: '计算机软件',
