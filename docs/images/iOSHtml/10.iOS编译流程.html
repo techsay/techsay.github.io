@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>iOS开发-下篇-2022</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            width: auto;
+            height: auto;
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            overflow-y: auto;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            overflow-x: scroll;
+            min-width: 0px;
+            margin: 0 10px;
+            overflow: visible;
+            position: relative;
+        }
+        #nav-thumbs{
+            overflow-y: scroll;
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+        }
+        #svg-container >svg{
+            overflow: visible;
+            display: block;
+            margin:5px auto;
+            margin-bottom: 5px;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            text-decoration: none;
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #08a1ef;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+            #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+            #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+            #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="main-content">
+        <div id="svg-container"><svg id="page7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 865 2475" xmlns:ev="http://www.w3.org/2001/xml-events" height="2547" ed:name="iOS编译流程" xmlns:ed="https://www.w3.org/xml/2017/SVGExtensions/" ed:hSpacing="30" ed:vSpacing="30" preserveAspectRadio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="865">
+    <style type="text/css"><![CDATA[
+g[ed\:togtopicid],g[ed\:hyperlink],g[ed\:comment],g[ed\:note] {cursor:pointer;}
+g[id] {-moz-user-select: none;-ms-user-select: none;user-select: none;}
+svg text::selection,svg tspan::selection{background-color: #4285f4;color: #ffffff;fill: #ffffff;}
+.st114 {fill:#141414;font-family:Open Sans;font-size:10.5pt}
+.st113 {fill:#141414;font-family:Open Sans;font-size:13.5pt}
+.st112 {fill:#4caf50;font-family:Open Sans;font-size:21pt;font-weight:bold}
+]]></style>
+    <defs/>
+    <rect fill="#ffffff" height="2547" x="0" y="0" width="865"/>
+    <path d="M-25.2,-26.5L-25.2,26.5L25.2,26.5" fill="none" ed:tosuperid="114" id="115" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,176.17)"/>
+    <path d="M-9.5,-46.6L-9.5,46.6L9.5,46.6" fill="none" ed:tosuperid="116" id="117" stroke-linecap="round" stroke-width="2" ed:parentid="114" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,269.29)"/>
+    <path d="M-25.2,-109.6L-25.2,109.6L25.2,109.6" fill="none" ed:tosuperid="118" id="119" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,259.29)"/>
+    <path d="M-9.5,-76.6L-9.5,76.6L9.5,76.6" fill="none" ed:tosuperid="120" id="121" stroke-linecap="round" stroke-width="2" ed:parentid="118" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,465.54)"/>
+    <path d="M-25.2,-222.8L-25.2,222.8L25.2,222.8" fill="none" ed:tosuperid="122" id="123" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,372.42)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="124" id="125" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,631.79)"/>
+    <path d="M-9.5,-40.8L-9.5,40.8L9.5,40.8" fill="none" ed:tosuperid="126" id="127" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,655.92)"/>
+    <path d="M-13.5,7.5L0,7.5L0,-7.5L13.5,-7.5" fill="none" ed:tosuperid="128" id="129" stroke-linecap="round" stroke-width="2" ed:parentid="126" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,262.13,689.17)"/>
+    <path d="M0,-7.5L0,7.5L13.5,7.5" fill="none" ed:tosuperid="130" id="131" stroke-linecap="round" stroke-width="2" ed:parentid="126" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,262.13,704.17)"/>
+    <path d="M-9.5,-74.9L-9.5,74.9L9.5,74.9" fill="none" ed:tosuperid="132" id="133" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,690.04)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="134" id="135" stroke-linecap="round" stroke-width="2" ed:parentid="132" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,262.13,764.92)"/>
+    <path d="M-13.5,7.5L0,7.5L0,-7.5L13.5,-7.5" fill="none" ed:tosuperid="136" id="137" stroke-linecap="round" stroke-width="2" ed:parentid="134" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,437.29,757.42)"/>
+    <path d="M0,-7.5L0,7.5L13.5,7.5" fill="none" ed:tosuperid="138" id="139" stroke-linecap="round" stroke-width="2" ed:parentid="134" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,437.29,772.42)"/>
+    <path d="M-9.5,-99L-9.5,99L9.5,99" fill="none" ed:tosuperid="140" id="141" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,714.17)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="142" id="143" stroke-linecap="round" stroke-width="2" ed:parentid="140" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,234.13,813.17)"/>
+    <path d="M-9.5,-115.6L-9.5,115.6L9.5,115.6" fill="none" ed:tosuperid="144" id="145" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,730.79)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="146" id="147" stroke-linecap="round" stroke-width="2" ed:parentid="144" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,276.13,846.42)"/>
+    <path d="M-9.5,-139.8L-9.5,139.8L9.5,139.8" fill="none" ed:tosuperid="148" id="149" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,754.92)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="150" id="151" stroke-linecap="round" stroke-width="2" ed:parentid="148" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,220.13,894.67)"/>
+    <path d="M-13.5,7.5L0,7.5L0,-7.5L13.5,-7.5" fill="none" ed:tosuperid="152" id="153" stroke-linecap="round" stroke-width="2" ed:parentid="150" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,471.77,887.17)"/>
+    <path d="M0,-7.5L0,7.5L13.5,7.5" fill="none" ed:tosuperid="154" id="155" stroke-linecap="round" stroke-width="2" ed:parentid="150" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,471.77,902.17)"/>
+    <path d="M-9.5,-163.9L-9.5,163.9L9.5,163.9" fill="none" ed:tosuperid="156" id="157" stroke-linecap="round" stroke-width="2" ed:parentid="122" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,779.04)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="158" id="159" stroke-linecap="round" stroke-width="2" ed:parentid="156" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,220.13,942.92)"/>
+    <path d="M-25.2,-423.1L-25.2,423.1L25.2,423.1" fill="none" ed:tosuperid="160" id="161" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,572.79)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="162" id="163" stroke-linecap="round" stroke-width="2" ed:parentid="160" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1032.54)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="164" id="165" stroke-linecap="round" stroke-width="2" ed:parentid="162" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,220.13,1049.17)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="166" id="167" stroke-linecap="round" stroke-width="2" ed:parentid="164" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,321.13,1049.17)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="168" id="169" stroke-linecap="round" stroke-width="2" ed:parentid="166" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,435.01,1049.17)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="170" id="171" stroke-linecap="round" stroke-width="2" ed:parentid="168" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,536.01,1049.17)"/>
+    <path d="M-25.2,-476.3L-25.2,476.3L25.2,476.3" fill="none" ed:tosuperid="172" id="173" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,625.92)"/>
+    <path d="M-9.5,-26.6L-9.5,26.6L9.5,26.6" fill="none" ed:tosuperid="174" id="175" stroke-linecap="round" stroke-width="2" ed:parentid="172" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1148.79)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="176" id="177" stroke-linecap="round" stroke-width="2" ed:parentid="174" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,276.9,1175.42)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="178" id="179" stroke-linecap="round" stroke-width="2" ed:parentid="176" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,382.91,1175.42)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="180" id="181" stroke-linecap="round" stroke-width="2" ed:parentid="178" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,495.51,1175.42)"/>
+    <path d="M-13.5,0L0,0L13.5,0" fill="none" ed:tosuperid="182" id="183" stroke-linecap="round" stroke-width="2" ed:parentid="180" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,717.16,1175.42)"/>
+    <path d="M-25.2,-539.4L-25.2,539.4L25.2,539.4" fill="none" ed:tosuperid="184" id="185" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,689.04)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="186" id="187" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1265.04)"/>
+    <path d="M-9.5,-33.3L-9.5,33.3L9.5,33.3" fill="none" ed:tosuperid="188" id="189" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1281.67)"/>
+    <path d="M-9.5,-66.6L-9.5,66.6L9.5,66.6" fill="none" ed:tosuperid="190" id="191" stroke-linecap="round" stroke-width="2" ed:parentid="188" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1381.54)"/>
+    <path d="M-9.5,-116.5L-9.5,116.5L9.5,116.5" fill="none" ed:tosuperid="192" id="193" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1364.92)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="194" id="195" stroke-linecap="round" stroke-width="2" ed:parentid="192" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1498.04)"/>
+    <path d="M-9.5,-33.3L-9.5,33.3L9.5,33.3" fill="none" ed:tosuperid="196" id="197" stroke-linecap="round" stroke-width="2" ed:parentid="192" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1514.67)"/>
+    <path d="M-9.5,-15.1L-9.5,15.1L9.5,15.1" fill="none" ed:tosuperid="198" id="199" stroke-linecap="round" stroke-width="2" ed:parentid="196" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,258.98,1563.04)"/>
+    <path d="M-9.5,-63.5L-9.5,63.5L9.5,63.5" fill="none" ed:tosuperid="200" id="201" stroke-linecap="round" stroke-width="2" ed:parentid="192" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1544.92)"/>
+    <path d="M-9.5,-26.6L-9.5,26.6L9.5,26.6" fill="none" ed:tosuperid="202" id="203" stroke-linecap="round" stroke-width="2" ed:parentid="200" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,258.19,1635.04)"/>
+    <path d="M-9.5,-41.8L-9.5,41.8L9.5,41.8" fill="none" ed:tosuperid="204" id="205" stroke-linecap="round" stroke-width="2" ed:parentid="200" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,258.19,1650.17)"/>
+    <path d="M-9.5,-238.4L-9.5,238.4L9.5,238.4" fill="none" ed:tosuperid="206" id="207" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1486.79)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="208" id="209" stroke-linecap="round" stroke-width="2" ed:parentid="206" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1741.79)"/>
+    <path d="M-9.5,-33.3L-9.5,33.3L9.5,33.3" fill="none" ed:tosuperid="210" id="211" stroke-linecap="round" stroke-width="2" ed:parentid="206" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1758.42)"/>
+    <path d="M-9.5,-49.9L-9.5,49.9L9.5,49.9" fill="none" ed:tosuperid="212" id="213" stroke-linecap="round" stroke-width="2" ed:parentid="206" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1775.04)"/>
+    <path d="M-9.5,-66.5L-9.5,66.5L9.5,66.5" fill="none" ed:tosuperid="214" id="215" stroke-linecap="round" stroke-width="2" ed:parentid="206" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1791.67)"/>
+    <path d="M-9.5,-15.1L-9.5,15.1L9.5,15.1" fill="none" ed:tosuperid="216" id="217" stroke-linecap="round" stroke-width="2" ed:parentid="214" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,258.98,1873.29)"/>
+    <path d="M-9.5,-98.3L-9.5,98.3L9.5,98.3" fill="none" ed:tosuperid="218" id="219" stroke-linecap="round" stroke-width="2" ed:parentid="206" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1823.42)"/>
+    <path d="M-9.5,-353.3L-9.5,353.3L9.5,353.3" fill="none" ed:tosuperid="220" id="221" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1601.67)"/>
+    <path d="M-9.5,-26.6L-9.5,26.6L9.5,26.6" fill="none" ed:tosuperid="222" id="223" stroke-linecap="round" stroke-width="2" ed:parentid="220" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1981.54)"/>
+    <path d="M-9.5,-41.8L-9.5,41.8L9.5,41.8" fill="none" ed:tosuperid="224" id="225" stroke-linecap="round" stroke-width="2" ed:parentid="220" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,205.08,1996.67)"/>
+    <path d="M-9.5,-411.6L-9.5,411.6L9.5,411.6" fill="none" ed:tosuperid="226" id="227" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1660.04)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="228" id="229" stroke-linecap="round" stroke-width="2" ed:parentid="226" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,193.08,2088.29)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="230" id="231" stroke-linecap="round" stroke-width="2" ed:parentid="228" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,246.98,2121.54)"/>
+    <path d="M-9.5,-33.3L-9.5,33.3L9.5,33.3" fill="none" ed:tosuperid="232" id="233" stroke-linecap="round" stroke-width="2" ed:parentid="228" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,246.98,2138.17)"/>
+    <path d="M-9.5,-66.5L-9.5,66.5L9.5,66.5" fill="none" ed:tosuperid="234" id="235" stroke-linecap="round" stroke-width="2" ed:parentid="226" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,193.08,2138.17)"/>
+    <path d="M-9.5,-15.1L-9.5,15.1L9.5,15.1" fill="none" ed:tosuperid="236" id="237" stroke-linecap="round" stroke-width="2" ed:parentid="234" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,246.98,2219.79)"/>
+    <path d="M-9.5,-31.8L-9.5,31.8L9.5,31.8" fill="none" ed:tosuperid="238" id="239" stroke-linecap="round" stroke-width="2" ed:parentid="234" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,246.98,2236.42)"/>
+    <path d="M-9.5,-526.5L-9.5,526.5L9.5,526.5" fill="none" ed:tosuperid="240" id="241" stroke-linecap="round" stroke-width="2" ed:parentid="184" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,1774.92)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="242" id="243" stroke-linecap="round" stroke-width="2" ed:parentid="240" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,193.08,2318.04)"/>
+    <path d="M-25.2,-1119L-25.2,1119L25.2,1119" fill="none" ed:tosuperid="244" id="245" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,1268.67)"/>
+    <path d="M-9.5,-16.6L-9.5,16.6L9.5,16.6" fill="none" ed:tosuperid="246" id="247" stroke-linecap="round" stroke-width="2" ed:parentid="244" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,151.18,2424.29)"/>
+    <path d="M-25.2,-1172.1L-25.2,1172.1L25.2,1172.1" fill="none" ed:tosuperid="248" id="249" stroke-linecap="round" stroke-width="2" ed:parentid="112" stroke="#4caf50" stroke-linejoin="round" transform="matrix(1,0,0,1,81.53,1321.79)"/>
+    <g id="112" ed:width="227.4583333730698" ed:topictype="mainidea" ed:height="68.33333337306976" ed:layout="righttree" transform="matrix(1,0,0,1,21.33,81.33)">
+        <path d="M4,0L223.5,0C226.1,0,227.5,1.3,227.5,4L227.5,64.3C227.5,67,226.1,68.3,223.5,68.3L4,68.3C1.3,68.3,0,67,0,64.3L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke-width="1.33333" stroke="#00af54" stroke-linejoin="round"/>
+        <g transform="translate(20.17,24.27)">
+            <use xlink:href="#imgflag1" transform="translate(0,0)"/>
+        </g>
+        <text class="st112">
+            <tspan   x="47" y="41.167" textLength="160">iOS编译流程</tspan>
+        </text>
+    </g>
+    <symbol id="imgflag1">
+        <image xlink:href="data:image/png;base64,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" height="16" width="16"/>
+    </symbol>
+    <g id="114" ed:width="128" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,182.67)">
+        <path d="M4,0L124,0C126.7,0,128,1.3,128,4L128,36C128,38.7,126.7,40,124,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="90">四个阶段：</tspan>
+        </text>
+    </g>
+    <g id="116" ed:width="201.765625" ed:height="83.5" ed:parentid="114" transform="matrix(1,0,0,1,160.63,232.42)">
+        <path d="M0,83.5L201.8,83.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="184">1. 预处理（preprocessing）</tspan>
+            <tspan   x="9" y="35.65" textLength="154">2. 编译（compliation）</tspan>
+            <tspan   x="9" y="55.65" textLength="137">3. 汇编（assembly）</tspan>
+            <tspan   x="9" y="75.65" textLength="120">4. 链接（linking）</tspan>
+        </text>
+    </g>
+    <g id="118" ed:width="164" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,348.92)">
+        <path d="M4,0L160,0C162.7,0,164,1.3,164,4L164,36C164,38.7,162.7,40,160,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="126">细分七个阶段：</tspan>
+        </text>
+    </g>
+    <g id="120" ed:width="119.6875" ed:height="143.5" ed:parentid="118" transform="matrix(1,0,0,1,160.63,398.67)">
+        <path d="M0,143.5L119.7,143.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="60">1. 预处理</tspan>
+            <tspan   x="9" y="35.65" textLength="74">2. 词法分析</tspan>
+            <tspan   x="9" y="55.65" textLength="74">3. 语法分析</tspan>
+            <tspan   x="9" y="75.65" textLength="102">4. 生成中间代码</tspan>
+            <tspan   x="9" y="95.65" textLength="102">5. 生成目标代码</tspan>
+            <tspan   x="9" y="115.65" textLength="46">6. 汇编</tspan>
+            <tspan   x="9" y="135.65" textLength="46">7. 链接</tspan>
+        </text>
+    </g>
+    <g id="122" ed:width="74" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,575.17)">
+        <path fill="#ff6f00" d="M4,0L70,0C72.7,0,74,1.3,74,4L74,36C74,38.7,72.7,40,70,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="36">流程</tspan>
+        </text>
+    </g>
+    <g id="124" ed:width="60" ed:height="23.5" ed:parentid="122" transform="matrix(1,0,0,1,160.63,624.92)">
+        <path d="M0,23.5L60,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="42">源文件</tspan>
+        </text>
+    </g>
+    <g id="126" ed:width="88" ed:height="23.5" ed:layout="rightmap" ed:parentid="122" transform="matrix(1,0,0,1,160.63,673.17)">
+        <path d="M0,23.5L88,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="70">预处理阶段</tspan>
+        </text>
+    </g>
+    <g id="128" ed:width="60" ed:height="23.5" ed:layout="rightmap" ed:parentid="126" transform="matrix(1,0,0,1,275.63,658.17)">
+        <path d="M0,23.5L60,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="42">宏替换</tspan>
+        </text>
+    </g>
+    <g id="130" ed:width="88" ed:height="23.5" ed:layout="rightmap" ed:parentid="126" transform="matrix(1,0,0,1,275.63,688.17)">
+        <path d="M0,23.5L88,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="70">导入头文件</tspan>
+        </text>
+    </g>
+    <g id="132" ed:width="88" ed:height="23.5" ed:layout="rightmap" ed:parentid="122" transform="matrix(1,0,0,1,160.63,741.42)">
+        <path d="M0,23.5L88,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="70">编译阶段：</tspan>
+        </text>
+    </g>
+    <g id="134" ed:width="148.15625" ed:height="43.5" ed:layout="rightmap" ed:parentid="132" transform="matrix(1,0,0,1,275.63,721.42)">
+        <path d="M0,43.5L148.2,43.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="125">【生成中间代码IR】</tspan>
+            <tspan   x="9" y="35.65" textLength="130">【.ll 或者 .bc 文件】</tspan>
+        </text>
+    </g>
+    <g id="136" ed:width="74" ed:height="23.5" ed:layout="rightmap" ed:parentid="134" transform="matrix(1,0,0,1,450.79,726.42)">
+        <path d="M0,23.5L74,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="56">词法分析</tspan>
+        </text>
+    </g>
+    <g id="138" ed:width="74" ed:height="23.5" ed:layout="rightmap" ed:parentid="134" transform="matrix(1,0,0,1,450.79,756.42)">
+        <path d="M0,23.5L74,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="56">语法分析</tspan>
+        </text>
+    </g>
+    <g id="140" ed:width="60" ed:height="23.5" ed:layout="rightmap" ed:parentid="122" transform="matrix(1,0,0,1,160.63,789.67)">
+        <path d="M0,23.5L60,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="42">后端：</tspan>
+        </text>
+    </g>
+    <g id="142" ed:width="122.390625" ed:height="23.5" ed:layout="rightmap" ed:parentid="140" transform="matrix(1,0,0,1,247.63,789.67)">
+        <path d="M0,23.5L122.4,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="104">【生成 .s 文件】</tspan>
+        </text>
+    </g>
+    <g id="144" ed:width="102" ed:height="23.5" ed:layout="rightmap" ed:parentid="122" transform="matrix(1,0,0,1,160.63,822.92)">
+        <path d="M0,23.5L102,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="84">生成目标文件</tspan>
+        </text>
+    </g>
+    <g id="146" ed:width="151.859375" ed:height="23.5" ed:layout="rightmap" ed:parentid="144" transform="matrix(1,0,0,1,289.63,822.92)">
+        <path d="M0,23.5L151.9,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="134">【生成 .o 目标文件】</tspan>
+        </text>
+    </g>
+    <g id="148" ed:width="46" ed:height="23.5" ed:layout="rightmap" ed:parentid="122" transform="matrix(1,0,0,1,160.63,871.17)">
+        <path d="M0,23.5L46,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="28">链接</tspan>
+        </text>
+    </g>
+    <g id="150" ed:width="224.640625" ed:height="23.5" ed:layout="rightmap" ed:parentid="148" transform="matrix(1,0,0,1,233.63,871.17)">
+        <path d="M0,23.5L224.6,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="207">【.o 文件与 .dyld, .a 文件链接】</tspan>
+        </text>
+    </g>
+    <g id="152" ed:width="60" ed:height="23.5" ed:layout="rightmap" ed:parentid="150" transform="matrix(1,0,0,1,485.27,856.17)">
+        <path d="M0,23.5L60,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="42">静态库</tspan>
+        </text>
+    </g>
+    <g id="154" ed:width="60" ed:height="23.5" ed:layout="rightmap" ed:parentid="150" transform="matrix(1,0,0,1,485.27,886.17)">
+        <path d="M0,23.5L60,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="42">动态库</tspan>
+        </text>
+    </g>
+    <g id="156" ed:width="46" ed:height="23.5" ed:layout="rightmap" ed:parentid="122" transform="matrix(1,0,0,1,160.63,919.42)">
+        <path d="M0,23.5L46,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="28">绑定</tspan>
+        </text>
+    </g>
+    <g id="158" ed:width="178.15625" ed:height="23.5" ed:layout="rightmap" ed:parentid="156" transform="matrix(1,0,0,1,233.63,919.42)">
+        <path d="M0,23.5L178.2,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="160">生成 mach-o 可执行文件</tspan>
+        </text>
+    </g>
+    <g id="160" ed:width="121.375" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,975.92)">
+        <path d="M4,0L117.4,0C120.1,0,121.4,1.3,121.4,4L121.4,36C121.4,38.7,120.1,40,117.4,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="83">流程结构1</tspan>
+        </text>
+    </g>
+    <g id="162" ed:width="46" ed:height="23.5" ed:layout="rightmap" ed:parentid="160" transform="matrix(1,0,0,1,160.63,1025.67)">
+        <path d="M0,23.5L46,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="28">源码</tspan>
+        </text>
+    </g>
+    <g id="164" ed:width="74" ed:height="23.5" ed:layout="rightmap" ed:parentid="162" transform="matrix(1,0,0,1,233.63,1025.67)">
+        <path d="M0,23.5L74,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="56">前端编译</tspan>
+        </text>
+    </g>
+    <g id="166" ed:width="86.875" ed:height="23.5" ed:layout="rightmap" ed:parentid="164" transform="matrix(1,0,0,1,334.63,1025.67)">
+        <path d="M0,23.5L86.9,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="69">中间产物IR</tspan>
+        </text>
+    </g>
+    <g id="168" ed:width="74" ed:height="23.5" ed:layout="rightmap" ed:parentid="166" transform="matrix(1,0,0,1,448.51,1025.67)">
+        <path d="M0,23.5L74,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="56">后端编译</tspan>
+        </text>
+    </g>
+    <g id="170" ed:width="74" ed:height="23.5" ed:layout="rightmap" ed:parentid="168" transform="matrix(1,0,0,1,549.51,1025.67)">
+        <path d="M0,23.5L74,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="56">执行文件</tspan>
+        </text>
+    </g>
+    <g id="172" ed:width="121.375" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,1082.17)">
+        <path d="M4,0L117.4,0C120.1,0,121.4,1.3,121.4,4L121.4,36C121.4,38.7,120.1,40,117.4,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="83">流程结构2</tspan>
+        </text>
+    </g>
+    <g id="174" ed:width="102.765625" ed:height="40.5" ed:layout="rightmap" ed:parentid="172" transform="matrix(1,0,0,1,160.63,1134.92)">
+        <path d="M0,40.5L102.8,40.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="85">Source Code</tspan>
+            <tspan   x="9" y="32.65" textLength="32">源码 </tspan>
+        </text>
+    </g>
+    <g id="176" ed:width="79.015625" ed:height="40.5" ed:layout="rightmap" ed:parentid="174" transform="matrix(1,0,0,1,290.4,1134.92)">
+        <path d="M0,40.5L79,40.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="61">Frontend</tspan>
+            <tspan   x="9" y="32.65" textLength="28">前端</tspan>
+        </text>
+    </g>
+    <g id="178" ed:width="85.59375" ed:height="40.5" ed:layout="rightmap" ed:parentid="176" transform="matrix(1,0,0,1,396.41,1134.92)">
+        <path d="M0,40.5L85.6,40.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="68">Optimizer</tspan>
+            <tspan   x="9" y="32.65" textLength="42">优化器</tspan>
+        </text>
+    </g>
+    <g id="180" ed:width="194.65625" ed:height="43.5" ed:layout="rightmap" ed:parentid="178" transform="matrix(1,0,0,1,509.01,1131.92)">
+        <path d="M0,43.5L194.7,43.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="89">Backend 后端</tspan>
+            <tspan   x="9" y="35.65" textLength="177">代码生成器 CodeGenerator</tspan>
+        </text>
+    </g>
+    <g id="182" ed:width="113.421875" ed:height="40.5" ed:layout="rightmap" ed:parentid="180" transform="matrix(1,0,0,1,730.66,1134.92)">
+        <path d="M0,40.5L113.4,40.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="95">Machine Code</tspan>
+            <tspan   x="9" y="32.65" textLength="42">机器码</tspan>
+        </text>
+    </g>
+    <g id="184" ed:width="110" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,1208.42)">
+        <path d="M4,0L106,0C108.7,0,110,1.3,110,4L110,36C110,38.7,108.7,40,106,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="72">细分流程</tspan>
+        </text>
+    </g>
+    <g id="186" ed:width="144" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,1258.17)">
+        <path d="M0,23.5L144,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="126">创建项目，编写代码</tspan>
+        </text>
+    </g>
+    <g id="188" ed:width="111.4375" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,1291.42)">
+        <path d="M0,23.5L111.4,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="93">前端 Frontend</tspan>
+        </text>
+    </g>
+    <g id="190" ed:width="514" ed:height="123.5" ed:parentid="188" transform="matrix(1,0,0,1,214.53,1324.67)">
+        <path d="M0,123.5L514,123.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="495">编译器前端的`任务`是`解析源代码`（编译阶段），它会进行 `词法分析、语法</tspan>
+            <tspan   x="9" y="35.65" textLength="423">分析、语义分析、检查源代码是否存在错误`，然后构建`抽象语法树</tspan>
+            <tspan   x="9" y="55.65" textLength="455">`（Abstract Syntax Tree `AST`），`LLVM`的前端还会生成`中间代码</tspan>
+            <tspan   x="9" y="75.65" textLength="497">`（intermediate representation，简称`IR`），可以理解为`llvm`是`编译器 </tspan>
+            <tspan   x="9" y="95.65" textLength="494">+ 优化器`， 接收的是`IR`中间代码，输出的还是`IR`，给**后端Backend**，</tspan>
+            <tspan   x="9" y="115.65" textLength="168">经过后端翻译成目标指令集</tspan>
+        </text>
+    </g>
+    <g id="192" ed:width="132.015625" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,1457.92)">
+        <path d="M0,23.5L132,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="114">优化器 Optimizer</tspan>
+        </text>
+    </g>
+    <g id="194" ed:width="452" ed:height="23.5" ed:parentid="192" transform="matrix(1,0,0,1,214.53,1491.17)">
+        <path d="M0,23.5L452,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="434">优化器负责进行各种优化，改善代码的运行时间，例如消除冗余计算等</tspan>
+        </text>
+    </g>
+    <g id="196" ed:width="476.953125" ed:height="23.5" ed:parentid="192" transform="matrix(1,0,0,1,214.53,1524.42)">
+        <path d="M0,23.5L477,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="459">IR文件在OC中是可以进行优化的，Optimization Level 设置不同优化级别</tspan>
+        </text>
+    </g>
+    <g id="198" ed:width="386.15625" ed:height="20.5" ed:parentid="196" transform="matrix(1,0,0,1,268.43,1557.67)">
+        <path d="M0,20.5L386.2,20.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="368">clang -Os -S -fobjc-arc -emit-llvm main.m -o main.ll</tspan>
+        </text>
+    </g>
+    <g id="200" ed:width="68.421875" ed:height="20.5" ed:parentid="192" transform="matrix(1,0,0,1,214.53,1587.92)">
+        <path d="M0,20.5L68.4,20.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="50">bitcode</tspan>
+        </text>
+    </g>
+    <g id="202" ed:width="514" ed:height="43.5" ed:parentid="200" transform="matrix(1,0,0,1,267.64,1618.17)">
+        <path d="M0,43.5L514,43.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="497">开启`bitcode`，苹果会做进一步优化，生成`.bc`的中间代码，我们通过优化后</tspan>
+            <tspan   x="9" y="35.65" textLength="148">的IR代码生成`.bc`代码</tspan>
+        </text>
+    </g>
+    <g id="204" ed:width="283.015625" ed:height="20.5" ed:parentid="200" transform="matrix(1,0,0,1,267.64,1671.42)">
+        <path d="M0,20.5L283,20.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="265">clang -emit-llvm -c main.ll -o main.bc</tspan>
+        </text>
+    </g>
+    <g id="206" ed:width="106.796875" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,1701.67)">
+        <path d="M0,23.5L106.8,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="89">后端 Backend</tspan>
+        </text>
+    </g>
+    <g id="208" ed:width="199.078125" ed:height="23.5" ed:parentid="206" transform="matrix(1,0,0,1,214.53,1734.92)">
+        <path d="M0,23.5L199.1,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="181">代码生成器 Code Generator</tspan>
+        </text>
+    </g>
+    <g id="210" ed:width="511.1875" ed:height="23.5" ed:parentid="206" transform="matrix(1,0,0,1,214.53,1768.17)">
+        <path d="M0,23.5L511.2,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="493">将`代码映射到目标指令集，生成机器代码`，并且进行机器代码相关的代码优化</tspan>
+        </text>
+    </g>
+    <g id="212" ed:width="323.265625" ed:height="23.5" ed:parentid="206" transform="matrix(1,0,0,1,214.53,1801.42)">
+        <path d="M0,23.5L323.3,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="305">我们通过最终的`.bc或者.ll代码`生成`汇编代码`</tspan>
+        </text>
+    </g>
+    <g id="214" ed:width="200" ed:height="23.5" ed:parentid="206" transform="matrix(1,0,0,1,214.53,1834.67)">
+        <path d="M0,23.5L200,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="182">生成汇编代码也可以进行优化</tspan>
+        </text>
+    </g>
+    <g id="216" ed:width="306.046875" ed:height="20.5" ed:parentid="214" transform="matrix(1,0,0,1,268.43,1867.92)">
+        <path d="M0,20.5L306,20.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="288">clang -Os -S -fobjc-arc main.m -o main.s</tspan>
+        </text>
+    </g>
+    <g id="218" ed:width="271.65625" ed:height="23.5" ed:parentid="206" transform="matrix(1,0,0,1,214.53,1898.17)">
+        <path d="M0,23.5L271.7,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="254">生成的`xxx.s`文件的格式为`汇编代码`</tspan>
+        </text>
+    </g>
+    <g id="220" ed:width="102" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,1931.42)">
+        <path d="M0,23.5L102,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="84">生成目标文件</tspan>
+        </text>
+    </g>
+    <g id="222" ed:width="514" ed:height="43.5" ed:parentid="220" transform="matrix(1,0,0,1,214.53,1964.67)">
+        <path d="M0,43.5L514,43.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="496">汇编器以`汇编代码作为插入`，将汇编代码`转换为机器代码`，最后输出目标文</tspan>
+            <tspan   x="9" y="35.65" textLength="14">件</tspan>
+        </text>
+    </g>
+    <g id="224" ed:width="271.3125" ed:height="20.5" ed:parentid="220" transform="matrix(1,0,0,1,214.53,2017.92)">
+        <path d="M0,20.5L271.3,20.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="253">clang -fmodules -c main.s -o main.o</tspan>
+        </text>
+    </g>
+    <g id="226" ed:width="46" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,2048.17)">
+        <path d="M0,23.5L46,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="28">链接</tspan>
+        </text>
+    </g>
+    <g id="228" ed:width="298" ed:height="23.5" ed:parentid="226" transform="matrix(1,0,0,1,202.53,2081.42)">
+        <path d="M0,23.5L298,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="280">链接需要的动态库和静态库，生成可执行文件</tspan>
+        </text>
+    </g>
+    <g id="230" ed:width="186" ed:height="23.5" ed:parentid="228" transform="matrix(1,0,0,1,256.43,2114.67)">
+        <path d="M0,23.5L186,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="168">静态库会和可执行文件合并</tspan>
+        </text>
+    </g>
+    <g id="232" ed:width="345.765625" ed:height="23.5" ed:parentid="228" transform="matrix(1,0,0,1,256.43,2147.92)">
+        <path d="M0,23.5L345.8,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="328">动态库是独立的（iOS会复制一份和app打包在一起）</tspan>
+        </text>
+    </g>
+    <g id="234" ed:width="495.0625" ed:height="23.5" ed:parentid="226" transform="matrix(1,0,0,1,202.53,2181.17)">
+        <path d="M0,23.5L495.1,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="477">连接器把编译生成的`.o文件和 .dyld .a`文件链接，生成一个`mach-o文件`</tspan>
+        </text>
+    </g>
+    <g id="236" ed:width="164.328125" ed:height="20.5" ed:parentid="234" transform="matrix(1,0,0,1,256.43,2214.42)">
+        <path d="M0,20.5L164.3,20.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="146">clang main.o -o main</tspan>
+        </text>
+    </g>
+    <g id="238" ed:width="247.515625" ed:height="23.5" ed:parentid="234" transform="matrix(1,0,0,1,256.43,2244.67)">
+        <path d="M0,23.5L247.5,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="230">最终生成的mian文件就是可执行文件</tspan>
+        </text>
+    </g>
+    <g id="240" ed:width="46" ed:height="23.5" ed:parentid="184" transform="matrix(1,0,0,1,160.63,2277.92)">
+        <path d="M0,23.5L46,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="28">绑定</tspan>
+        </text>
+    </g>
+    <g id="242" ed:width="421.3125" ed:height="23.5" ed:parentid="240" transform="matrix(1,0,0,1,202.53,2311.17)">
+        <path d="M0,23.5L421.3,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="403">绑定主要是通过不同的架构，生成对应的mach-o格式可执行文件</tspan>
+        </text>
+    </g>
+    <g id="244" ed:width="450.203125" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,2367.67)">
+        <path d="M4,0L446.2,0C448.9,0,450.2,1.3,450.2,4L450.2,36C450.2,38.7,448.9,40,446.2,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="412">iOS 采用 Clang（发音为/ˈklæŋ/） 作为前端编译器</tspan>
+        </text>
+    </g>
+    <g id="246" ed:width="296.546875" ed:height="23.5" ed:parentid="244" transform="matrix(1,0,0,1,160.63,2417.42)">
+        <path d="M0,23.5L296.5,23.5" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st114">
+            <tspan   x="9" y="15.65" textLength="279">Clang属于整个LLVM架构中的 `编译器前端`</tspan>
+        </text>
+    </g>
+    <g id="248" ed:width="286.546875" ed:height="40" ed:parentid="112" transform="matrix(1,0,0,1,106.73,2473.92)">
+        <path d="M4,0L282.5,0C285.2,0,286.5,1.3,286.5,4L286.5,36C286.5,38.7,285.2,40,282.5,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="none" stroke="#4caf50" stroke-linejoin="round"/>
+        <text class="st113">
+            <tspan   x="19" y="24" textLength="249">LLVM的设计是`前后端分离`的</tspan>
+        </text>
+    </g>
+</svg>
+</div>
+      </div>
+    </div>
+  </body>
+</html>

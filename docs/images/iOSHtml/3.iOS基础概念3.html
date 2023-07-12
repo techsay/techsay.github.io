@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>iOS开发-上篇-2022</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            width: auto;
+            height: auto;
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            overflow-y: auto;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            overflow-x: scroll;
+            min-width: 0px;
+            margin: 0 10px;
+            overflow: visible;
+            position: relative;
+        }
+        #nav-thumbs{
+            overflow-y: scroll;
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+        }
+        #svg-container >svg{
+            overflow: visible;
+            display: block;
+            margin:5px auto;
+            margin-bottom: 5px;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            text-decoration: none;
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #08a1ef;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+            #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+            #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+            #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="main-content">
+        <div id="svg-container"><svg ed:name="iOS基础概念3" height="5932" xmlns:ed="https://www.w3.org/xml/2017/SVGExtensions/" viewBox="0 0 754 5868" xmlns="http://www.w3.org/2000/svg" ed:hSpacing="30" ed:vSpacing="30" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="754" id="page6" preserveAspectRadio="xMinYMin meet">
+    <style type="text/css"><![CDATA[
+g[ed\:togtopicid],g[ed\:hyperlink],g[ed\:comment],g[ed\:note] {cursor:pointer;}
+g[id] {-moz-user-select: none;-ms-user-select: none;user-select: none;}
+svg text::selection,svg tspan::selection{background-color: #4285f4;color: #ffffff;fill: #ffffff;}
+.st36 {fill:#141414;font-family:Open Sans;font-size:10.5pt}
+.st34 {fill:#4caf50;font-family:Open Sans;font-size:12pt;font-weight:bold}
+.st35 {fill:#ffffff;font-family:Open Sans;font-size:13.5pt}
+]]></style>
+    <defs/>
+    <rect y="0" height="5932" x="0" fill="#ffffff" width="754"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L523,0C528.4,0,531,2.6,531,8L531,472C531,477.4,528.4,480,523,480L8,480C2.6,480,0,477.4,0,472L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="113" fill="#4caf50" stroke="#4caf50" id="111" transform="matrix(1,0,0,1,155.3,210.75)" fill-opacity="0.2" ed:parentid="113" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L238.2,0C243.6,0,246.2,2.6,246.2,8L246.2,282.8C246.2,288.1,243.6,290.7,238.2,290.7L8,290.8C2.6,290.8,0,288.1,0,282.8L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="117,119,119" fill="#4caf50" stroke="#4caf50" id="112" transform="matrix(1,0,0,1,155.3,754.25)" fill-opacity="0.2" ed:parentid="117" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L307,0C312.4,0,315,2.6,315,8L315,47C315,52.4,312.4,55,307,55L8,55C2.6,55,0,52.4,0,47L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="136" fill="#4caf50" stroke="#4caf50" id="125" transform="matrix(1,0,0,1,155.3,1345)" fill-opacity="0.2" ed:parentid="136" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L237,0C242.4,0,245,2.6,245,8L245,47C245,52.4,242.4,55,237,55L8,55C2.6,55,0,52.4,0,47L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="138" fill="#4caf50" stroke="#4caf50" id="126" transform="matrix(1,0,0,1,155.3,1409.75)" fill-opacity="0.2" ed:parentid="138" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L195,0C200.4,0,203,2.6,203,8L203,47C203,52.4,200.4,55,195,55L8,55C2.6,55,0,52.4,0,47L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="140" fill="#4caf50" stroke="#4caf50" id="127" transform="matrix(1,0,0,1,155.3,1474.5)" fill-opacity="0.2" ed:parentid="140" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L287,0C292.4,0,295,2.6,295,8L295,27C295,32.4,292.4,35,287,35L8,35C2.6,35,0,32.4,0,27L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="134" fill="#4caf50" stroke="#4caf50" id="133" transform="matrix(1,0,0,1,209.2,1300.25)" fill-opacity="0.2" ed:parentid="134" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L338.1,0C343.5,0,346.1,2.6,346.1,8L346.1,118C346.1,123.4,343.5,126,338.1,126L8,126C2.6,126,0,123.4,0,118L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="174" fill="#4caf50" stroke="#4caf50" id="173" transform="matrix(1,0,0,1,209.2,2225)" fill-opacity="0.2" ed:parentid="174" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L388.3,0C393.7,0,396.3,2.6,396.3,8L396.3,104C396.3,109.4,393.7,112,388.3,112L8,112C2.6,112,0,109.4,0,104L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="179" fill="#4caf50" stroke="#4caf50" id="178" transform="matrix(1,0,0,1,209.2,2411.5)" fill-opacity="0.2" ed:parentid="179" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L355.3,0C360.7,0,363.3,2.6,363.3,8L363.3,118C363.3,123.4,360.7,126,355.3,126L8,126C2.6,126,0,123.4,0,118L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="184" fill="#4caf50" stroke="#4caf50" id="183" transform="matrix(1,0,0,1,209.2,2584)" fill-opacity="0.2" ed:parentid="184" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L523,0C528.4,0,531,2.6,531,8L531,2515C531,2520.4,528.4,2523,523,2523L8,2523C2.6,2523,0,2520.4,0,2515L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="209" fill="#4caf50" stroke="#4caf50" id="208" transform="matrix(1,0,0,1,201.37,3122.25)" fill-opacity="0.2" ed:parentid="209" stroke-linejoin="round"/>
+    <path stroke-width="2" ed:type="boundary" d="M8,0L279,0C284.4,0,287,2.6,287,8L287,30C287,35.4,284.4,38,279,38L8,38C2.6,38,0,35.4,0,30L0,8C0,2.6,2.6,0,8,0z" stroke-dasharray="5,2" ed:idlist="199" fill="#4caf50" stroke="#4caf50" id="198" transform="matrix(1,0,0,1,263.1,2962.25)" fill-opacity="0.2" ed:parentid="199" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-26.5L-25.2,20.5C-25.2,23.8,-22.5,26.5,-19.2,26.5L25.2,26.5" ed:tosuperid="109" stroke="#4caf50" fill="none" id="110" transform="matrix(1,0,0,1,83.2,154.5)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-124.9L-9.5,118.9C-9.5,122.2,-6.8,124.9,-3.5,124.9L9.5,124.9" ed:tosuperid="113" stroke="#4caf50" fill="none" id="114" transform="matrix(1,0,0,1,152.85,325.88)" ed:parentid="109" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-260.8L-9.5,254.8C-9.5,258.1,-6.8,260.8,-3.5,260.8L9.5,260.8" ed:tosuperid="115" stroke="#4caf50" fill="none" id="116" transform="matrix(1,0,0,1,152.85,461.75)" ed:parentid="109" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-310.9L-9.5,304.9C-9.5,308.2,-6.8,310.9,-3.5,310.9L9.5,310.9" ed:tosuperid="117" stroke="#4caf50" fill="none" id="118" transform="matrix(1,0,0,1,152.85,511.88)" ed:parentid="109" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-40.9L-9.5,34.9C-9.5,38.2,-6.8,40.9,-3.5,40.9L9.5,40.9" ed:tosuperid="119" stroke="#4caf50" fill="none" id="120" transform="matrix(1,0,0,1,206.75,925.13)" ed:parentid="117" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-492.5L-25.2,486.5C-25.2,489.8,-22.5,492.5,-19.2,492.5L25.2,492.5" ed:tosuperid="121" stroke="#4caf50" fill="none" id="122" transform="matrix(1,0,0,1,83.2,620.5)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-536.5L-25.2,530.5C-25.2,533.8,-22.5,536.5,-19.2,536.5L25.2,536.5" ed:tosuperid="123" stroke="#4caf50" fill="none" id="124" transform="matrix(1,0,0,1,83.2,664.5)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" ed:tosuperid="128" stroke="#4caf50" fill="none" id="129" transform="matrix(1,0,0,1,152.85,1231.88)" ed:parentid="123" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-28.3L-9.5,22.3C-9.5,25.6,-6.8,28.3,-3.5,28.3L9.5,28.3" ed:tosuperid="130" stroke="#4caf50" fill="none" id="131" transform="matrix(1,0,0,1,152.85,1249.25)" ed:parentid="123" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-13.6L-9.5,7.6C-9.5,10.9,-6.8,13.6,-3.5,13.6L9.5,13.6" ed:tosuperid="134" stroke="#4caf50" fill="none" id="135" transform="matrix(1,0,0,1,206.75,1304.13)" ed:parentid="130" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-75.8L-9.5,69.8C-9.5,73.1,-6.8,75.8,-3.5,75.8L9.5,75.8" ed:tosuperid="136" stroke="#4caf50" fill="none" id="137" transform="matrix(1,0,0,1,152.85,1296.75)" ed:parentid="123" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-108.1L-9.5,102.1C-9.5,105.4,-6.8,108.1,-3.5,108.1L9.5,108.1" ed:tosuperid="138" stroke="#4caf50" fill="none" id="139" transform="matrix(1,0,0,1,152.85,1329.13)" ed:parentid="123" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-140.5L-9.5,134.5C-9.5,137.8,-6.8,140.5,-3.5,140.5L9.5,140.5" ed:tosuperid="140" stroke="#4caf50" fill="none" id="141" transform="matrix(1,0,0,1,152.85,1361.5)" ed:parentid="123" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-165.1L-9.5,159.1C-9.5,162.4,-6.8,165.1,-3.5,165.1L9.5,165.1" ed:tosuperid="142" stroke="#4caf50" fill="none" id="143" transform="matrix(1,0,0,1,152.85,1386.13)" ed:parentid="123" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" ed:tosuperid="144" stroke="#4caf50" fill="none" id="145" transform="matrix(1,0,0,1,196.25,1574.13)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" ed:tosuperid="146" stroke="#4caf50" fill="none" id="147" transform="matrix(1,0,0,1,196.25,1591)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" ed:tosuperid="148" stroke="#4caf50" fill="none" id="149" transform="matrix(1,0,0,1,196.25,1607.88)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-66.5L-9.5,60.5C-9.5,63.8,-6.8,66.5,-3.5,66.5L9.5,66.5" ed:tosuperid="150" stroke="#4caf50" fill="none" id="151" transform="matrix(1,0,0,1,196.25,1629.75)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-88.4L-9.5,82.4C-9.5,85.7,-6.8,88.4,-3.5,88.4L9.5,88.4" ed:tosuperid="152" stroke="#4caf50" fill="none" id="153" transform="matrix(1,0,0,1,196.25,1651.63)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-110.3L-9.5,104.3C-9.5,107.6,-6.8,110.3,-3.5,110.3L9.5,110.3" ed:tosuperid="154" stroke="#4caf50" fill="none" id="155" transform="matrix(1,0,0,1,196.25,1673.5)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-132.1L-9.5,126.1C-9.5,129.4,-6.8,132.1,-3.5,132.1L9.5,132.1" ed:tosuperid="156" stroke="#4caf50" fill="none" id="157" transform="matrix(1,0,0,1,196.25,1695.38)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-154L-9.5,148C-9.5,151.3,-6.8,154,-3.5,154L9.5,154" ed:tosuperid="158" stroke="#4caf50" fill="none" id="159" transform="matrix(1,0,0,1,196.25,1717.25)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-175.9L-9.5,169.9C-9.5,173.2,-6.8,175.9,-3.5,175.9L9.5,175.9" ed:tosuperid="160" stroke="#4caf50" fill="none" id="161" transform="matrix(1,0,0,1,196.25,1739.13)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-202.8L-9.5,196.8C-9.5,200.1,-6.8,202.8,-3.5,202.8L9.5,202.8" ed:tosuperid="162" stroke="#4caf50" fill="none" id="163" transform="matrix(1,0,0,1,196.25,1766)" ed:parentid="142" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-963.1L-25.2,957.1C-25.2,960.4,-22.5,963.1,-19.2,963.1L25.2,963.1" ed:tosuperid="164" stroke="#4caf50" fill="none" id="165" transform="matrix(1,0,0,1,83.2,1091.13)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" ed:tosuperid="167" stroke="#4caf50" fill="none" id="168" transform="matrix(1,0,0,1,152.85,2085.63)" ed:parentid="164" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-1016.8L-25.2,1010.8C-25.2,1014.1,-22.5,1016.8,-19.2,1016.8L25.2,1016.8" ed:tosuperid="169" stroke="#4caf50" fill="none" id="170" transform="matrix(1,0,0,1,83.2,1144.75)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" ed:tosuperid="171" stroke="#4caf50" fill="none" id="172" transform="matrix(1,0,0,1,152.85,2192.38)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-36.4L-9.5,30.4C-9.5,33.7,-6.8,36.4,-3.5,36.4L9.5,36.4" ed:tosuperid="174" stroke="#4caf50" fill="none" id="175" transform="matrix(1,0,0,1,206.75,2251.63)" ed:parentid="171" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-99.9L-9.5,93.9C-9.5,97.2,-6.8,99.9,-3.5,99.9L9.5,99.9" ed:tosuperid="176" stroke="#4caf50" fill="none" id="177" transform="matrix(1,0,0,1,152.85,2281.38)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-32.9L-9.5,26.9C-9.5,30.2,-6.8,32.9,-3.5,32.9L9.5,32.9" ed:tosuperid="179" stroke="#4caf50" fill="none" id="180" transform="matrix(1,0,0,1,206.75,2434.63)" ed:parentid="176" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-186.1L-9.5,180.1C-9.5,183.4,-6.8,186.1,-3.5,186.1L9.5,186.1" ed:tosuperid="181" stroke="#4caf50" fill="none" id="182" transform="matrix(1,0,0,1,152.85,2367.63)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-36.4L-9.5,30.4C-9.5,33.7,-6.8,36.4,-3.5,36.4L9.5,36.4" ed:tosuperid="184" stroke="#4caf50" fill="none" id="185" transform="matrix(1,0,0,1,206.75,2610.63)" ed:parentid="181" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-280.1L-9.5,274.1C-9.5,277.4,-6.8,280.1,-3.5,280.1L9.5,280.1" ed:tosuperid="186" stroke="#4caf50" fill="none" id="187" transform="matrix(1,0,0,1,152.85,2461.63)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-302L-9.5,296C-9.5,299.3,-6.8,302,-3.5,302L9.5,302" ed:tosuperid="188" stroke="#4caf50" fill="none" id="189" transform="matrix(1,0,0,1,152.85,2483.5)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" ed:tosuperid="190" stroke="#4caf50" fill="none" id="191" transform="matrix(1,0,0,1,206.75,2808.38)" ed:parentid="188" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-335.8L-9.5,329.8C-9.5,333.1,-6.8,335.8,-3.5,335.8L9.5,335.8" ed:tosuperid="192" stroke="#4caf50" fill="none" id="193" transform="matrix(1,0,0,1,152.85,2517.25)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" ed:tosuperid="194" stroke="#4caf50" fill="none" id="195" transform="matrix(1,0,0,1,206.75,2875.88)" ed:parentid="192" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-32.8L-9.5,26.8C-9.5,30.1,-6.8,32.8,-3.5,32.8L9.5,32.8" ed:tosuperid="196" stroke="#4caf50" fill="none" id="197" transform="matrix(1,0,0,1,206.75,2897.75)" ed:parentid="192" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-14.4L-9.5,8.4C-9.5,11.7,-6.8,14.4,-3.5,14.4L9.5,14.4" ed:tosuperid="199" stroke="#4caf50" fill="none" id="200" transform="matrix(1,0,0,1,260.65,2966.88)" ed:parentid="196" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-421L-9.5,415C-9.5,418.3,-6.8,421,-3.5,421L9.5,421" ed:tosuperid="201" stroke="#4caf50" fill="none" id="202" transform="matrix(1,0,0,1,152.85,2602.5)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-13.4L-9.5,7.4C-9.5,10.7,-6.8,13.4,-3.5,13.4L9.5,13.4" ed:tosuperid="204" stroke="#4caf50" fill="none" id="205" transform="matrix(1,0,0,1,206.75,3050.38)" ed:parentid="201" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-460L-9.5,454C-9.5,457.3,-6.8,460,-3.5,460L9.5,460" ed:tosuperid="206" stroke="#4caf50" fill="none" id="207" transform="matrix(1,0,0,1,152.85,2641.5)" ed:parentid="169" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-635.6L-9.5,629.6C-9.5,632.9,-6.8,635.6,-3.5,635.6L9.5,635.6" ed:tosuperid="209" stroke="#4caf50" fill="none" id="210" transform="matrix(1,0,0,1,198.92,3748.13)" ed:parentid="206" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-2785.1L-25.2,2779.1C-25.2,2782.4,-22.5,2785.1,-19.2,2785.1L25.2,2785.1" ed:tosuperid="211" stroke="#4caf50" fill="none" id="212" transform="matrix(1,0,0,1,83.2,2913.13)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-25.2,-2821.6L-25.2,2815.6C-25.2,2818.9,-22.5,2821.6,-19.2,2821.6L25.2,2821.6" ed:tosuperid="213" stroke="#4caf50" fill="none" id="214" transform="matrix(1,0,0,1,83.2,2949.63)" ed:parentid="107" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-11.4L-9.5,5.4C-9.5,8.7,-6.8,11.4,-3.5,11.4L9.5,11.4" ed:tosuperid="216" stroke="#4caf50" fill="none" id="217" transform="matrix(1,0,0,1,152.85,5802.63)" ed:parentid="213" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-29.3L-9.5,23.3C-9.5,26.6,-6.8,29.3,-3.5,29.3L9.5,29.3" ed:tosuperid="219" stroke="#4caf50" fill="none" id="220" transform="matrix(1,0,0,1,152.85,5820.5)" ed:parentid="213" stroke-linejoin="round"/>
+    <path stroke-width="3" stroke-linecap="round" d="M-9.5,-47.1L-9.5,41.1C-9.5,44.4,-6.8,47.1,-3.5,47.1L9.5,47.1" ed:tosuperid="222" stroke="#4caf50" fill="none" id="223" transform="matrix(1,0,0,1,152.85,5838.38)" ed:parentid="213" stroke-linejoin="round"/>
+    <g ed:width="171.0625" ed:height="53" ed:layout="righttree" id="107" transform="matrix(1,0,0,1,23,75)" ed:topictype="mainidea">
+        <path stroke-width="3" d="M4,0L167.1,0C169.8,0,171.1,1.3,171.1,4L171.1,49C171.1,51.7,169.8,53,167.1,53L4,53C1.3,53,0,51.7,0,49L0,4C0,1.3,1.3,0,4,0z" stroke="#4caf50" fill="none" stroke-linejoin="round"/>
+        <g transform="translate(21,16.6)">
+            <use transform="translate(0,0)" xlink:href="#imgflag1"/>
+        </g>
+        <text class="st34">
+            <tspan textLength="102" y="30" x="48"  >iOS基础概念3</tspan>
+        </text>
+    </g>
+    <symbol id="imgflag1">
+        <image height="16" width="16" xlink:href="data:image/png;base64,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"/>
+    </symbol>
+    <g ed:width="192.40625" ed:height="40" id="109" transform="matrix(1,0,0,1,108.4,161)" ed:parentid="107">
+        <path d="M4,0L188.4,0C191.1,0,192.4,1.3,192.4,4L192.4,36C192.4,38.7,191.1,40,188.4,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#50c3f7"/>
+        <text class="st35">
+            <tspan textLength="154" y="24" x="19"  >函数编码类型-定义</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="466" id="113" transform="matrix(1,0,0,1,162.3,217.75)" ed:parentid="109">
+        <text class="st36">
+            <tspan textLength="69" y="16" x="10"  >编码   含义</tspan>
+            <tspan textLength="64" y="36" x="10"  >c   A char</tspan>
+            <tspan textLength="58" y="53" x="10"  >i   An int</tspan>
+            <tspan textLength="70" y="70" x="10"  >s   A short</tspan>
+            <tspan textLength="61" y="87" x="10"  >l   A long</tspan>
+            <tspan textLength="370" y="104" x="10"  >l    is treated as a 32-bit quantity on 64-bit programs.</tspan>
+            <tspan textLength="101" y="121" x="10"  >q   A long long</tspan>
+            <tspan textLength="142" y="138" x="10"  >C   An unsigned char</tspan>
+            <tspan textLength="125" y="155" x="10"  >I   An unsigned int</tspan>
+            <tspan textLength="146" y="172" x="10"  >S   An unsigned short</tspan>
+            <tspan textLength="141" y="189" x="10"  >L   An unsigned long</tspan>
+            <tspan textLength="178" y="206" x="10"  >Q   An unsigned long long</tspan>
+            <tspan textLength="63" y="223" x="10"  >f   A float</tspan>
+            <tspan textLength="83" y="240" x="10"  >d   A double</tspan>
+            <tspan textLength="205" y="257" x="10"  >B   A C++ bool or a C99 _Bool</tspan>
+            <tspan textLength="63" y="274" x="10"  >v   A void</tspan>
+            <tspan textLength="195" y="291" x="10"  >*   A character string (char *)</tspan>
+            <tspan textLength="343" y="308" x="10"  >@   An object (whether statically typed or typed id)</tspan>
+            <tspan textLength="165" y="325" x="10"  >#   A class object (Class)</tspan>
+            <tspan textLength="178" y="342" x="10"  >:   A method selector (SEL)</tspan>
+            <tspan textLength="151" y="359" x="10"  >[array type]    An array</tspan>
+            <tspan textLength="189" y="376" x="10"  >{name=type...}   A structure</tspan>
+            <tspan textLength="166" y="393" x="10"  >(name=type...)   A union</tspan>
+            <tspan textLength="201" y="410" x="10"  >bnum   A bit field of num bits</tspan>
+            <tspan textLength="166" y="427" x="10"  >^type   A pointer to type</tspan>
+            <tspan textLength="493" y="444" x="10"  >?   An unknown type (among other things, this code is used for function </tspan>
+            <tspan textLength="61" y="461" x="10"  >pointers)</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="44" id="115" transform="matrix(1,0,0,1,162.3,700.5)" ed:parentid="109">
+        <text class="st36">
+            <tspan textLength="494" y="16" x="10"  >iOS提供了一个@encode指令，可以将具体的类型表示成字符串编码， 看下面代</tspan>
+            <tspan textLength="28" y="36" x="10"  >码：</tspan>
+        </text>
+    </g>
+    <g ed:width="232.1875" ed:height="123" id="117" transform="matrix(1,0,0,1,162.3,761.25)" ed:parentid="109">
+        <text class="st36">
+            <tspan textLength="187" y="16" x="10"  >NSLog(@"%s",@encode(int));</tspan>
+            <tspan textLength="200" y="33" x="10"  >NSLog(@"%s",@encode(float));</tspan>
+            <tspan textLength="199" y="50" x="10"  >NSLog(@"%s",@encode(int *));</tspan>
+            <tspan textLength="182" y="67" x="10"  >NSLog(@"%s",@encode(id));</tspan>
+            <tspan textLength="198" y="84" x="10"  >NSLog(@"%s",@encode(void));</tspan>
+            <tspan textLength="192" y="101" x="10"  >NSLog(@"%s",@encode(SEL));</tspan>
+            <tspan textLength="211" y="118" x="10"  >NSLog(@"%s",@encode(float *));</tspan>
+        </text>
+    </g>
+    <g ed:width="109.8125" ed:height="144" id="119" transform="matrix(1,0,0,1,216.2,894)" ed:parentid="117">
+        <text class="st36">
+            <tspan textLength="78" y="16" x="10"  >打印结果： i</tspan>
+            <tspan textLength="80" y="36" x="10"  >打印结果： f</tspan>
+            <tspan textLength="87" y="56" x="10"  >打印结果： ^i</tspan>
+            <tspan textLength="86" y="76" x="10"  >打印结果： @</tspan>
+            <tspan textLength="82" y="96" x="10"  >打印结果： v</tspan>
+            <tspan textLength="79" y="116" x="10"  >打印结果： :</tspan>
+            <tspan textLength="88" y="136" x="10"  >打印结果： ^f</tspan>
+        </text>
+    </g>
+    <g ed:width="79.625" ed:height="70" id="121" transform="matrix(1,0,0,1,108.4,1078)" ed:parentid="107">
+        <text class="st35">
+            <tspan textLength="42" y="36" x="19"  >----</tspan>
+        </text>
+    </g>
+    <g ed:width="156.40625" ed:height="40" id="123" transform="matrix(1,0,0,1,108.4,1181)" ed:parentid="107">
+        <path d="M4,0L152.4,0C155.1,0,156.4,1.3,156.4,4L156.4,36C156.4,38.7,155.1,40,152.4,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#ff9f00"/>
+        <text class="st35">
+            <tspan textLength="118" y="24" x="19"  >函数编码-举例</tspan>
+        </text>
+    </g>
+    <g ed:width="451.34375" ed:height="24" id="128" transform="matrix(1,0,0,1,162.3,1230.75)" ed:parentid="123">
+        <text class="st36">
+            <tspan textLength="430" y="16" x="10"  >知识点：OC方法对应的底层函数前两个是默认参数id self 和SEL cmd</tspan>
+        </text>
+    </g>
+    <g ed:width="113" ed:height="26" id="130" transform="matrix(1,0,0,1,162.3,1264.5)" ed:parentid="123">
+        <g transform="translate(9,3.1)">
+            <use transform="translate(0,0)" xlink:href="#imgflag3"/>
+        </g>
+        <text class="st36">
+            <tspan textLength="70" y="17" x="33"  >实例详解：</tspan>
+        </text>
+    </g>
+    <symbol id="imgflag3">
+        <image height="16" width="16" xlink:href="data:image/png;base64,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"/>
+    </symbol>
+    <g ed:width="281" ed:height="21" id="134" transform="matrix(1,0,0,1,216.2,1307.25)" ed:parentid="130">
+        <text class="st36">
+            <tspan textLength="260" y="16" x="10"  > - (int)test:(int)age height:(float)height</tspan>
+        </text>
+    </g>
+    <g ed:width="301" ed:height="41" id="136" transform="matrix(1,0,0,1,162.3,1352)" ed:parentid="123">
+        <text class="st36">
+            <tspan textLength="280" y="16" x="10"  >方法从左到右，返回值和参数的类型分别为：</tspan>
+            <tspan textLength="179" y="36" x="10"  >int->id->SEL->int->float</tspan>
+        </text>
+    </g>
+    <g ed:width="231" ed:height="41" id="138" transform="matrix(1,0,0,1,162.3,1416.75)" ed:parentid="123">
+        <text class="st36">
+            <tspan textLength="210" y="16" x="10"  >转换成类型编码，我猜想应该是：</tspan>
+            <tspan textLength="62" y="36" x="10"  >i-@-:-i-f</tspan>
+        </text>
+    </g>
+    <g ed:width="189" ed:height="41" id="140" transform="matrix(1,0,0,1,162.3,1481.5)" ed:parentid="123">
+        <text class="st36">
+            <tspan textLength="168" y="16" x="10"  >而最终系统是这样表示的：</tspan>
+            <tspan textLength="100" y="36" x="10"  >i24@0:8i16f20</tspan>
+        </text>
+    </g>
+    <g ed:width="49" ed:height="24" id="142" transform="matrix(1,0,0,1,162.3,1539.25)" ed:parentid="123">
+        <text class="st36">
+            <tspan textLength="28" y="16" x="10"  >详解</tspan>
+        </text>
+    </g>
+    <g ed:width="205.859375" ed:height="24" id="144" transform="matrix(1,0,0,1,205.7,1573)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="185" y="16" x="10"  >i —— 函数的返回值类型为int</tspan>
+        </text>
+    </g>
+    <g ed:width="331.21875" ed:height="24" id="146" transform="matrix(1,0,0,1,205.7,1606.75)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="310" y="16" x="10"  >24 —— 此方法所有参数所占的总长度（24字节）</tspan>
+        </text>
+    </g>
+    <g ed:width="152.703125" ed:height="24" id="148" transform="matrix(1,0,0,1,205.7,1640.5)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="132" y="16" x="10"  >@ —— 第一个参数id</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="44" id="150" transform="matrix(1,0,0,1,205.7,1674.25)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="483" y="16" x="10"  >0 —— 第一个参数在内存中的起始偏移量（0字节，也就是从第0个字节开始算</tspan>
+            <tspan textLength="28" y="36" x="10"  >起）</tspan>
+        </text>
+    </g>
+    <g ed:width="154.828125" ed:height="24" id="152" transform="matrix(1,0,0,1,205.7,1728)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="134" y="16" x="10"  >: —— 第二个参数SEL</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="44" id="154" transform="matrix(1,0,0,1,205.7,1761.75)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="483" y="16" x="10"  >8 —— 第二个参数在内存中的起始偏移量（8字节，也就是从第8个字节开始算</tspan>
+            <tspan textLength="250" y="36" x="10"  >起,因此上面的id参数占之前的8个字节）</tspan>
+        </text>
+    </g>
+    <g ed:width="149.859375" ed:height="24" id="156" transform="matrix(1,0,0,1,205.7,1815.5)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="129" y="16" x="10"  >i —— 第三个参数int</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="44" id="158" transform="matrix(1,0,0,1,205.7,1849.25)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="496" y="16" x="10"  >16 —— 第三个参数在内存中的起始偏移量（16字节，也就是从第16个字节开始</tspan>
+            <tspan textLength="311" y="36" x="10"  >算起，因此上面的SEL参数占用了之前的8个字节）</tspan>
+        </text>
+    </g>
+    <g ed:width="163.59375" ed:height="24" id="160" transform="matrix(1,0,0,1,205.7,1903)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="143" y="16" x="10"  >f —— 第四个参数float</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="64" id="162" transform="matrix(1,0,0,1,205.7,1936.75)" ed:parentid="142">
+        <text class="st36">
+            <tspan textLength="496" y="16" x="10"  >20 —— 第四个参数在内存中的起始偏移量（20字节，也就是从第20个字节开始</tspan>
+            <tspan textLength="487" y="36" x="10"  >算起，因此上面的int参数占用了前面的4个字节，而总长度为24，因此最后的4</tspan>
+            <tspan textLength="171" y="56" x="10"  >个字节是给float参数用的）</tspan>
+        </text>
+    </g>
+    <g ed:width="263.203125" ed:height="41" id="164" transform="matrix(1,0,0,1,108.4,2033.75)" ed:parentid="107">
+        <path stroke-width="2" d="M4,0L259.2,0C261.9,0,263.2,1.3,263.2,4L263.2,37C263.2,39.7,261.9,41,259.2,41L4,41C1.3,41,0,39.7,0,37L0,4C0,1.3,1.3,0,4,0z" fill="#4caf50" stroke="#4caf50" stroke-linejoin="round"/>
+        <g transform="translate(18.5,10.6)">
+            <use transform="translate(0,0)" xlink:href="#imgflag1"/>
+        </g>
+        <text class="st35">
+            <tspan textLength="201" y="24.5" x="43"  >Class方法缓存：cache_t</tspan>
+        </text>
+    </g>
+    <g ed:width="178.6875" ed:height="24" id="167" transform="matrix(1,0,0,1,162.3,2084.5)" ed:parentid="164">
+        <text class="st36">
+            <tspan textLength="158" y="16" x="10"  >分源码详解篇1，总结篇2</tspan>
+        </text>
+    </g>
+    <g ed:width="185.703125" ed:height="40" id="169" transform="matrix(1,0,0,1,108.4,2141.5)" ed:parentid="107">
+        <path d="M4,0L181.7,0C184.4,0,185.7,1.3,185.7,4L185.7,36C185.7,38.7,184.4,40,181.7,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#ff9595"/>
+        <text class="st35">
+            <tspan textLength="148" y="24" x="19"  >cache_t 篇1: 源码</tspan>
+        </text>
+    </g>
+    <g ed:width="124.171875" ed:height="24" id="171" transform="matrix(1,0,0,1,162.3,2191.25)" ed:parentid="169">
+        <text class="st36">
+            <tspan textLength="103" y="16" x="10"  >回顾class结构：</tspan>
+        </text>
+    </g>
+    <g ed:width="332.078125" ed:height="112" id="174" transform="matrix(1,0,0,1,216.2,2232)" ed:parentid="171">
+        <text class="st36">
+            <tspan textLength="311" y="16" x="10"  >struct objc_class : objc_object { // class结构体</tspan>
+            <tspan textLength="103" y="36" x="10"  >    // Class ISA;</tspan>
+            <tspan textLength="134" y="53" x="10"  >    Class superclass;</tspan>
+            <tspan textLength="209" y="70" x="10"  >    cache_t cache;   //  方法缓存</tspan>
+            <tspan textLength="170" y="90" x="10"  >    class_data_bits_t bits; </tspan>
+            <tspan textLength="9" y="107" x="10"  >};</tspan>
+        </text>
+    </g>
+    <g ed:width="114.6875" ed:height="41" id="176" transform="matrix(1,0,0,1,162.3,2360.75)" ed:parentid="169">
+        <text class="st36">
+            <tspan textLength="94" y="16" x="10"  >cache_t cache</tspan>
+            <tspan textLength="56" y="33" x="10"  >是散列表</tspan>
+        </text>
+    </g>
+    <g ed:width="382.296875" ed:height="98" id="179" transform="matrix(1,0,0,1,216.2,2418.5)" ed:parentid="176">
+        <text class="st36">
+            <tspan textLength="103" y="16" x="10"  >struct cache_t {</tspan>
+            <tspan textLength="361" y="33" x="10"  >    struct bucket_t *_buckets; //缓存方法的散列/哈希表</tspan>
+            <tspan textLength="282" y="53" x="10"  >    mask_t _mask;     // == 散列表长度 - 1</tspan>
+            <tspan textLength="292" y="73" x="10"  >    mask_t _occupied; // 已缓存的方法的数量</tspan>
+            <tspan textLength="5" y="93" x="10"  >}</tspan>
+        </text>
+    </g>
+    <g ed:width="105" ed:height="41" id="181" transform="matrix(1,0,0,1,162.3,2533.25)" ed:parentid="169">
+        <text class="st36">
+            <tspan textLength="63" y="16" x="10"  >bucket_t </tspan>
+            <tspan textLength="84" y="33" x="10"  >方法缓存单元</tspan>
+        </text>
+    </g>
+    <g ed:width="349.328125" ed:height="112" id="184" transform="matrix(1,0,0,1,216.2,2591)" ed:parentid="181">
+        <text class="st36">
+            <tspan textLength="111" y="16" x="10"  >struct bucket_t {</tspan>
+            <tspan textLength="51" y="33" x="10"  >private:</tspan>
+            <tspan textLength="328" y="50" x="10"  >    cache_key_t _key;  // 方法的SEL，也就是方法名</tspan>
+            <tspan textLength="231" y="70" x="10"  >    IMP _imp;       // 函数的内存地址</tspan>
+            <tspan textLength="5" y="90" x="10"  >}</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="44" id="186" transform="matrix(1,0,0,1,162.3,2719.75)" ed:parentid="169">
+        <text class="st36">
+            <tspan textLength="498" y="16" x="10"  >类似理解就是cache_t 里有字典dictiony，里面存着 bucket_t ，方法调用时根据</tspan>
+            <tspan textLength="126" y="36" x="10"  >方法名称key 取 IMP</tspan>
+        </text>
+    </g>
+    <g ed:width="105" ed:height="24" id="188" transform="matrix(1,0,0,1,162.3,2773.5)" ed:parentid="169">
+        <text class="st36">
+            <tspan textLength="84" y="16" x="10"  >列表中查询：</tspan>
+        </text>
+    </g>
+    <g ed:width="259" ed:height="24" id="190" transform="matrix(1,0,0,1,216.2,2807.25)" ed:parentid="188">
+        <text class="st36">
+            <tspan textLength="238" y="16" x="10"  >排序的话就是二分查找，否则就会遍历</tspan>
+        </text>
+    </g>
+    <g ed:width="91" ed:height="24" id="192" transform="matrix(1,0,0,1,162.3,2841)" ed:parentid="169">
+        <text class="st36">
+            <tspan textLength="70" y="16" x="10"  >列表插入：</tspan>
+        </text>
+    </g>
+    <g ed:width="385" ed:height="24" id="194" transform="matrix(1,0,0,1,216.2,2874.75)" ed:parentid="192">
+        <text class="st36">
+            <tspan textLength="364" y="16" x="10"  >调用方法没有缓存过，就会添加到调用者读类对象缓存列表</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="44" id="196" transform="matrix(1,0,0,1,216.2,2908.5)" ed:parentid="192">
+        <text class="st36">
+            <tspan textLength="488" y="16" x="10"  >扩容： 当列表达到3/4时，成倍 *2 扩容，并且原来旧列表缓存过的方法全部被</tspan>
+            <tspan textLength="28" y="36" x="10"  >删除</tspan>
+        </text>
+    </g>
+    <g ed:width="273" ed:height="24" id="199" transform="matrix(1,0,0,1,270.1,2969.25)" ed:parentid="196">
+        <text class="st36">
+            <tspan textLength="252" y="16" x="10"  >下次再次调用的话，有需要被重新缓存了</tspan>
+        </text>
+    </g>
+    <g ed:width="114" ed:height="27" id="201" transform="matrix(1,0,0,1,162.3,3010)" ed:parentid="169">
+        <path stroke-width="2" d="M4,0L110,0C112.7,0,114,1.3,114,4L114,23C114,25.7,112.7,27,110,27L4,27C1.3,27,0,25.7,0,23L0,4C0,1.3,1.3,0,4,0z" stroke="#4caf50" fill="none" stroke-linejoin="round"/>
+        <g transform="translate(9.5,3.6)">
+            <use transform="translate(0,0)" xlink:href="#imgstar1"/>
+        </g>
+        <text class="st36">
+            <tspan textLength="70" y="17.5" x="33"  >源码逻辑：</tspan>
+        </text>
+    </g>
+    <symbol id="imgstar1">
+        <image height="16" width="16" xlink:href="data:image/png;base64,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"/>
+    </symbol>
+    <g ed:width="352.625" ed:height="34" id="204" transform="matrix(1,0,0,1,216.2,3046.75)" ed:parentid="201">
+        <text class="st36">
+            <tspan textLength="303" y="16" x="10"  >lookUpImpOrForward 方法查找函数， ️ ️ ️处标记</tspan>
+        </text>
+    </g>
+    <g ed:width="54.34375" ed:height="22" id="206" transform="matrix(1,0,0,1,162.3,3090.5)" ed:parentid="169">
+        <path stroke-width="2" d="M4,0L50.3,0C53,0,54.3,1.3,54.3,4L54.3,18C54.3,20.7,53,22,50.3,22L4,22C1.3,22,0,20.7,0,18L0,4C0,1.3,1.3,0,4,0z" stroke="#4caf50" fill="none" stroke-linejoin="round"/>
+        <text class="st36">
+            <tspan textLength="32" y="16.5" x="10"  >code</tspan>
+        </text>
+    </g>
+    <g ed:width="517" ed:height="2509" id="209" transform="matrix(1,0,0,1,208.37,3129.25)" ed:parentid="206">
+        <text class="st36">
+            <tspan textLength="351" y="16" x="10"  >IMP lookUpImpOrForward(Class cls, SEL sel, id inst, </tspan>
+            <tspan textLength="387" y="33" x="10"  >                       bool initialize, bool cache, bool resolver) {</tspan>
+            <tspan textLength="113" y="50" x="10"  >    IMP imp = nil;</tspan>
+            <tspan textLength="186" y="67" x="10"  >    bool triedResolver = NO;</tspan>
+            <tspan textLength="224" y="84" x="10"  >    runtimeLock.assertUnlocked();</tspan>
+            <tspan textLength="266" y="101" x="10"  >    // 【Runtime 第一步：消息发送流程】</tspan>
+            <tspan textLength="423" y="121" x="10"  >    //-> ️ ️ ️查询当前Class对象的缓存，如果找到方法，就返回该方法</tspan>
+            <tspan textLength="88" y="151" x="10"  >    if (cache) {</tspan>
+            <tspan textLength="234" y="168" x="10"  >        imp = cache_getImp(cls, sel);</tspan>
+            <tspan textLength="165" y="185" x="10"  >        if (imp) return imp;</tspan>
+            <tspan textLength="22" y="202" x="10"  >    }</tspan>
+            <tspan textLength="150" y="219" x="10"  >    runtimeLock.read();</tspan>
+            <tspan textLength="390" y="253" x="10"  >    //--> ️ ️ ️当前Class如果没有被realized，就进行realize操作</tspan>
+            <tspan textLength="169" y="283" x="10"  >    if (!cls->isRealized()) {</tspan>
+            <tspan textLength="216" y="300" x="10"  >        runtimeLock.unlockRead();</tspan>
+            <tspan textLength="172" y="317" x="10"  >        runtimeLock.write();</tspan>
+            <tspan textLength="148" y="334" x="10"  >        realizeClass(cls);</tspan>
+            <tspan textLength="218" y="351" x="10"  >        runtimeLock.unlockWrite();</tspan>
+            <tspan textLength="168" y="368" x="10"  >        runtimeLock.read();</tspan>
+            <tspan textLength="22" y="385" x="10"  >    }</tspan>
+            <tspan textLength="361" y="419" x="10"  >    //--> ️ ️ ️当前Class如果没有初始化，就进行初始化操作</tspan>
+            <tspan textLength="273" y="449" x="10"  >    if (initialize  &amp;&amp;  !cls->isInitialized()) {</tspan>
+            <tspan textLength="216" y="466" x="10"  >        runtimeLock.unlockRead();</tspan>
+            <tspan textLength="385" y="483" x="10"  >        _class_initialize (_class_getNonMetaClass(cls, inst));</tspan>
+            <tspan textLength="168" y="500" x="10"  >        runtimeLock.read();</tspan>
+            <tspan textLength="22" y="517" x="10"  >    }</tspan>
+            <tspan textLength="18" y="534" x="10"  >    </tspan>
+            <tspan textLength="58" y="551" x="10"  > retry:    </tspan>
+            <tspan textLength="216" y="568" x="10"  >    runtimeLock.assertReading();</tspan>
+            <tspan textLength="464" y="602" x="10"  >    //--> ️ ️ ️尝试从该Class对象的缓存中查找，如果找到，就跳到done处返</tspan>
+            <tspan textLength="56" y="632" x="10"  >回该方法</tspan>
+            <tspan textLength="216" y="662" x="10"  >    imp = cache_getImp(cls, sel);</tspan>
+            <tspan textLength="145" y="679" x="10"  >    if (imp) goto done;</tspan>
+            <tspan textLength="459" y="713" x="10"  >    //--> ️ ️ ️尝试从该Class对象的方法列表中查找，找到的话，就缓存到该</tspan>
+            <tspan textLength="302" y="743" x="10"  >Class的cache_t里面，并跳到done处返回该方法</tspan>
+            <tspan textLength="22" y="773" x="10"  >    {</tspan>
+            <tspan textLength="388" y="790" x="10"  >        Method meth = getMethodNoSuper_nolock(cls, sel);</tspan>
+            <tspan textLength="102" y="807" x="10"  >        if (meth) {</tspan>
+            <tspan textLength="386" y="824" x="10"  >            log_and_fill_cache(cls, meth->imp, sel, inst, cls);</tspan>
+            <tspan textLength="183" y="841" x="10"  >            imp = meth->imp;</tspan>
+            <tspan textLength="127" y="858" x="10"  >            goto done;</tspan>
+            <tspan textLength="40" y="875" x="10"  >        }</tspan>
+            <tspan textLength="22" y="892" x="10"  >    }</tspan>
+            <tspan textLength="306" y="926" x="10"  >    //--> ️ ️ ️进入当前Class对象的superclass对象</tspan>
+            <tspan textLength="22" y="956" x="10"  >    {</tspan>
+            <tspan textLength="364" y="973" x="10"  >        unsigned attempts = unreasonableClassCount();</tspan>
+            <tspan textLength="461" y="990" x="10"  >        for (Class curClass = cls->superclass;//---> ️ ️ ️该for循环每循环</tspan>
+            <tspan textLength="435" y="1020" x="10"  >一次，就会进入上一层的superclass对象，进行循环内部方法查询流程</tspan>
+            <tspan textLength="160" y="1050" x="10"  >             curClass != nil;</tspan>
+            <tspan textLength="287" y="1067" x="10"  >             curClass = curClass->superclass)</tspan>
+            <tspan textLength="40" y="1084" x="10"  >        {</tspan>
+            <tspan textLength="382" y="1101" x="10"  >            // Halt if there is a cycle in the superclass chain.</tspan>
+            <tspan textLength="201" y="1118" x="10"  >            if (--attempts == 0) {</tspan>
+            <tspan textLength="382" y="1135" x="10"  >                _objc_fatal("Memory corruption in class list.");</tspan>
+            <tspan textLength="58" y="1152" x="10"  >            }</tspan>
+            <tspan textLength="53" y="1169" x="10"  >            </tspan>
+            <tspan textLength="461" y="1186" x="10"  >            // Superclass cache.------> ️ ️ ️在当前superclass对象的缓存进</tspan>
+            <tspan textLength="42" y="1216" x="10"  >行查找</tspan>
+            <tspan textLength="291" y="1246" x="10"  >            imp = cache_getImp(curClass, sel);</tspan>
+            <tspan textLength="111" y="1263" x="10"  >            if (imp) {</tspan>
+            <tspan textLength="384" y="1280" x="10"  >                if (imp != (IMP)_objc_msgForward_impcache) {</tspan>
+            <tspan textLength="490" y="1297" x="10"  >                    // Found the method in a superclass. Cache it in this class.</tspan>
+            <tspan textLength="406" y="1314" x="10"  >                    log_and_fill_cache(cls, imp, sel, inst, curClass);</tspan>
+            <tspan textLength="461" y="1331" x="10"  >                    goto done;//------> ️ ️ ️如果在当前superclass的缓存里找</tspan>
+            <tspan textLength="473" y="1361" x="10"  >到了方法，就调用log_and_fill_cache进行方法缓存，注意这里传入的参数是</tspan>
+            <tspan textLength="497" y="1391" x="10"  >cls，也就是将方法缓存到消息接受对象所对应的Class对象的cache_t中，然后跳</tspan>
+            <tspan textLength="132" y="1421" x="10"  >到done处返回该方法</tspan>
+            <tspan textLength="75" y="1451" x="10"  >                }</tspan>
+            <tspan textLength="106" y="1468" x="10"  >                else {</tspan>
+            <tspan textLength="376" y="1485" x="10"  >                    // Found a forward:: entry in a superclass.</tspan>
+            <tspan textLength="439" y="1502" x="10"  >                    // Stop searching, but don't cache yet; call method </tspan>
+            <tspan textLength="288" y="1519" x="10"  >                    // resolver for this class first.</tspan>
+            <tspan textLength="356" y="1536" x="10"  >                    break;//----> ️ ️ ️如果缓存里找到的方法是</tspan>
+            <tspan textLength="493" y="1566" x="10"  >_objc_msgForward_impcache，就跳出该轮循环，进入上一层的superclass，</tspan>
+            <tspan textLength="84" y="1596" x="10"  >再次进行查找</tspan>
+            <tspan textLength="75" y="1626" x="10"  >                }</tspan>
+            <tspan textLength="58" y="1643" x="10"  >            }</tspan>
+            <tspan textLength="53" y="1660" x="10"  >            </tspan>
+            <tspan textLength="455" y="1677" x="10"  >            // Superclass method list.----> ️ ️ ️如过画缓存里面没有找到方</tspan>
+            <tspan textLength="281" y="1707" x="10"  >法，则对当前superclass的方法列表进行查找</tspan>
+            <tspan textLength="445" y="1737" x="10"  >            Method meth = getMethodNoSuper_nolock(curClass, sel);</tspan>
+            <tspan textLength="120" y="1754" x="10"  >            if (meth) {</tspan>
+            <tspan textLength="464" y="1771" x="10"  >            //------> ️ ️ ️如果在当前superclass的方法列表里找到了方法，就</tspan>
+            <tspan textLength="492" y="1801" x="10"  >调用log_and_fill_cache进行方法缓存，注意这里传入的参数是cls，也就是将方</tspan>
+            <tspan textLength="484" y="1831" x="10"  >法缓存到消息接受对象所对应的Class对象的cache_t中，然后跳到done处返回</tspan>
+            <tspan textLength="42" y="1861" x="10"  >该方法</tspan>
+            <tspan textLength="442" y="1891" x="10"  >                log_and_fill_cache(cls, meth->imp, sel, inst, curClass);</tspan>
+            <tspan textLength="201" y="1908" x="10"  >                imp = meth->imp;</tspan>
+            <tspan textLength="145" y="1925" x="10"  >                goto done;</tspan>
+            <tspan textLength="58" y="1942" x="10"  >            }</tspan>
+            <tspan textLength="40" y="1959" x="10"  >        }</tspan>
+            <tspan textLength="22" y="1976" x="10"  >    }</tspan>
+            <tspan textLength="398" y="2010" x="10"  >    // No implementation found. Try method resolver once.</tspan>
+            <tspan textLength="463" y="2027" x="10"  >    //---> ️ ️ ️  【Runtime 第二步】： 如果到基类还没有找到方法，就尝试</tspan>
+            <tspan textLength="84" y="2057" x="10"  >进行方法解析</tspan>
+            <tspan textLength="234" y="2104" x="10"  >    if (resolver  &amp;&amp;  !triedResolver) {</tspan>
+            <tspan textLength="216" y="2121" x="10"  >        runtimeLock.unlockRead();</tspan>
+            <tspan textLength="276" y="2138" x="10"  >        _class_resolveMethod(cls, sel, inst);</tspan>
+            <tspan textLength="168" y="2155" x="10"  >        runtimeLock.read();</tspan>
+            <tspan textLength="469" y="2172" x="10"  >        // Don't cache the result; we don't hold the lock so it may have </tspan>
+            <tspan textLength="440" y="2189" x="10"  >        // changed already. Re-do the search from scratch instead.</tspan>
+            <tspan textLength="172" y="2206" x="10"  >        triedResolver = YES;</tspan>
+            <tspan textLength="107" y="2223" x="10"  >        goto retry;</tspan>
+            <tspan textLength="22" y="2240" x="10"  >    }</tspan>
+            <tspan textLength="446" y="2274" x="10"  >    // No implementation found, and method resolver didn't help. </tspan>
+            <tspan textLength="469" y="2291" x="10"  >    //------> ️ ️ ️  【Runtime 第三步】：如果方法解析不成功，就进行消息</tspan>
+            <tspan textLength="28" y="2321" x="10"  >转发</tspan>
+            <tspan textLength="144" y="2351" x="10"  >    // Use forwarding.</tspan>
+            <tspan textLength="299" y="2385" x="10"  >    imp = (IMP)_objc_msgForward_impcache;</tspan>
+            <tspan textLength="209" y="2402" x="10"  >    cache_fill(cls, sel, imp, inst);</tspan>
+            <tspan textLength="43" y="2436" x="10"  > done:</tspan>
+            <tspan textLength="199" y="2453" x="10"  >    runtimeLock.unlockRead();</tspan>
+            <tspan textLength="94" y="2487" x="10"  >    return imp;</tspan>
+            <tspan textLength="5" y="2504" x="10"  >}</tspan>
+        </text>
+    </g>
+    <g ed:width="459.890625" ed:height="40" id="211" transform="matrix(1,0,0,1,108.4,5678.25)" ed:parentid="107">
+        <path d="M4,0L455.9,0C458.6,0,459.9,1.3,459.9,4L459.9,36C459.9,38.7,458.6,40,455.9,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#4caf50"/>
+        <text class="st35">
+            <tspan textLength="422" y="24" x="19"  >cache_t 篇2:  runtime ，放到下面runtime部分讲解</tspan>
+        </text>
+    </g>
+    <g ed:width="265.109375" ed:height="40" id="213" transform="matrix(1,0,0,1,108.4,5751.25)" ed:parentid="107">
+        <path d="M4,0L261.1,0C263.8,0,265.1,1.3,265.1,4L265.1,36C265.1,38.7,263.8,40,261.1,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#4caf50"/>
+        <g transform="translate(18,10.1)">
+            <use transform="translate(0,0)" xlink:href="#imgflag1"/>
+        </g>
+        <text class="st35">
+            <tspan textLength="204" y="24" x="43"  >Runtime 一共三大步骤：</tspan>
+        </text>
+    </g>
+    <g ed:width="299.421875" ed:height="26" id="216" transform="matrix(1,0,0,1,162.3,5801)" ed:parentid="213">
+        <g transform="translate(9,3.1)">
+            <use transform="translate(0,0)" xlink:href="#imgpriority1"/>
+        </g>
+        <text class="st36">
+            <tspan textLength="256" y="17" x="33"  >消息发送流程： 涉及方法列表和方法缓存</tspan>
+        </text>
+    </g>
+    <symbol id="imgpriority1">
+        <image height="16" width="16" xlink:href="data:image/png;base64,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"/>
+    </symbol>
+    <g ed:width="169" ed:height="26" id="219" transform="matrix(1,0,0,1,162.3,5836.75)" ed:parentid="213">
+        <g transform="translate(9,3.1)">
+            <use transform="translate(0,0)" xlink:href="#imgpriority2"/>
+        </g>
+        <text class="st36">
+            <tspan textLength="126" y="17" x="33"  >动态方法解析流程：</tspan>
+        </text>
+    </g>
+    <symbol id="imgpriority2">
+        <image height="16" width="16" xlink:href="data:image/png;base64,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"/>
+    </symbol>
+    <g ed:width="141" ed:height="26" id="222" transform="matrix(1,0,0,1,162.3,5872.5)" ed:parentid="213">
+        <g transform="translate(9,3.1)">
+            <use transform="translate(0,0)" xlink:href="#imgpriority3"/>
+        </g>
+        <text class="st36">
+            <tspan textLength="98" y="17" x="33"  >消息转发流程：</tspan>
+        </text>
+    </g>
+    <symbol id="imgpriority3">
+        <image height="16" width="16" xlink:href="data:image/png;base64,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"/>
+    </symbol>
+</svg>
+</div>
+      </div>
+    </div>
+  </body>
+</html>

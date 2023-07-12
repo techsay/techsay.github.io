@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <title>iOS开发-上篇-2022</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            width: auto;
+            height: auto;
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            overflow-y: auto;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            overflow-x: scroll;
+            min-width: 0px;
+            margin: 0 10px;
+            overflow: visible;
+            position: relative;
+        }
+        #nav-thumbs{
+            overflow-y: scroll;
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+        }
+        #svg-container >svg{
+            overflow: visible;
+            display: block;
+            margin:5px auto;
+            margin-bottom: 5px;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            text-decoration: none;
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #08a1ef;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+            #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+            #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+            #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="main-content">
+        <div id="svg-container"><svg preserveAspectRadio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink" ed:name="内存" ed:vSpacing="30" viewBox="0 0 790 4122" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns="http://www.w3.org/2000/svg" height="4188" xmlns:ed="https://www.w3.org/xml/2017/SVGExtensions/" ed:hSpacing="30" width="790" id="page16">
+    <style type="text/css"><![CDATA[
+g[ed\:togtopicid],g[ed\:hyperlink],g[ed\:comment],g[ed\:note] {cursor:pointer;}
+g[id] {-moz-user-select: none;-ms-user-select: none;user-select: none;}
+svg text::selection,svg tspan::selection{background-color: #4285f4;color: #ffffff;fill: #ffffff;}
+.st42 {fill:#141414;font-family:微软雅黑;font-size:10.5pt}
+.st40 {fill:#4caf50;font-family:微软雅黑;font-size:12pt;font-weight:bold}
+.st41 {fill:#ffffff;font-family:微软雅黑;font-size:13.5pt}
+]]></style>
+    <defs/>
+    <rect x="0" y="0" fill="#ffffff" height="4188" width="790"/>
+    <path d="M8,0L269.6,0C275,0,277.6,2.6,277.6,8L277.6,200C277.6,205.4,275,208,269.6,208L8,208C2.6,208,0,205.4,0,200L0,8C0,2.6,2.6,0,8,0z" stroke="#4caf50" stroke-dasharray="5,2" ed:idlist="214" stroke-width="2" transform="matrix(1,0,0,1,209.2,2044)" ed:type="boundary" ed:parentid="214" stroke-linejoin="round" fill-opacity="0.2" fill="#4caf50" id="213"/>
+    <path d="M8,0L358.7,0C364.1,0,366.7,2.6,366.7,8L366.7,288C366.7,293.4,364.1,296,358.7,296L8,296C2.6,296,0,293.4,0,288L0,8C0,2.6,2.6,0,8,0z" stroke="#4caf50" stroke-dasharray="5,2" ed:idlist="219" stroke-width="2" transform="matrix(1,0,0,1,209.2,2296.5)" ed:type="boundary" ed:parentid="219" stroke-linejoin="round" fill-opacity="0.2" fill="#4caf50" id="218"/>
+    <path d="M8,0L523,0C528.4,0,531,2.6,531,8L531,215C531,220.4,528.4,223,523,223L8,223C2.6,223,0,220.4,0,215L0,8C0,2.6,2.6,0,8,0z" stroke="#4caf50" stroke-dasharray="5,2" ed:idlist="236" stroke-width="2" transform="matrix(1,0,0,1,209.2,2863.5)" ed:type="boundary" ed:parentid="236" stroke-linejoin="round" fill-opacity="0.2" fill="#4caf50" id="235"/>
+    <path stroke="#4caf50" d="M-25.2,-26.5L-25.2,20.5C-25.2,23.8,-22.5,26.5,-19.2,26.5L25.2,26.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,83.2,156.5)" ed:parentid="117" stroke-linejoin="round" fill="none" ed:tosuperid="119" id="120"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,213.88)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="121" id="122"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,230.75)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="123" id="124"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,281.38)" ed:parentid="123" stroke-linejoin="round" fill="none" ed:tosuperid="125" id="126"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,298.25)" ed:parentid="123" stroke-linejoin="round" fill="none" ed:tosuperid="127" id="128"/>
+    <path stroke="#4caf50" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,315.13)" ed:parentid="123" stroke-linejoin="round" fill="none" ed:tosuperid="129" id="130"/>
+    <path stroke="#4caf50" d="M-9.5,-61.5L-9.5,55.5C-9.5,58.8,-6.8,61.5,-3.5,61.5L9.5,61.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,332)" ed:parentid="123" stroke-linejoin="round" fill="none" ed:tosuperid="131" id="132"/>
+    <path stroke="#4caf50" d="M-9.5,-78.4L-9.5,72.4C-9.5,75.7,-6.8,78.4,-3.5,78.4L9.5,78.4" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,348.88)" ed:parentid="123" stroke-linejoin="round" fill="none" ed:tosuperid="133" id="134"/>
+    <path stroke="#4caf50" d="M-9.5,-129L-9.5,123C-9.5,126.3,-6.8,129,-3.5,129L9.5,129" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,332)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="135" id="136"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,483.88)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="137" id="138"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,500.75)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="139" id="140"/>
+    <path stroke="#4caf50" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,517.63)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="141" id="142"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,250.15,585.13)" ed:parentid="141" stroke-linejoin="round" fill="none" ed:tosuperid="143" id="144"/>
+    <path stroke="#4caf50" d="M-9.5,-78.4L-9.5,72.4C-9.5,75.7,-6.8,78.4,-3.5,78.4L9.5,78.4" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,551.38)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="145" id="146"/>
+    <path stroke="#4caf50" d="M-9.5,-95.3L-9.5,89.3C-9.5,92.6,-6.8,95.3,-3.5,95.3L9.5,95.3" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,568.25)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="147" id="148"/>
+    <path stroke="#4caf50" d="M-9.5,-112.1L-9.5,106.1C-9.5,109.4,-6.8,112.1,-3.5,112.1L9.5,112.1" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,585.13)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="149" id="150"/>
+    <path stroke="#4caf50" d="M-9.5,-129L-9.5,123C-9.5,126.3,-6.8,129,-3.5,129L9.5,129" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,602)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="151" id="152"/>
+    <path stroke="#4caf50" d="M-9.5,-145.9L-9.5,139.9C-9.5,143.2,-6.8,145.9,-3.5,145.9L9.5,145.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,196.25,618.88)" ed:parentid="135" stroke-linejoin="round" fill="none" ed:tosuperid="153" id="154"/>
+    <path stroke="#4caf50" d="M-9.5,-297.8L-9.5,291.8C-9.5,295.1,-6.8,297.8,-3.5,297.8L9.5,297.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,500.75)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="155" id="156"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,821.38)" ed:parentid="155" stroke-linejoin="round" fill="none" ed:tosuperid="157" id="158"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,838.25)" ed:parentid="155" stroke-linejoin="round" fill="none" ed:tosuperid="159" id="160"/>
+    <path stroke="#4caf50" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,855.13)" ed:parentid="155" stroke-linejoin="round" fill="none" ed:tosuperid="161" id="162"/>
+    <path stroke="#4caf50" d="M-9.5,-61.5L-9.5,55.5C-9.5,58.8,-6.8,61.5,-3.5,61.5L9.5,61.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,872)" ed:parentid="155" stroke-linejoin="round" fill="none" ed:tosuperid="163" id="164"/>
+    <path stroke="#4caf50" d="M-9.5,-78.4L-9.5,72.4C-9.5,75.7,-6.8,78.4,-3.5,78.4L9.5,78.4" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,888.88)" ed:parentid="155" stroke-linejoin="round" fill="none" ed:tosuperid="165" id="166"/>
+    <path stroke="#4caf50" d="M-9.5,-399L-9.5,393C-9.5,396.3,-6.8,399,-3.5,399L9.5,399" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,602)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="167" id="168"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,203.25,1023.88)" ed:parentid="167" stroke-linejoin="round" fill="none" ed:tosuperid="169" id="170"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,203.25,1040.75)" ed:parentid="167" stroke-linejoin="round" fill="none" ed:tosuperid="171" id="172"/>
+    <path stroke="#4caf50" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,203.25,1057.63)" ed:parentid="167" stroke-linejoin="round" fill="none" ed:tosuperid="173" id="174"/>
+    <path stroke="#4caf50" d="M-9.5,-466.5L-9.5,460.5C-9.5,463.8,-6.8,466.5,-3.5,466.5L9.5,466.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,669.5)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="175" id="176"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,203.25,1158.88)" ed:parentid="175" stroke-linejoin="round" fill="none" ed:tosuperid="177" id="178"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,203.25,1175.75)" ed:parentid="175" stroke-linejoin="round" fill="none" ed:tosuperid="179" id="180"/>
+    <path stroke="#4caf50" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,203.25,1192.63)" ed:parentid="175" stroke-linejoin="round" fill="none" ed:tosuperid="181" id="182"/>
+    <path stroke="#4caf50" d="M-9.5,-534L-9.5,528C-9.5,531.3,-6.8,534,-3.5,534L9.5,534" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,737)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="183" id="184"/>
+    <path stroke="#4caf50" d="M-9.5,-550.9L-9.5,544.9C-9.5,548.2,-6.8,550.9,-3.5,550.9L9.5,550.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,753.88)" ed:parentid="119" stroke-linejoin="round" fill="none" ed:tosuperid="185" id="186"/>
+    <path stroke="#4caf50" d="M-25.2,-619.9L-25.2,613.9C-25.2,617.2,-22.5,619.9,-19.2,619.9L25.2,619.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,83.2,749.88)" ed:parentid="117" stroke-linejoin="round" fill="none" ed:tosuperid="187" id="188"/>
+    <path stroke="#4caf50" d="M-9.5,-21.1L-9.5,15.1C-9.5,18.4,-6.8,21.1,-3.5,21.1L9.5,21.1" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,1410.88)" ed:parentid="187" stroke-linejoin="round" fill="none" ed:tosuperid="189" id="190"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,1475.38)" ed:parentid="189" stroke-linejoin="round" fill="none" ed:tosuperid="191" id="192"/>
+    <path stroke="#4caf50" d="M-9.5,-65.1L-9.5,59.1C-9.5,62.4,-6.8,65.1,-3.5,65.1L9.5,65.1" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,1454.88)" ed:parentid="187" stroke-linejoin="round" fill="none" ed:tosuperid="193" id="194"/>
+    <path stroke="#4caf50" d="M-25.2,-727.5L-25.2,721.5C-25.2,724.8,-22.5,727.5,-19.2,727.5L25.2,727.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,83.2,857.5)" ed:parentid="117" stroke-linejoin="round" fill="none" ed:tosuperid="195" id="196"/>
+    <path stroke="#4caf50" d="M-9.5,-20.9L-9.5,14.9C-9.5,18.2,-6.8,20.9,-3.5,20.9L9.5,20.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,1625.88)" ed:parentid="195" stroke-linejoin="round" fill="none" ed:tosuperid="197" id="198"/>
+    <path stroke="#4caf50" d="M-9.5,-15.9L-9.5,9.9C-9.5,13.2,-6.8,15.9,-3.5,15.9L9.5,15.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,1694.63)" ed:parentid="197" stroke-linejoin="round" fill="none" ed:tosuperid="199" id="200"/>
+    <path stroke="#4caf50" d="M-9.5,-42.8L-9.5,36.8C-9.5,40.1,-6.8,42.8,-3.5,42.8L9.5,42.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,1721.5)" ed:parentid="197" stroke-linejoin="round" fill="none" ed:tosuperid="201" id="202"/>
+    <path stroke="#4caf50" d="M-9.5,-64.6L-9.5,58.6C-9.5,61.9,-6.8,64.6,-3.5,64.6L9.5,64.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,1743.38)" ed:parentid="197" stroke-linejoin="round" fill="none" ed:tosuperid="203" id="204"/>
+    <path stroke="#4caf50" d="M-25.2,-871.5L-25.2,865.5C-25.2,868.8,-22.5,871.5,-19.2,871.5L25.2,871.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,83.2,1001.5)" ed:parentid="117" stroke-linejoin="round" fill="none" ed:tosuperid="205" id="206"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,1903.88)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="207" id="208"/>
+    <path stroke="#4caf50" d="M-9.5,-37.8L-9.5,31.8C-9.5,35.1,-6.8,37.8,-3.5,37.8L9.5,37.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,1930.75)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="209" id="210"/>
+    <path stroke="#4caf50" d="M-9.5,-64.6L-9.5,58.6C-9.5,61.9,-6.8,64.6,-3.5,64.6L9.5,64.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,1957.63)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="211" id="212"/>
+    <path stroke="#4caf50" d="M-9.5,-56.9L-9.5,50.9C-9.5,54.2,-6.8,56.9,-3.5,56.9L9.5,56.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,2091.13)" ed:parentid="211" stroke-linejoin="round" fill="none" ed:tosuperid="214" id="215"/>
+    <path stroke="#4caf50" d="M-9.5,-190.6L-9.5,184.6C-9.5,187.9,-6.8,190.6,-3.5,190.6L9.5,190.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2083.63)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="216" id="217"/>
+    <path stroke="#4caf50" d="M-9.5,-78.9L-9.5,72.9C-9.5,76.2,-6.8,78.9,-3.5,78.9L9.5,78.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,2365.63)" ed:parentid="216" stroke-linejoin="round" fill="none" ed:tosuperid="219" id="220"/>
+    <path stroke="#4caf50" d="M-9.5,-186.8L-9.5,180.8C-9.5,184.1,-6.8,186.8,-3.5,186.8L9.5,186.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,2473.5)" ed:parentid="216" stroke-linejoin="round" fill="none" ed:tosuperid="221" id="222"/>
+    <path stroke="#4caf50" d="M-13.5,12.8L0,12.8L0,-6.8C0,-10.1,2.7,-12.8,6,-12.8L13.5,-12.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,320.7,2647.5)" ed:parentid="221" stroke-linejoin="round" fill="none" ed:tosuperid="223" id="224"/>
+    <path stroke="#4caf50" d="M0,-12.8L0,6.8C0,10.1,2.7,12.8,6,12.8L13.5,12.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,320.7,2673)" ed:parentid="221" stroke-linejoin="round" fill="none" ed:tosuperid="225" id="226"/>
+    <path stroke="#4caf50" d="M-9.5,-418.5L-9.5,412.5C-9.5,415.8,-6.8,418.5,-3.5,418.5L9.5,418.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2311.5)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="227" id="228"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,2763.38)" ed:parentid="227" stroke-linejoin="round" fill="none" ed:tosuperid="229" id="230"/>
+    <path stroke="#4caf50" d="M-9.5,-457.5L-9.5,451.5C-9.5,454.8,-6.8,457.5,-3.5,457.5L9.5,457.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2350.5)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="231" id="232"/>
+    <path stroke="#4caf50" d="M-9.5,-474.4L-9.5,468.4C-9.5,471.7,-6.8,474.4,-3.5,474.4L9.5,474.4" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2367.38)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="233" id="234"/>
+    <path stroke="#4caf50" d="M-9.5,-60.6L-9.5,54.6C-9.5,57.9,-6.8,60.6,-3.5,60.6L9.5,60.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,2914.38)" ed:parentid="233" stroke-linejoin="round" fill="none" ed:tosuperid="236" id="237"/>
+    <path stroke="#4caf50" d="M-9.5,-127.3L-9.5,121.3C-9.5,124.6,-6.8,127.3,-3.5,127.3L9.5,127.3" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,2981)" ed:parentid="233" stroke-linejoin="round" fill="none" ed:tosuperid="238" id="239"/>
+    <path stroke="#4caf50" d="M-9.5,-149.4L-9.5,143.4C-9.5,146.7,-6.8,149.4,-3.5,149.4L9.5,149.4" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,3003.13)" ed:parentid="233" stroke-linejoin="round" fill="none" ed:tosuperid="240" id="241"/>
+    <path stroke="#4caf50" d="M-9.5,-176.5L-9.5,170.5C-9.5,173.8,-6.8,176.5,-3.5,176.5L9.5,176.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,3030.25)" ed:parentid="233" stroke-linejoin="round" fill="none" ed:tosuperid="242" id="243"/>
+    <path stroke="#4caf50" d="M-9.5,-719L-9.5,713C-9.5,716.3,-6.8,719,-3.5,719L9.5,719" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2612)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="244" id="245"/>
+    <path stroke="#4caf50" d="M-13.5,30.3L0,30.3L0,-24.3C0,-27.6,2.7,-30.3,6,-30.3L13.5,-30.3" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,238.8,3300.75)" ed:parentid="244" stroke-linejoin="round" fill="none" ed:tosuperid="246" id="247"/>
+    <path stroke="#4caf50" d="M0,-5L0,-1C0,2.3,2.7,5,6,5L13.5,5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,238.8,3336)" ed:parentid="244" stroke-linejoin="round" fill="none" ed:tosuperid="248" id="249"/>
+    <path stroke="#4caf50" d="M0,-30.3L0,24.3C0,27.6,2.7,30.3,6,30.3L13.5,30.3" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,238.8,3361.25)" ed:parentid="244" stroke-linejoin="round" fill="none" ed:tosuperid="250" id="251"/>
+    <path stroke="#4caf50" d="M-9.5,-766.1L-9.5,760.1C-9.5,763.4,-6.8,766.1,-3.5,766.1L9.5,766.1" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2659.13)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="252" id="253"/>
+    <path stroke="#4caf50" d="M-9.5,-15.9L-9.5,9.9C-9.5,13.2,-6.8,15.9,-3.5,15.9L9.5,15.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,200.67,3453.13)" ed:parentid="252" stroke-linejoin="round" fill="none" ed:tosuperid="254" id="255"/>
+    <path stroke="#4caf50" d="M-9.5,-51.5L-9.5,45.5C-9.5,48.8,-6.8,51.5,-3.5,51.5L9.5,51.5" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,200.67,3488.75)" ed:parentid="252" stroke-linejoin="round" fill="none" ed:tosuperid="256" id="257"/>
+    <path stroke="#4caf50" d="M-9.5,-82.1L-9.5,76.1C-9.5,79.4,-6.8,82.1,-3.5,82.1L9.5,82.1" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,200.67,3519.38)" ed:parentid="252" stroke-linejoin="round" fill="none" ed:tosuperid="258" id="259"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,254.57,3624.38)" ed:parentid="258" stroke-linejoin="round" fill="none" ed:tosuperid="260" id="261"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,254.57,3641.25)" ed:parentid="258" stroke-linejoin="round" fill="none" ed:tosuperid="262" id="263"/>
+    <path stroke="#4caf50" d="M-9.5,-137.8L-9.5,131.8C-9.5,135.1,-6.8,137.8,-3.5,137.8L9.5,137.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,200.67,3575)" ed:parentid="252" stroke-linejoin="round" fill="none" ed:tosuperid="264" id="265"/>
+    <path stroke="#4caf50" d="M-9.5,-173.9L-9.5,167.9C-9.5,171.2,-6.8,173.9,-3.5,173.9L9.5,173.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,200.67,3611.13)" ed:parentid="252" stroke-linejoin="round" fill="none" ed:tosuperid="266" id="267"/>
+    <path stroke="#4caf50" d="M-9.5,-210L-9.5,204C-9.5,207.3,-6.8,210,-3.5,210L9.5,210" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,200.67,3647.25)" ed:parentid="252" stroke-linejoin="round" fill="none" ed:tosuperid="268" id="269"/>
+    <path stroke="#4caf50" d="M-9.5,-1004L-9.5,998C-9.5,1001.3,-6.8,1004,-3.5,1004L9.5,1004" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,2897)" ed:parentid="205" stroke-linejoin="round" fill="none" ed:tosuperid="270" id="271"/>
+    <path stroke="#4caf50" d="M-25.2,-1918L-25.2,1912C-25.2,1915.3,-22.5,1918,-19.2,1918L25.2,1918" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,83.2,2048)" ed:parentid="117" stroke-linejoin="round" fill="none" ed:tosuperid="272" id="273"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,3996.88)" ed:parentid="272" stroke-linejoin="round" fill="none" ed:tosuperid="274" id="275"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,4013.75)" ed:parentid="272" stroke-linejoin="round" fill="none" ed:tosuperid="276" id="277"/>
+    <path stroke="#4caf50" d="M-9.5,-44.6L-9.5,38.6C-9.5,41.9,-6.8,44.6,-3.5,44.6L9.5,44.6" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,152.85,4030.63)" ed:parentid="272" stroke-linejoin="round" fill="none" ed:tosuperid="278" id="279"/>
+    <path stroke="#4caf50" d="M-9.5,-10.9L-9.5,4.9C-9.5,8.2,-6.8,10.9,-3.5,10.9L9.5,10.9" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,4098.13)" ed:parentid="278" stroke-linejoin="round" fill="none" ed:tosuperid="280" id="281"/>
+    <path stroke="#4caf50" d="M-9.5,-27.8L-9.5,21.8C-9.5,25.1,-6.8,27.8,-3.5,27.8L9.5,27.8" stroke-linecap="round" stroke-width="3" transform="matrix(1,0,0,1,206.75,4115)" ed:parentid="278" stroke-linejoin="round" fill="none" ed:tosuperid="282" id="283"/>
+    <g ed:height="53" ed:layout="righttree" transform="matrix(1,0,0,1,23,77)" id="117" ed:topictype="mainidea" ed:width="101">
+        <path stroke="#4caf50" d="M4,0L97,0C99.7,0,101,1.3,101,4L101,49C101,51.7,99.7,53,97,53L4,53C1.3,53,0,51.7,0,49L0,4C0,1.3,1.3,0,4,0z" stroke-width="3" stroke-linejoin="round" fill="none"/>
+        <g transform="translate(21,16.6)">
+            <use transform="translate(0,0)" xlink:href="#imgflag1"/>
+        </g>
+        <text class="st40">
+            <tspan   x="48" y="30" textLength="32">内存</tspan>
+        </text>
+    </g>
+    <symbol id="imgflag1">
+        <image xlink:href="data:image/png;base64,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" height="16" width="16"/>
+    </symbol>
+    <g ed:height="40" transform="matrix(1,0,0,1,108.4,163)" ed:parentid="117" id="119" ed:width="144.546875">
+        <path d="M4,0L140.5,0C143.2,0,144.5,1.3,144.5,4L144.5,36C144.5,38.7,143.2,40,140.5,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#4caf50"/>
+        <text class="st41">
+            <tspan   x="19" y="24" textLength="107">iOS 内存分区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,212.75)" ed:parentid="119" id="121" ed:width="63">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="42">高地址</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,246.5)" ed:parentid="119" id="123" ed:width="49">
+        <path d="M4,0L45,0C47.7,0,49,1.3,49,4L49,20C49,22.7,47.7,24,45,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#fdd834"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="28">栈区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,280.25)" ed:parentid="123" id="125" ed:width="133">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="112">临时变量，参数等</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,314)" ed:parentid="123" id="127" ed:width="147">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="126">系统管理，可读可写</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,347.75)" ed:parentid="123" id="129" ed:width="111.28125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="90">FILO 先进后出</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,381.5)" ed:parentid="123" id="131" ed:width="119">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="98">连续的内存地址</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,415.25)" ed:parentid="123" id="133" ed:width="107.6875">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="87">地址 0x7开头</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,449)" ed:parentid="119" id="135" ed:width="49">
+        <path d="M4,0L45,0C47.7,0,49,1.3,49,4L49,20C49,22.7,47.7,24,45,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ffc009"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="28">堆区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,482.75)" ed:parentid="135" id="137" ed:width="199.609375">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="179">alloc，malloc 申请分配地址</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,516.5)" ed:parentid="135" id="139" ed:width="175">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="154">手动管理内存，可读可写</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,550.25)" ed:parentid="135" id="141" ed:width="133">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="112">不连续的内存地址</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,259.6,584)" ed:parentid="141" id="143" ed:width="77">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="56">链表结构</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,617.75)" ed:parentid="135" id="145" ed:width="111.328125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="90">先进先出 FIFO</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,651.5)" ed:parentid="135" id="147" ed:width="287">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="266">内存空间分配灵活，不过也会导致内存碎片</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,685.25)" ed:parentid="135" id="149" ed:width="231">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="210">用户管理内存，可能导致内存泄露</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,719)" ed:parentid="135" id="151" ed:width="235.421875">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="214">内存分配：动态， 速度比栈等都慢</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,205.7,752.75)" ed:parentid="135" id="153" ed:width="140.109375">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="119">地址 常以0x6 开头</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,786.5)" ed:parentid="119" id="155" ed:width="98.328125">
+        <path d="M4,0L94.3,0C97,0,98.3,1.3,98.3,4L98.3,20C98.3,22.7,97,24,94.3,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ffabd5"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="77">全局/静态区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,820.25)" ed:parentid="155" id="157" ed:width="164.890625">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="144">未分配全局变量区 .bss</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,854)" ed:parentid="155" id="159" ed:width="171.3125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="150">已分配全局变量区 .data</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,887.75)" ed:parentid="155" id="161" ed:width="98.109375">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="77">以 0x1 开头</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,921.5)" ed:parentid="155" id="163" ed:width="186.3125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="165">退出app时销毁，可读可写</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,955.25)" ed:parentid="155" id="165" ed:width="161">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="140">运行中对象内存一直在</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,989)" ed:parentid="119" id="167" ed:width="63">
+        <path d="M4,0L59,0C61.7,0,63,1.3,63,4L63,20C63,22.7,61.7,24,59,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ea8aba"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="42">常量区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,212.7,1022.75)" ed:parentid="167" id="169" ed:width="200.3125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="179">编译时加载，退出app时销毁</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,212.7,1056.5)" ed:parentid="167" id="171" ed:width="161">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="140">代码中的常量申请内存</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,212.7,1090.25)" ed:parentid="167" id="173" ed:width="49">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="28">只读</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,1124)" ed:parentid="119" id="175" ed:width="63">
+        <path d="M4,0L59,0C61.7,0,63,1.3,63,4L63,20C63,22.7,61.7,24,59,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#8ede99"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="42">代码区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,212.7,1157.75)" ed:parentid="175" id="177" ed:width="119">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="98">二进制代码数据</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,212.7,1191.5)" ed:parentid="175" id="179" ed:width="49">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="28">只读</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,212.7,1225.25)" ed:parentid="175" id="181" ed:width="200.3125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="179">编译时加载，退出app时销毁</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,1259)" ed:parentid="119" id="183" ed:width="63">
+        <path d="M4,0L59,0C61.7,0,63,1.3,63,4L63,20C63,22.7,61.7,24,59,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#8eddf9"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="42">保留区</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,1292.75)" ed:parentid="119" id="185" ed:width="63">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="42">低地址</tspan>
+        </text>
+    </g>
+    <g ed:height="40" transform="matrix(1,0,0,1,108.4,1349.75)" ed:parentid="117" id="187" ed:width="128">
+        <path d="M4,0L124,0C126.7,0,128,1.3,128,4L128,36C128,38.7,126.7,40,124,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#00a99d"/>
+        <text class="st41">
+            <tspan   x="19" y="24" textLength="90">二进制重排</tspan>
+        </text>
+    </g>
+    <g ed:height="65" transform="matrix(1,0,0,1,162.3,1399.5)" ed:parentid="187" id="189" ed:width="518">
+        <path stroke="#50c3f7" d="M4,0L514,0C516.7,0,518,1.3,518,4L518,61C518,63.7,516.7,65,514,65L4,65C1.3,65,0,63.7,0,61L0,4C0,1.3,1.3,0,4,0z" stroke-width="2" stroke-linejoin="round" fill="none"/>
+        <text class="st42">
+            <tspan   x="10" y="16.5" textLength="490">启动优化中我们介绍了二进制重排，通过修改文件加载顺序，从而改变函数加载</tspan>
+            <tspan   x="10" y="36.5" textLength="490">顺序，从而减少虚拟内存映射真实内存地址缺页问题，最终达到优化加载速度效</tspan>
+            <tspan   x="10" y="56.5" textLength="112">果，减少启动时间</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,1474.25)" ed:parentid="189" id="191" ed:width="245">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="224">详细参考优化篇内容，本节不再介绍</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,1508)" ed:parentid="187" id="193" ed:width="441">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="420">下面要介绍的是字节对齐，本质上也是内存读取速度优化的一种策略</tspan>
+        </text>
+    </g>
+    <g ed:height="40" transform="matrix(1,0,0,1,108.4,1565)" ed:parentid="117" id="195" ed:width="182">
+        <path d="M4,0L178,0C180.7,0,182,1.3,182,4L182,36C182,38.7,180.7,40,178,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#ea8aba"/>
+        <text class="st41">
+            <tspan   x="19" y="24" textLength="144">内存（字节）对齐</tspan>
+        </text>
+    </g>
+    <g ed:height="64" transform="matrix(1,0,0,1,162.3,1614.75)" ed:parentid="195" id="197" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="446">iOS中创建一个对象， 并且这个对象还有属性，比如 int age 占 4字节，</tspan>
+            <tspan   x="10" y="36" textLength="497">NSString *name 占 8 字节，等等，那么这个对象在编译分配 内存占用大小时，</tspan>
+            <tspan   x="10" y="56" textLength="210">会根据属性编写的先后顺序来计算</tspan>
+        </text>
+    </g>
+    <g ed:height="44" transform="matrix(1,0,0,1,216.2,1688.5)" ed:parentid="197" id="199" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="486">一个对象至少分配8字节，iOS 64位中至少是16字节，没有任何属性时，多出8</tspan>
+            <tspan   x="10" y="36" textLength="438">字节，这样保证至少以16字节作单位，方便计算指针位置，也方便扩展</tspan>
+        </text>
+    </g>
+    <g ed:height="44" transform="matrix(1,0,0,1,216.2,1742.25)" ed:parentid="197" id="201" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="476">如果属性本身 有嵌套对象，那么一小一大混合排序 过多的话，会产生内存“碎</tspan>
+            <tspan   x="10" y="36" textLength="412">片”，所以尽量定义属性时，把代码提前排好，这样能节省内存空间</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,1796)" ed:parentid="197" id="203" ed:width="351.453125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="335">iOS系统本身也是不断更新的，所以也会为 其进行优化</tspan>
+        </text>
+    </g>
+    <g ed:height="40" transform="matrix(1,0,0,1,108.4,1853)" ed:parentid="117" id="205" ed:width="110">
+        <path d="M4,0L106,0C108.7,0,110,1.3,110,4L110,36C110,38.7,108.7,40,106,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#2cd551"/>
+        <text class="st41">
+            <tspan   x="19" y="24" textLength="72">内存平移</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,1902.75)" ed:parentid="205" id="207" ed:width="249.421875">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="228">简单理解就是内存地址上的 指针移动</tspan>
+        </text>
+    </g>
+    <g ed:height="64" transform="matrix(1,0,0,1,162.3,1936.5)" ed:parentid="205" id="209" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="471">一个实例对象调用对象方法，首先去对应的类对象（isa指向对应类对象 首地</tspan>
+            <tspan   x="10" y="36" textLength="495">址）缓存cache 和方法列表中寻找，通过指针移动来找对应的方法 函数地址，然</tspan>
+            <tspan   x="10" y="56" textLength="70">后进行调用</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,2010.25)" ed:parentid="205" id="211" ed:width="94.65625">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="87">Person 类  ：</tspan>
+        </text>
+    </g>
+    <g ed:height="194" transform="matrix(1,0,0,1,216.2,2051)" ed:parentid="211" id="214" ed:width="263.640625">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="214">@interface LGPerson : NSObject</tspan>
+            <tspan   x="10" y="33" textLength="112">- (void)sayHello;</tspan>
+            <tspan   x="10" y="50" textLength="37">@end</tspan>
+            <tspan   x="10" y="84" textLength="186">@implementation LGPerson</tspan>
+            <tspan   x="10" y="118" textLength="163">- (void) saySomething { </tspan>
+            <tspan   x="10" y="135" textLength="243">         NSLog(@"%s: 你好", __func__); </tspan>
+            <tspan   x="10" y="155" textLength="5">}</tspan>
+            <tspan   x="10" y="189" textLength="37">@end</tspan>
+        </text>
+    </g>
+    <g ed:height="25" transform="matrix(1,0,0,1,162.3,2261.75)" ed:parentid="205" id="216" ed:width="72.84375">
+        <path d="M4,0L68.8,0C71.5,0,72.8,1.3,72.8,4L72.8,21C72.8,23.7,71.5,25,68.8,25L4,25C1.3,25,0,23.7,0,21L0,4C0,1.3,1.3,0,4,0z" stroke="#4caf50" stroke-width="2" stroke-linejoin="round" fill="#ffabd5"/>
+        <text class="st42">
+            <tspan   x="10" y="16.5" textLength="51">测试1：</tspan>
+        </text>
+    </g>
+    <g ed:height="282" transform="matrix(1,0,0,1,216.2,2303.5)" ed:parentid="216" id="219" ed:width="352.6875">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="223">@implementation ViewController</tspan>
+            <tspan   x="10" y="50" textLength="149">- (void)viewDidLoad  {</tspan>
+            <tspan   x="10" y="67" textLength="160">    [super viewDidLoad];</tspan>
+            <tspan   x="10" y="84" textLength="18">    </tspan>
+            <tspan   x="10" y="101" textLength="332">    // 指针读取类地址，强转为对象，调用sayHello。</tspan>
+            <tspan   x="10" y="121" textLength="210">    Class cls = [LGPerson class];</tspan>
+            <tspan   x="10" y="138" textLength="128">    void * ht = &amp;cls;</tspan>
+            <tspan   x="10" y="155" textLength="228">    [(__bridge id)ht saySomething];</tspan>
+            <tspan   x="10" y="172" textLength="18">    </tspan>
+            <tspan   x="10" y="189" textLength="206">    // 实例化对象，调用sayHello</tspan>
+            <tspan   x="10" y="209" textLength="272">    LGPerson * person = [LGPerson new];</tspan>
+            <tspan   x="10" y="226" textLength="177">    [person saySomething];</tspan>
+            <tspan   x="10" y="243" textLength="5">}</tspan>
+            <tspan   x="10" y="277" textLength="37">@end</tspan>
+        </text>
+    </g>
+    <g ed:height="24" ed:layout="rightmap" transform="matrix(1,0,0,1,216.2,2648.25)" ed:parentid="216" id="221" ed:width="91">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="70">打印结果：</tspan>
+        </text>
+    </g>
+    <g ed:height="65" ed:layout="rightmap" transform="matrix(1,0,0,1,334.2,2602.25)" ed:parentid="221" id="223" ed:width="242.609375">
+        <path stroke="#4caf50" d="M4,0L238.6,0C241.3,0,242.6,1.3,242.6,4L242.6,61C242.6,63.7,241.3,65,238.6,65L4,65C1.3,65,0,63.7,0,61L0,4C0,1.3,1.3,0,4,0z" stroke-width="2" stroke-linejoin="round" fill="none"/>
+        <text class="st42">
+            <tspan   x="10" y="16.5" textLength="74">打印如下： </tspan>
+            <tspan   x="10" y="36.5" textLength="221">-[LGPerson saySomething] : 你好</tspan>
+            <tspan   x="10" y="56.5" textLength="221">-[LGPerson saySomething] : 你好</tspan>
+        </text>
+    </g>
+    <g ed:height="24" ed:layout="rightmap" transform="matrix(1,0,0,1,334.2,2673.75)" ed:parentid="221" id="225" ed:width="328.265625">
+        <path d="M4,0L324.3,0C327,0,328.3,1.3,328.3,4L328.3,20C328.3,22.7,327,24,324.3,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ff9595"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="312"> 通过类对象竟然成功调用 实例对象的 方法 ！！！</tspan>
+        </text>
+    </g>
+    <g ed:height="45" transform="matrix(1,0,0,1,162.3,2707.5)" ed:parentid="205" id="227" ed:width="518">
+        <path stroke="#ea8aba" d="M4,0L514,0C516.7,0,518,1.3,518,4L518,41C518,43.7,516.7,45,514,45L4,45C1.3,45,0,43.7,0,41L0,4C0,1.3,1.3,0,4,0z" stroke-width="2" stroke-linejoin="round" fill="none"/>
+        <text class="st42">
+            <tspan   x="10" y="16.5" textLength="489">测试1结果可知，通过类地址强转获得地址 和 实例对象 地址 应该是相同的，不</tspan>
+            <tspan   x="10" y="36.5" textLength="126">然怎么会调用成功呢</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,2762.25)" ed:parentid="227" id="229" ed:width="457.65625">
+        <path d="M4,0L453.7,0C456.3,0,457.7,1.3,457.7,4L457.7,20C457.7,22.7,456.3,24,453.7,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ffabd5"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="437">也就是说，测试1代码中两种实现方法都指向 Person 类对象的地址 isa</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,2796)" ed:parentid="205" id="231" ed:width="202.734375">
+        <path d="M4,0L198.7,0C201.4,0,202.7,1.3,202.7,4L202.7,20C202.7,22.7,201.4,24,198.7,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ff9595"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="182">为什么首地址都是指向 isa ？</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,2829.75)" ed:parentid="205" id="233" ed:width="189.015625">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="168">我们回顾下 class 的结构：</tspan>
+        </text>
+    </g>
+    <g ed:height="209" transform="matrix(1,0,0,1,216.2,2870.5)" ed:parentid="233" id="236" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="392">struct objc_class : objc_object {   // objc_object 内包含 isa</tspan>
+            <tspan   x="10" y="36" textLength="18">    </tspan>
+            <tspan   x="10" y="53" textLength="264">    Class superclass;   // 父类，元类对象</tspan>
+            <tspan   x="10" y="73" textLength="234">    cache_t cache;             // 缓存表</tspan>
+            <tspan   x="10" y="93" textLength="458">    class_data_bits_t bits;    //  class_rw_t内部用来获取基础信息的标记</tspan>
+            <tspan   x="10" y="113" textLength="494">    class_rw_t *data() {      // 可读可写结构：方法，属性，协议 ，对象信息 等</tspan>
+            <tspan   x="10" y="133" textLength="84">都整合到此处</tspan>
+            <tspan   x="10" y="153" textLength="154">        return bits.data();</tspan>
+            <tspan   x="10" y="170" textLength="22">    }</tspan>
+            <tspan   x="10" y="187" textLength="13">...</tspan>
+            <tspan   x="10" y="204" textLength="5">}</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,3096.25)" ed:parentid="233" id="238" ed:width="438.78125">
+        <path d="M4,0L434.8,0C437.5,0,438.8,1.3,438.8,4L438.8,20C438.8,22.7,437.5,24,434.8,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#fdd834"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="418">objc_object 结构里就是一个 isa ，继承过来的，其顺序在第一位。</tspan>
+        </text>
+    </g>
+    <g ed:height="45" transform="matrix(1,0,0,1,216.2,3130)" ed:parentid="233" id="240" ed:width="518">
+        <path stroke="#ff3c00" d="M4,0L514,0C516.7,0,518,1.3,518,4L518,41C518,43.7,516.7,45,514,45L4,45C1.3,45,0,43.7,0,41L0,4C0,1.3,1.3,0,4,0z" stroke-width="2" stroke-linejoin="round" fill="none"/>
+        <text class="st42">
+            <tspan   x="10" y="16.5" textLength="488">也就是说，类对象起始地址就是指向 isa 的，或者说就是  isa 地址。 【isa 占8</tspan>
+            <tspan   x="10" y="36.5" textLength="42">字节】</tspan>
+        </text>
+    </g>
+    <g ed:height="44" transform="matrix(1,0,0,1,216.2,3184.75)" ed:parentid="233" id="242" ed:width="517">
+        <path d="M4,0L513,0C515.7,0,517,1.3,517,4L517,40C517,42.7,515.7,44,513,44L4,44C1.3,44,0,42.7,0,40L0,4C0,1.3,1.3,0,4,0z" fill="#8eddf9"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="471">另外，获取对象第一个属性时，肯定至少平移8字节，第二个属性的话就不一</tspan>
+            <tspan   x="10" y="36" textLength="392">定，可能中间隔断，具体还是以获取到对象属性的偏移位置为准</tspan>
+        </text>
+    </g>
+    <g ed:height="24" ed:layout="rightmap" transform="matrix(1,0,0,1,162.3,3319)" ed:parentid="205" id="244" ed:width="63">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="42">小结：</tspan>
+        </text>
+    </g>
+    <g ed:height="64" ed:layout="rightmap" transform="matrix(1,0,0,1,252.3,3238.5)" ed:parentid="244" id="246" ed:width="517">
+        <path d="M4,0L513,0C515.7,0,517,1.3,517,4L517,60C517,62.7,515.7,64,513,64L4,64C1.3,64,0,62.7,0,60L0,4C0,1.3,1.3,0,4,0z" fill="#fdd834"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="493">测试1 通过类直接强转后指向是类的首地址 isa 位置，刚好和实例对象 要去类对</tspan>
+            <tspan   x="10" y="36" textLength="485">象寻找方法指向isa 一致，这个巧合导致编译器未能判断前者不是真正的实例对</tspan>
+            <tspan   x="10" y="56" textLength="406">象，对于编译器来说，它只负责发送指令就行，管你是怎么来的呢</tspan>
+        </text>
+    </g>
+    <g ed:height="64" ed:layout="rightmap" transform="matrix(1,0,0,1,252.3,3309)" ed:parentid="244" id="248" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="484">巧合往往也是不稳定的，测试1 中，person 我们没有设置过属性，假如我们设</tspan>
+            <tspan   x="10" y="36" textLength="490">置一个属性呢，会不会就有问题了，因为通过类直接强转的对象是不能设置属性</tspan>
+            <tspan   x="10" y="56" textLength="14">的</tspan>
+        </text>
+    </g>
+    <g ed:height="24" ed:layout="rightmap" transform="matrix(1,0,0,1,252.3,3379.5)" ed:parentid="244" id="250" ed:width="357">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="336">接下来我们设置一个属性，然后在方法里打印一下看看</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,3413.25)" ed:parentid="205" id="252" ed:width="57.84375">
+        <path d="M4,0L53.8,0C56.5,0,57.8,1.3,57.8,4L57.8,20C57.8,22.7,56.5,24,53.8,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#ffabd5"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="37">测试2</tspan>
+        </text>
+    </g>
+    <g ed:height="44" transform="matrix(1,0,0,1,210.12,3447)" ed:parentid="252" id="254" ed:width="368.453125">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="70">修改结构：</tspan>
+            <tspan   x="10" y="36" textLength="347">给person 结构增加一个 NSString *kc_hobby；属性。 </tspan>
+        </text>
+    </g>
+    <g ed:height="79" transform="matrix(1,0,0,1,210.12,3500.75)" ed:parentid="252" id="256" ed:width="512.734375">
+        <path stroke="#4caf50" d="M4,0L508.7,0C511.4,0,512.7,1.3,512.7,4L512.7,75C512.7,77.7,511.4,79,508.7,79L4,79C1.3,79,0,77.7,0,75L0,4C0,1.3,1.3,0,4,0z" stroke-width="2" stroke-linejoin="round" fill="none"/>
+        <text class="st42">
+            <tspan   x="10" y="16.5" textLength="70">修改方法：</tspan>
+            <tspan   x="10" y="36.5" textLength="163">- (void) saySomething { </tspan>
+            <tspan   x="10" y="53.5" textLength="491">         NSLog(@"%s - %@",__func__,self.kc_hobby);  //kc_hobby是个字符串</tspan>
+            <tspan   x="10" y="73.5" textLength="5">}</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,210.12,3589.5)" ed:parentid="252" id="258" ed:width="189">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="168">接着再运行一遍，看结果：</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,264.02,3623.25)" ed:parentid="258" id="260" ed:width="209.296875">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="188">第一个打印： ViewController</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,264.02,3657)" ed:parentid="258" id="262" ed:width="130.46875">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="109">第二个打印：null</tspan>
+        </text>
+    </g>
+    <g ed:height="44" transform="matrix(1,0,0,1,210.12,3690.75)" ed:parentid="252" id="264" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="491">第二个实例对象因为还没设置属性值打印 null 正常，但是 第一个强转 对象打印</tspan>
+            <tspan   x="10" y="36" textLength="177">却打印到 控制器了 ！！！！</tspan>
+        </text>
+    </g>
+    <g ed:height="81" transform="matrix(1,0,0,1,210.12,3744.5)" ed:parentid="252" id="266" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="280">【这里内存逻辑还没有搞明白，后面再补充】</tspan>
+            <tspan   x="10" y="53" textLength="501">经打印得知内存顺序为： self -> _cmd -> ViewController -> self -> cls -> </tspan>
+            <tspan   x="10" y="73" textLength="83">ht（TODO）</tspan>
+        </text>
+    </g>
+    <g ed:height="44" transform="matrix(1,0,0,1,210.12,3835.25)" ed:parentid="252" id="268" ed:width="517">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="495">平移8字节后指向了self，导致打印到控制器了，如果指向未知地址有可能崩溃，</tspan>
+            <tspan   x="10" y="36" textLength="210">所以会存在问题，用来测试可以。</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,3889)" ed:parentid="205" id="270" ed:width="175">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="154">主要是理解内存平移概念</tspan>
+        </text>
+    </g>
+    <g ed:height="40" transform="matrix(1,0,0,1,108.4,3946)" ed:parentid="117" id="272" ed:width="110">
+        <path d="M4,0L106,0C108.7,0,110,1.3,110,4L110,36C110,38.7,108.7,40,106,40L4,40C1.3,40,0,38.7,0,36L0,4C0,1.3,1.3,0,4,0z" fill="#7986cb"/>
+        <text class="st41">
+            <tspan   x="19" y="24" textLength="72">内存泄露</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,3995.75)" ed:parentid="272" id="274" ed:width="141.84375">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="121">这个在 优化篇 介绍</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,4029.5)" ed:parentid="272" id="276" ed:width="301">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="280">主要是指因循环引用导致对象内存得不到释放</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,162.3,4063.25)" ed:parentid="272" id="278" ed:width="77">
+        <path d="M4,0L73,0C75.7,0,77,1.3,77,4L77,20C77,22.7,75.7,24,73,24L4,24C1.3,24,0,22.7,0,20L0,4C0,1.3,1.3,0,4,0z" fill="#8ede99"/>
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="56">内存溢出</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,4097)" ed:parentid="278" id="280" ed:width="441">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="420">直接加载大图等资源文件，或内存中被大量占用，内存不足导致问题</tspan>
+        </text>
+    </g>
+    <g ed:height="24" transform="matrix(1,0,0,1,216.2,4130.75)" ed:parentid="278" id="282" ed:width="399">
+        <text class="st42">
+            <tspan   x="10" y="16" textLength="378">循环创建对象，短时间没有得到释放，最终导致内存分配失败</tspan>
+        </text>
+    </g>
+</svg>
+</div>
+      </div>
+    </div>
+  </body>
+</html>
