@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>intel-32基础语法(中) | 知识导图</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/images/hlogo.png">
+    <meta name="description" content="复杂的知识体系需要一套精简的知识导图作参考和索引">
+    
+    <link rel="preload" href="/assets/css/0.styles.3623805a.css" as="style"><link rel="preload" href="/assets/js/app.956f6e98.js" as="script"><link rel="preload" href="/assets/js/2.d54d51d6.js" as="script"><link rel="preload" href="/assets/js/92.8830c207.js" as="script"><link rel="prefetch" href="/assets/js/10.7d5d06ea.js"><link rel="prefetch" href="/assets/js/100.c52b0ea4.js"><link rel="prefetch" href="/assets/js/101.97dc2f7b.js"><link rel="prefetch" href="/assets/js/102.b5b9abc6.js"><link rel="prefetch" href="/assets/js/103.de0678e3.js"><link rel="prefetch" href="/assets/js/104.162a790f.js"><link rel="prefetch" href="/assets/js/105.4b96688c.js"><link rel="prefetch" href="/assets/js/11.73300a98.js"><link rel="prefetch" href="/assets/js/12.1574de4b.js"><link rel="prefetch" href="/assets/js/13.9e1cff29.js"><link rel="prefetch" href="/assets/js/14.9dd4e9b0.js"><link rel="prefetch" href="/assets/js/15.fb4a4e30.js"><link rel="prefetch" href="/assets/js/16.a9978a2f.js"><link rel="prefetch" href="/assets/js/17.d161c4a3.js"><link rel="prefetch" href="/assets/js/18.0a3f80f9.js"><link rel="prefetch" href="/assets/js/19.27c43cea.js"><link rel="prefetch" href="/assets/js/20.76b66c8b.js"><link rel="prefetch" href="/assets/js/21.3d69b68c.js"><link rel="prefetch" href="/assets/js/22.b8fc92f0.js"><link rel="prefetch" href="/assets/js/23.dbf3b98b.js"><link rel="prefetch" href="/assets/js/24.cb857455.js"><link rel="prefetch" href="/assets/js/25.6b10ac06.js"><link rel="prefetch" href="/assets/js/26.cbceffcf.js"><link rel="prefetch" href="/assets/js/27.bddb79bc.js"><link rel="prefetch" href="/assets/js/28.9b9d939d.js"><link rel="prefetch" href="/assets/js/29.127f1213.js"><link rel="prefetch" href="/assets/js/3.e19cb12c.js"><link rel="prefetch" href="/assets/js/30.60bccf99.js"><link rel="prefetch" href="/assets/js/31.34b286a8.js"><link rel="prefetch" href="/assets/js/32.991b2f63.js"><link rel="prefetch" href="/assets/js/33.e6f327b7.js"><link rel="prefetch" href="/assets/js/34.b69bbc21.js"><link rel="prefetch" href="/assets/js/35.bab297ed.js"><link rel="prefetch" href="/assets/js/36.8a119b34.js"><link rel="prefetch" href="/assets/js/37.d029e9f3.js"><link rel="prefetch" href="/assets/js/38.46eb20a4.js"><link rel="prefetch" href="/assets/js/39.d793e68f.js"><link rel="prefetch" href="/assets/js/4.dd3209f8.js"><link rel="prefetch" href="/assets/js/40.b7b51498.js"><link rel="prefetch" href="/assets/js/41.151e380a.js"><link rel="prefetch" href="/assets/js/42.b07e21d1.js"><link rel="prefetch" href="/assets/js/43.3e777f06.js"><link rel="prefetch" href="/assets/js/44.11fa5c7b.js"><link rel="prefetch" href="/assets/js/45.7052c909.js"><link rel="prefetch" href="/assets/js/46.40032702.js"><link rel="prefetch" href="/assets/js/47.5b51cc93.js"><link rel="prefetch" href="/assets/js/48.39927459.js"><link rel="prefetch" href="/assets/js/49.3448b4a9.js"><link rel="prefetch" href="/assets/js/5.54c64e18.js"><link rel="prefetch" href="/assets/js/50.b030173a.js"><link rel="prefetch" href="/assets/js/51.1bbf6ad8.js"><link rel="prefetch" href="/assets/js/52.8558681f.js"><link rel="prefetch" href="/assets/js/53.288a22ed.js"><link rel="prefetch" href="/assets/js/54.ce3b3e40.js"><link rel="prefetch" href="/assets/js/55.1317e68e.js"><link rel="prefetch" href="/assets/js/56.24e8e377.js"><link rel="prefetch" href="/assets/js/57.ab29406a.js"><link rel="prefetch" href="/assets/js/58.a2e3804d.js"><link rel="prefetch" href="/assets/js/59.6a3257e7.js"><link rel="prefetch" href="/assets/js/6.a78acc98.js"><link rel="prefetch" href="/assets/js/60.80e92dda.js"><link rel="prefetch" href="/assets/js/61.7cdefce5.js"><link rel="prefetch" href="/assets/js/62.080e9027.js"><link rel="prefetch" href="/assets/js/63.12fb6ff0.js"><link rel="prefetch" href="/assets/js/64.f472bfdc.js"><link rel="prefetch" href="/assets/js/65.0f2d77db.js"><link rel="prefetch" href="/assets/js/66.cf918f88.js"><link rel="prefetch" href="/assets/js/67.e2a894dc.js"><link rel="prefetch" href="/assets/js/68.d02214b4.js"><link rel="prefetch" href="/assets/js/69.da9c776f.js"><link rel="prefetch" href="/assets/js/7.26888c57.js"><link rel="prefetch" href="/assets/js/70.3accafd4.js"><link rel="prefetch" href="/assets/js/71.cf06ab59.js"><link rel="prefetch" href="/assets/js/72.07426e29.js"><link rel="prefetch" href="/assets/js/73.2ca0934c.js"><link rel="prefetch" href="/assets/js/74.6ccd29d1.js"><link rel="prefetch" href="/assets/js/75.8180abcb.js"><link rel="prefetch" href="/assets/js/76.6b08ec10.js"><link rel="prefetch" href="/assets/js/77.d4b5ae3e.js"><link rel="prefetch" href="/assets/js/78.b26c414a.js"><link rel="prefetch" href="/assets/js/79.2734e666.js"><link rel="prefetch" href="/assets/js/8.9ae79d10.js"><link rel="prefetch" href="/assets/js/80.5cf7acc5.js"><link rel="prefetch" href="/assets/js/81.74f2c69e.js"><link rel="prefetch" href="/assets/js/82.9fb21468.js"><link rel="prefetch" href="/assets/js/83.464889d9.js"><link rel="prefetch" href="/assets/js/84.26038405.js"><link rel="prefetch" href="/assets/js/85.92d110c1.js"><link rel="prefetch" href="/assets/js/86.f8b3b40c.js"><link rel="prefetch" href="/assets/js/87.68c7849a.js"><link rel="prefetch" href="/assets/js/88.be47d7d8.js"><link rel="prefetch" href="/assets/js/89.33c7ca04.js"><link rel="prefetch" href="/assets/js/9.c437635c.js"><link rel="prefetch" href="/assets/js/90.43c46931.js"><link rel="prefetch" href="/assets/js/91.27dbd9c9.js"><link rel="prefetch" href="/assets/js/93.1d548ae4.js"><link rel="prefetch" href="/assets/js/94.ceac6b41.js"><link rel="prefetch" href="/assets/js/95.4f604719.js"><link rel="prefetch" href="/assets/js/96.090aa727.js"><link rel="prefetch" href="/assets/js/97.962db54a.js"><link rel="prefetch" href="/assets/js/98.6a0b73a3.js"><link rel="prefetch" href="/assets/js/99.9b257d4a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3623805a.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo2.png" alt="知识导图" class="logo"> <span class="site-name can-hide">知识导图</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/2f79a9/" class="nav-link">iOS知识</a></div><div class="nav-item"><a href="/pages/603316/" class="nav-link">计算机软件</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><!----> <span class="title" style="display:;">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.52im.net/index.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  即时通讯网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zhuanlan.zhihu.com/p/409277420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发常用网站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/2f79a9/" class="nav-link">iOS知识</a></div><div class="nav-item"><a href="/pages/603316/" class="nav-link">计算机软件</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><!----> <span class="title" style="display:;">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.52im.net/index.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  即时通讯网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zhuanlan.zhihu.com/p/409277420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发常用网站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MD</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C++语法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>汇编语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/3f6221/" class="sidebar-link">Day1-前言</a></li><li><a href="/pages/3420aa/" class="sidebar-link">Day2-语言发展</a></li><li><a href="/pages/712a44/" class="sidebar-link">intel-32基础语法(上)</a></li><li><a href="/pages/e62c69/" aria-current="page" class="active sidebar-link">intel-32基础语法(中)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/e62c69/#算术指令" class="sidebar-link">算术指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#inc-指令" class="sidebar-link">INC 指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#dec指令" class="sidebar-link">DEC指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#add和sub指令" class="sidebar-link">ADD和SUB指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#mul-乘法指令" class="sidebar-link">MUL 乘法指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#imul-乘法指令" class="sidebar-link">IMUL 乘法指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#div-idiv指令" class="sidebar-link">DIV / IDIV指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#div-idiv-x86-32位" class="sidebar-link">DIV / IDIV （x86 - 32位）</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/e62c69/#逻辑" class="sidebar-link">逻辑</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#逻辑指令" class="sidebar-link">逻辑指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#and-指令" class="sidebar-link">AND 指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#or-指令" class="sidebar-link">OR 指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#xor-指令" class="sidebar-link">XOR 指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#test-指令" class="sidebar-link">TEST 指令</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#not-指令" class="sidebar-link">NOT 指令</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/e62c69/#条件" class="sidebar-link">条件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#条件-2" class="sidebar-link">条件</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#无条件跳转" class="sidebar-link">无条件跳转</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#条件跳转" class="sidebar-link">条件跳转</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#示例" class="sidebar-link">示例</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/e62c69/#过程" class="sidebar-link">过程</a></li><li class="sidebar-sub-header level2"><a href="/pages/e62c69/#循环" class="sidebar-link">循环</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#循环-loop" class="sidebar-link">循环 loop</a></li><li class="sidebar-sub-header level3"><a href="/pages/e62c69/#例子" class="sidebar-link">例子</a></li></ul></li></ul></li><li><a href="/pages/e593e1/" class="sidebar-link">intel-32基础语法(下)</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><span data-v-06225672>软件编程及算法</span></li><li data-v-06225672><span data-v-06225672>汇编语言</span></li></ul> <div class="info" data-v-06225672><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-08-16</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">intel-32基础语法(中)<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h2 id="算术指令"><a href="#算术指令" class="header-anchor">#</a> 算术指令</h2> <h3 id="inc-指令"><a href="#inc-指令" class="header-anchor">#</a> INC 指令</h3> <p>INC指令用于将操作数加1。它对可以在寄存器或内存中的单个操作数起作用。</p> <p>INC指令具有以下语法-</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>INC destination
+</code></pre></div><p>目标操作数可以是8位，16位或32位操作数。</p> <p>例</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>INC <span class="token register variable">EBX</span>      <span class="token comment">;  32-bit 寄存器 自增1</span>
+INC <span class="token register variable">DL</span>       <span class="token comment">;  8-bit 寄存器 自增1</span>
+INC <span class="token operator">[</span>count<span class="token operator">]</span>  <span class="token comment">;  变量count  自增1</span>
+</code></pre></div><h3 id="dec指令"><a href="#dec指令" class="header-anchor">#</a> DEC指令</h3> <p>DEC指令用于将操作数减1。它对可以在寄存器或内存中的单个操作数起作用。</p> <p>DEC指令具有以下语法-</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>DEC destination
+</code></pre></div><p>操作数目的地可以是8位，16位或32位操作数。</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>segment .data
+   count dw  <span class="token number">0</span>
+   value db  <span class="token number">15</span>
+        
+segment .text
+   inc <span class="token operator">[</span>count<span class="token operator">]</span>
+   dec <span class="token operator">[</span>value<span class="token operator">]</span>
+        
+   mov <span class="token register variable">ebx</span>, count
+   inc word <span class="token operator">[</span><span class="token register variable">ebx</span><span class="token operator">]</span>
+        
+   mov <span class="token register variable">esi</span>, value
+   dec byte <span class="token operator">[</span><span class="token register variable">esi</span><span class="token operator">]</span>
+</code></pre></div><h3 id="add和sub指令"><a href="#add和sub指令" class="header-anchor">#</a> ADD和SUB指令</h3> <p><strong>ADD</strong>和<strong>SUB</strong>指令用于对字节，字和双字大小的二进制数据进行简单的加/减，即分别用于添加或减去8位，16位或32位操作数。</p> <p>ADD和SUB指令具有以下语法-</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>ADD<span class="token operator">/</span>SUB destination, source
+</code></pre></div><p>ADD / SUB指令可以发生在-</p> <ul><li>寄存器 to 寄存器</li> <li>内存 to 寄存器</li> <li>寄存器 to 内存</li> <li>寄存器 to 常量数据</li> <li>内存 to 常量数据</li></ul> <p>但是，像其他指令一样，使用ADD / SUB指令也无法进行存储器到存储器的操作。ADD或SUB操作设置或清除溢出和进位标志。</p> <p>下面的示例将要求用户输入两位数字，分别将这些数字存储在EAX和EBX寄存器中，将这些值相加，将结果存储在“ res ”存储位置中，最后显示结果。</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>SYS_EXIT  equ <span class="token number">1</span>
+SYS_READ  equ <span class="token number">3</span>
+SYS_WRITE equ <span class="token number">4</span>
+STDIN     equ <span class="token number">0</span>
+STDOUT    equ <span class="token number">1</span>
+
+segment .data 
+
+   msg1 db <span class="token string">&quot;Enter a digit &quot;</span>, <span class="token number">0xA</span>,<span class="token number">0xD</span> 
+   len1 equ <span class="token operator">$</span><span class="token operator">-</span> msg1 
+
+   msg2 db <span class="token string">&quot;Please enter a second digit&quot;</span>, <span class="token number">0xA</span>,<span class="token number">0xD</span> 
+   len2 equ <span class="token operator">$</span><span class="token operator">-</span> msg2 
+
+   msg3 db <span class="token string">&quot;The sum is: &quot;</span>
+   len3 equ <span class="token operator">$</span><span class="token operator">-</span> msg3
+
+segment .bss
+
+   num1 resb <span class="token number">2</span> 
+   num2 resb <span class="token number">2</span> 
+   res resb <span class="token number">1</span>    
+
+<span class="token keyword">section .text</span>
+   <span class="token keyword">global _start    </span><span class="token comment">;must be declared for using gcc</span>
+        
+<span class="token label function">_start:</span>             <span class="token comment">;tell linker entry point</span>
+   mov <span class="token register variable">eax</span>, SYS_WRITE         
+   mov <span class="token register variable">ebx</span>, STDOUT         
+   mov <span class="token register variable">ecx</span>, msg1         
+   mov <span class="token register variable">edx</span>, len1 
+   int <span class="token number">0x80</span>                
+
+   mov <span class="token register variable">eax</span>, SYS_READ 
+   mov <span class="token register variable">ebx</span>, STDIN  
+   mov <span class="token register variable">ecx</span>, num1 
+   mov <span class="token register variable">edx</span>, <span class="token number">2</span>
+   int <span class="token number">0x80</span>            
+
+   mov <span class="token register variable">eax</span>, SYS_WRITE        
+   mov <span class="token register variable">ebx</span>, STDOUT         
+   mov <span class="token register variable">ecx</span>, msg2          
+   mov <span class="token register variable">edx</span>, len2         
+   int <span class="token number">0x80</span>
+
+   mov <span class="token register variable">eax</span>, SYS_READ  
+   mov <span class="token register variable">ebx</span>, STDIN  
+   mov <span class="token register variable">ecx</span>, num2 
+   mov <span class="token register variable">edx</span>, <span class="token number">2</span>
+   int <span class="token number">0x80</span>        
+
+   mov <span class="token register variable">eax</span>, SYS_WRITE         
+   mov <span class="token register variable">ebx</span>, STDOUT         
+   mov <span class="token register variable">ecx</span>, msg3          
+   mov <span class="token register variable">edx</span>, len3         
+   int <span class="token number">0x80</span>
+
+   <span class="token comment">; moving the first number to eax register and second number to ebx</span>
+   <span class="token comment">; and subtracting ascii '0' to convert it into a decimal number</span>
+        
+   mov <span class="token register variable">eax</span>, <span class="token operator">[</span>num1<span class="token operator">]</span>
+   sub <span class="token register variable">eax</span>, <span class="token string">'0'</span>
+        
+   mov <span class="token register variable">ebx</span>, <span class="token operator">[</span>num2<span class="token operator">]</span>
+   sub <span class="token register variable">ebx</span>, <span class="token string">'0'</span>
+
+   <span class="token comment">; add eax and ebx</span>
+   add <span class="token register variable">eax</span>, <span class="token register variable">ebx</span>
+   <span class="token comment">; add '0' to to convert the sum from decimal to ASCII</span>
+   add <span class="token register variable">eax</span>, <span class="token string">'0'</span>
+
+   <span class="token comment">; storing the sum in memory location res</span>
+   mov <span class="token operator">[</span>res<span class="token operator">]</span>, <span class="token register variable">eax</span>
+
+   <span class="token comment">; print the sum </span>
+   mov <span class="token register variable">eax</span>, SYS_WRITE        
+   mov <span class="token register variable">ebx</span>, STDOUT
+   mov <span class="token register variable">ecx</span>, res         
+   mov <span class="token register variable">edx</span>, <span class="token number">1</span>        
+   int <span class="token number">0x80</span>
+
+<span class="token label function">exit:</span>    
+   
+   mov <span class="token register variable">eax</span>, SYS_EXIT   
+   xor <span class="token register variable">ebx</span>, <span class="token register variable">ebx</span> 
+   int <span class="token number">0x80</span>
+</code></pre></div><p><a href="https://www.jc2182.com/runcode.html?filename=jisuan1&amp;type=21&amp;module=jiaocheng" target="_blank" rel="noopener noreferrer">尝试一下<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>编译并执行上述代码后，将产生以下结果-</p> <div class="language-t4 extra-class"><pre class="language-t4"><code>Enter a digit:
+3
+Please enter a second digit:
+4
+The sum is:
+7
+</code></pre></div><p>具有硬编码变量的程序-</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token keyword">section .text</span>
+   <span class="token keyword">global _start    </span><span class="token comment">;must be declared for using gcc</span>
+        
+<span class="token label function">_start:</span>             <span class="token comment">;tell linker entry point</span>
+   mov  <span class="token register variable">eax</span>,<span class="token string">'3'</span>
+   sub     <span class="token register variable">eax</span>, <span class="token string">'0'</span>
+        
+   mov  <span class="token register variable">ebx</span>, <span class="token string">'4'</span>
+   sub     <span class="token register variable">ebx</span>, <span class="token string">'0'</span>
+   add  <span class="token register variable">eax</span>, <span class="token register variable">ebx</span>
+   add  <span class="token register variable">eax</span>, <span class="token string">'0'</span>
+        
+   mov  <span class="token operator">[</span>sum<span class="token operator">]</span>, <span class="token register variable">eax</span>
+   mov  <span class="token register variable">ecx</span>,msg 
+   mov  <span class="token register variable">edx</span>, len
+   mov  <span class="token register variable">ebx</span>,<span class="token number">1</span>   <span class="token comment">;file descriptor (stdout)</span>
+   mov  <span class="token register variable">eax</span>,<span class="token number">4</span>   <span class="token comment">;system call number (sys_write)</span>
+   int  <span class="token number">0x80</span>    <span class="token comment">;call kernel</span>
+        
+   mov  <span class="token register variable">ecx</span>,sum
+   mov  <span class="token register variable">edx</span>, <span class="token number">1</span>
+   mov  <span class="token register variable">ebx</span>,<span class="token number">1</span>   <span class="token comment">;file descriptor (stdout)</span>
+   mov  <span class="token register variable">eax</span>,<span class="token number">4</span>   <span class="token comment">;system call number (sys_write)</span>
+   int  <span class="token number">0x80</span>    <span class="token comment">;call kernel</span>
+        
+   mov  <span class="token register variable">eax</span>,<span class="token number">1</span>   <span class="token comment">;system call number (sys_exit)</span>
+   int  <span class="token number">0x80</span>    <span class="token comment">;call kernel</span>
+        
+<span class="token keyword">section .data</span>
+   msg db <span class="token string">&quot;The sum is:&quot;</span>, <span class="token number">0xA</span>,<span class="token number">0xD</span> 
+   len equ <span class="token operator">$</span> <span class="token operator">-</span> msg   
+   segment .bss
+   sum resb <span class="token number">1</span>
+</code></pre></div><p><a href="https://www.jc2182.com/runcode.html?filename=jisuan2&amp;type=21&amp;module=jiaocheng" target="_blank" rel="noopener noreferrer">尝试一下<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>编译并执行上述代码后，将产生以下结果-</p> <div class="language-t4 extra-class"><pre class="language-t4"><code>The sum is:
+7
+</code></pre></div><p>⚠️  认真阅读发现，前面我们示例都是个位数的运算，如果直接换成个位以上的数运算就会得到错误的结果，原因就是溢出，下面在  乘法 中介绍 “进位” 相关的处理</p> <h3 id="mul-乘法指令"><a href="#mul-乘法指令" class="header-anchor">#</a> MUL 乘法指令</h3> <blockquote><p>1、mul乘法指令是无符号计算的，也就是不支持负数（imul支持负数）</p> <p>2、mul是单指令，也就是后面只能跟一个参数（imul支持多参）</p></blockquote> <p>32 位模式下，MUL（无符号数乘法）指令有三种类型：</p> <blockquote><p>1、执行 8 位操作数与 AL 寄存器的乘法；
+2、执行 16 位操作数与 AX 寄存器的乘法；
+3、执行 32 位操作数与 EAX 寄存器的乘法。</p></blockquote> <p>乘积溢出</p> <blockquote><p>MUL 指令中的单操作数是乘数。乘积结果存放的空间是被乘数和乘数大小的两倍，因此不会发生溢岀</p> <p>比如，两个8位二进制数的乘积不会超过16位。两个16位乘积不会超过32位等等（除法会溢出）</p></blockquote> <p>MUL无符号、单指令乘法表：</p> <p>MUL: 无符号乘 ;影响 OF、CF 标志位 ;</p> <p>指令格式: ;MUL r/m ;参数是乘数 ;</p> <p>如果参数是 r8/m8, 将把 AL 做乘数, 结果放在 AX ;（8位）</p> <p>如果参数是 r16/m16, 将把 AX 做乘数, 结果放在 EAX ;（16位）</p> <p>如果参数是 r32/m32, 将把 EAX 做乘数, 结果放在 EDX:EAX （32位）</p> <table><thead><tr><th>被乘数</th> <th>乘数</th> <th>乘积存放位置</th> <th>解析</th> <th>标记位</th></tr></thead> <tbody><tr><td>AL</td> <td>reg8/mem8</td> <td>AX</td> <td>MUL操作数是8位寄存器，自动将AL当作被乘数。结果存放AX</td> <td></td></tr> <tr><td>AX</td> <td>reg16/mem16</td> <td>DX:AX</td> <td>MUL操作数是16位寄存器，自动将AX当作被乘数。结果的低位放在AX，高位在DX</td> <td>CF = 1 标记位1表示DX有高位数据。CF = 0 表示DX没有高位数据，AX中已经显示全</td></tr> <tr><td>EAX</td> <td>reg16/mem32</td> <td>EDX:EAX</td> <td>MUL操作数是32位寄存器，自动将EAX当作被乘数。结果的低位在EAX，高位在EDX</td> <td></td></tr></tbody></table> <h4 id="_1、8位汇编"><a href="#_1、8位汇编" class="header-anchor">#</a> 1、8位汇编</h4> <p><strong>8086芯片 intel-8  位汇编个位乘法</strong></p> <p>MUL（乘法）指令，在C语法中，使用 int a = 2 * 3; 能很方便的计算乘法，而在汇编中却没有这么方便，而只有学习汇编，你才能更深入理解 2 * 3 底层到底是如何实现的</p> <p>示例：乘积小于10处理</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token comment">;调用并输出</span>
+<span class="token operator">%</span>macro  run_out <span class="token number">0</span>                      
+        mov <span class="token register variable">eax</span>, <span class="token number">4</span>         
+        mov <span class="token register variable">ebx</span>, <span class="token number">1</span> 
+        int <span class="token number">0x80</span>               
+<span class="token operator">%</span>endmacro
+
+<span class="token comment">;退出</span>
+<span class="token operator">%</span>macro  return <span class="token number">0</span>                      
+        mov <span class="token register variable">eax</span>,<span class="token number">1</span>   
+        int <span class="token number">0x80</span>              
+<span class="token operator">%</span>endmacro
+
+
+<span class="token comment">;乘法：乘积小于10处理 （ num1，num2）</span>
+<span class="token operator">%</span>macro  mul_oper <span class="token number">2</span>                      
+         mov  <span class="token register variable">al</span>, <span class="token operator">%</span><span class="token number">1</span>
+         sub  <span class="token register variable">al</span>, <span class="token string">'0'</span>
+
+         mov  <span class="token register variable">bl</span>, <span class="token operator">%</span><span class="token number">2</span>
+         sub  <span class="token register variable">bl</span>, <span class="token string">'0'</span>
+         
+         mul  <span class="token register variable">bl</span>  <span class="token comment">;这里乘法指令是一种【隐含寻址】方式，下面备注介绍</span>
+         add  <span class="token register variable">al</span>, <span class="token string">'0'</span>
+
+         mov  <span class="token operator">[</span>res<span class="token operator">]</span>, <span class="token register variable">al</span>
+         mov  <span class="token register variable">ecx</span>,res 
+         mov  <span class="token register variable">edx</span>,<span class="token number">1</span>                  
+<span class="token operator">%</span>endmacro
+
+<span class="token keyword">section  .text</span>
+   <span class="token keyword">global _start    </span>
+        
+<span class="token label function">_start:</span>      
+   mul_oper <span class="token string">'3'</span>,<span class="token string">'3'</span> <span class="token comment">;计算3*3结果</span>
+   run_out      
+   return     
+
+segment .bss
+res resb <span class="token number">1</span>
+</code></pre></div><p><strong>隐含寻址</strong>
+有些指令的操作码不仅包含了操作的性质，还隐含了部分操作数的地址，如乘法指令MUL，在这条指令中只需指明乘数的地址，而被乘数以及乘积的地址是隐含且固定的。这种将一个操作数隐含在指令码中的寻址方式称为隐含寻址。</p> <p>例如：</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>mul  <span class="token register variable">bl</span> <span class="token comment">;mul bl的功能把AL中的内容与BL的内容相乘，乘积送到AX寄存器中</span>
+
+<span class="token comment">;因此上面示例中我们将另一个送入al，然后会自动隐式从 al 取值</span>
+</code></pre></div><h3 id="imul-乘法指令"><a href="#imul-乘法指令" class="header-anchor">#</a> IMUL 乘法指令</h3> <p>imul乘法指令支持符号运算，支持多参数</p> <blockquote><p>1、支持正负符号</p> <p>2、支持2，3个参数，但是三个参数的最后一个必须是立即数</p></blockquote> <p>类似的：</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token comment">; a 16 bit multiplication:</span>
+  mov <span class="token register variable">ax</span>, <span class="token operator">[</span>factor1<span class="token operator">]</span>
+  mov <span class="token register variable">bx</span>, <span class="token operator">[</span>factor2<span class="token operator">]</span>
+  imul <span class="token register variable">bx</span>              <span class="token comment">; 32-bit result in DX:AX</span>
+  <span class="token comment">; or  imul  word [factor2]</span>
+
+  <span class="token comment">; a 32 bit multiplication:</span>
+  mov <span class="token register variable">eax</span>, <span class="token operator">[</span>factor1<span class="token operator">]</span>
+  mov <span class="token register variable">ebx</span>, <span class="token operator">[</span>factor2<span class="token operator">]</span> 
+  imul <span class="token register variable">ebx</span>             <span class="token comment">; 64-bit result in EDX:EAX</span>
+</code></pre></div><p>在386或更高版本上</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>	mov   <span class="token register variable">ecx</span>, <span class="token operator">[</span>factor1<span class="token operator">]</span>
+  imul  <span class="token register variable">ecx</span>, <span class="token operator">[</span>factor2<span class="token operator">]</span>    <span class="token comment">; result in ecx, no other registers affected</span>
+  imul  <span class="token register variable">ecx</span>, <span class="token register variable">ecx</span>          <span class="token comment">; and square the result</span>
+  
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>  
+  
+  movsx   <span class="token register variable">ecx</span>, word <span class="token operator">[</span>factor1<span class="token operator">]</span>
+  movsx   <span class="token register variable">eax</span>, word <span class="token operator">[</span>factor2<span class="token operator">]</span>  <span class="token comment">; sign-extend inputs to 32-bit</span>
+  imul    <span class="token register variable">eax</span>, <span class="token register variable">ecx</span>             <span class="token comment">; 32-bit multiply, result in EAX</span>
+  imul    <span class="token register variable">eax</span>, <span class="token register variable">eax</span>             <span class="token comment">; and square the result</span>
+  
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+  imul  <span class="token register variable">cx</span>, <span class="token register variable">bx</span>, <span class="token number">123</span>        <span class="token comment">; requires 186</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+	imul  <span class="token register variable">ecx</span>, <span class="token register variable">ebx</span>, <span class="token operator">-</span><span class="token number">123</span>      <span class="token comment">; requires 386</span>
+</code></pre></div><h3 id="div-idiv指令"><a href="#div-idiv指令" class="header-anchor">#</a> DIV / IDIV指令</h3> <h4 id="示例-6-3-2"><a href="#示例-6-3-2" class="header-anchor">#</a> 示例：6/3=2</h4> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token keyword">section .text</span>
+   <span class="token keyword">global _start    </span><span class="token comment">;must be declared for using gcc</span>
+        
+<span class="token label function">_start:</span>             <span class="token comment">;tell linker entry point</span>
+   mov  <span class="token register variable">ax</span>,<span class="token string">'6'</span>
+   sub     <span class="token register variable">ax</span>, <span class="token string">'0'</span>
+        
+   mov  <span class="token register variable">bl</span>, <span class="token string">'3'</span>
+   sub     <span class="token register variable">bl</span>, <span class="token string">'0'</span>
+   div  <span class="token register variable">bl</span>
+   add  <span class="token register variable">ax</span>, <span class="token string">'0'</span>
+        
+   mov  <span class="token operator">[</span>res<span class="token operator">]</span>, <span class="token register variable">ax</span>
+   mov  <span class="token register variable">ecx</span>,msg 
+   mov  <span class="token register variable">edx</span>, len
+   mov  <span class="token register variable">ebx</span>,<span class="token number">1</span>   <span class="token comment">;file descriptor (stdout)</span>
+   mov  <span class="token register variable">eax</span>,<span class="token number">4</span>   <span class="token comment">;system call number (sys_write)</span>
+   int  <span class="token number">0x80</span>    <span class="token comment">;call kernel</span>
+        
+   mov  <span class="token register variable">ecx</span>,res
+   mov  <span class="token register variable">edx</span>, <span class="token number">1</span>
+   mov  <span class="token register variable">ebx</span>,<span class="token number">1</span>   <span class="token comment">;file descriptor (stdout)</span>
+   mov  <span class="token register variable">eax</span>,<span class="token number">4</span>   <span class="token comment">;system call number (sys_write)</span>
+   int  <span class="token number">0x80</span>    <span class="token comment">;call kernel</span>
+        
+   mov  <span class="token register variable">eax</span>,<span class="token number">1</span>   <span class="token comment">;system call number (sys_exit)</span>
+   int  <span class="token number">0x80</span>    <span class="token comment">;call kernel</span>
+        
+<span class="token keyword">section .data</span>
+msg db <span class="token string">&quot;The result is:&quot;</span>, <span class="token number">0xA</span>,<span class="token number">0xD</span> 
+len equ <span class="token operator">$</span><span class="token operator">-</span> msg   
+segment .bss
+res resb <span class="token number">1</span>
+</code></pre></div><p><a href="https://www.jc2182.com/runcode.html?filename=jisuan4&amp;type=21&amp;module=jiaocheng" target="_blank" rel="noopener noreferrer">在线运行上面示例：<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="div-idiv-x86-32位"><a href="#div-idiv-x86-32位" class="header-anchor">#</a> DIV / IDIV （x86 - 32位）</h3> <h4 id="div-无符号除法"><a href="#div-无符号除法" class="header-anchor">#</a> DIV 无符号除法</h4> <blockquote><p>DIV 	寄存器或内存(8位)
+DIV 	寄存器或内存(16位)
+DIV 	寄存器或内存(32位)</p></blockquote> <table><thead><tr><th>被除数</th> <th>除数</th> <th>商</th> <th>余数</th></tr></thead> <tbody><tr><td>AX</td> <td>reg/mem8</td> <td>AL</td> <td>AH</td></tr> <tr><td>DX:AX</td> <td>reg/mem16</td> <td>AX</td> <td>DX</td></tr> <tr><td>EDX:EAX</td> <td>reg/mem32</td> <td>EAX</td> <td>EDX</td></tr></tbody></table> <p>比例</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>mov <span class="token register variable">ax</span>, <span class="token number">0043h</span>      <span class="token comment">; 被除数</span>
+mov <span class="token register variable">bl</span>, <span class="token number">5</span>          <span class="token comment">; 除数</span>
+div <span class="token register variable">bl</span>             <span class="token comment">; AL = 08h, AH = O3h</span>
+</code></pre></div><p>⚠️</p> <p>1、除数不能为0，需要判断</p> <p>2、商或余数存储超过对应空间大小就会抛出异常</p> <p>3、不占用的寄存器需要清空</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token register variable">DX</span> 包含的是被除数的高位部分，因此在执行 DIV 指令之前，必须将其清零：
+
+mov <span class="token register variable">dx</span>, <span class="token number">0</span>             <span class="token comment">; 清除被除数高16位</span>
+mov <span class="token register variable">ax</span>, <span class="token number">8003h</span>         <span class="token comment">; 被除数的低16位</span>
+mov ex, <span class="token number">100h</span>          <span class="token comment">; 除数</span>
+div ex                <span class="token comment">; AX = 0080h, DX = 0003h</span>
+
+</code></pre></div><h4 id="idiv-有符号数除法"><a href="#idiv-有符号数除法" class="header-anchor">#</a> IDIV 有符号数除法</h4> <p>有符号除法与无符号几乎相同，但是在计算前必须对被除数进行符号扩展。</p> <table><thead><tr><th><strong>指令</strong></th> <th><strong>全称</strong></th> <th><strong>说明</strong></th></tr></thead> <tbody><tr><td>cbw</td> <td><strong>c</strong>onvert <strong>b</strong>yte to <strong>w</strong>ord</td> <td>将AL的符号位扩展到AH</td></tr> <tr><td>cwd</td> <td><strong>c</strong>onvert <strong>w</strong>ord to <strong>d</strong>oubleword</td> <td>将AX的符号位扩展到DX</td></tr> <tr><td>cdq</td> <td><strong>c</strong>onvert <strong>d</strong>oubleword to <strong>q</strong>uadword</td> <td>将EAX的符号位扩展到EDX</td></tr></tbody></table> <div class="language-nasm extra-class"><pre class="language-nasm"><code>.data
+wordval sword <span class="token operator">-</span><span class="token number">101</span>
+ 
+.code
+main PROC
+    nop
+    mov <span class="token register variable">dx</span>, <span class="token number">0</span>
+    mov <span class="token register variable">ax</span>, wordval
+    cwd<span class="token comment">;   DX:AX=FFFF:FF9B，这样的才能保证被除数是负101，否则会被解释为正65435。</span>
+    mov <span class="token register variable">bx</span>, <span class="token number">2</span>
+    idiv <span class="token register variable">bx</span>
+    invoke ExitProcess,<span class="token number">0</span>
+main ENDP
+
+</code></pre></div><h2 id="逻辑"><a href="#逻辑" class="header-anchor">#</a> 逻辑</h2> <p>常见逻辑指令 and、or、xor、not、test（测试计算数据）等等</p> <h3 id="逻辑指令"><a href="#逻辑指令" class="header-anchor">#</a> 逻辑指令</h3> <p>格式：</p> <table><thead><tr><th style="text-align:left;">指令</th> <th style="text-align:left;">格式</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>AND</strong></td> <td style="text-align:left;">AND 操作数1，操作数2</td></tr> <tr><td style="text-align:left;"><strong>OR</strong></td> <td style="text-align:left;">OR 操作数1，操作数2</td></tr> <tr><td style="text-align:left;"><strong>XOR</strong></td> <td style="text-align:left;">XOR 操作数1，操作数2</td></tr> <tr><td style="text-align:left;"><strong>TEST</strong></td> <td style="text-align:left;">TEST 操作数1，操作数2</td></tr> <tr><td style="text-align:left;"><strong>NOT</strong></td> <td style="text-align:left;">NOT 操作数1</td></tr></tbody></table> <h3 id="and-指令"><a href="#and-指令" class="header-anchor">#</a> AND 指令</h3> <p>实现按位与运算</p> <p>1、将寄存器清空</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>AND     <span class="token register variable">AH</span>, <span class="token number">00H</span>     <span class="token comment">; 高位AH清空</span>
+</code></pre></div><p>2、检查奇偶数</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>AND     <span class="token register variable">AL</span>, <span class="token number">01H</span>     <span class="token comment">; 与上 0000 0001</span>
+</code></pre></div><p>格式示例：</p> <table><thead><tr><th>and 【寄存器or内存】【寄存器or内存or立即数】 ✅</th></tr></thead> <tbody><tr><td>and 【内存】【内存】 ❌</td></tr> <tr><td>运算结果会修改对应的标志：</td></tr> <tr><td>CF，OF，PF，SF和ZF标志</td></tr></tbody></table> <p>以下程序说明了这一点-</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token keyword">section .text</span>
+   <span class="token keyword">global _start            </span>
+        
+<span class="token label function">_start:</span>                     
+   mov   <span class="token register variable">ax</span>,   6h           <span class="token comment">;设置数据6（二进制 0110 ），下面开始判断它的奇偶</span>
+   and   <span class="token register variable">ax</span>, <span class="token number">1</span>              <span class="token comment">;通过 0001 &amp; 0110 = 0，此时标记位 ZF=0</span>
+   jz    even_f             <span class="token comment">; jz: ZF 等于 0 成立，跳转 偶数过程 even_f</span>
+   <span class="token comment">;jnz   odd_f               jnz: ZF 不等于 0 成立，跳转 奇数过程 odd_f</span>
+   jmp   exit               <span class="token comment">; jmp 无条件跳转到 exit</span>
+
+<span class="token label function">even_f:</span>  <span class="token comment">;偶数打印</span>
+  
+   mov   <span class="token register variable">eax</span>, <span class="token number">4</span>             
+   mov   <span class="token register variable">ebx</span>, <span class="token number">1</span>             
+   mov   <span class="token register variable">ecx</span>, even_msg      
+   mov   <span class="token register variable">edx</span>, len1          
+   int   <span class="token number">0x80</span>               
+
+<span class="token label function">odd_f:</span>  <span class="token comment">;奇数打印</span>
+   
+   mov   <span class="token register variable">eax</span>, <span class="token number">4</span>             
+   mov   <span class="token register variable">ebx</span>, <span class="token number">1</span>             
+   mov   <span class="token register variable">ecx</span>, odd_msg       
+   mov   <span class="token register variable">edx</span>, len2          
+   int   <span class="token number">0x80</span>
+
+<span class="token label function">exit:</span> <span class="token comment">;退出</span>
+   
+   mov   <span class="token register variable">eax</span>,<span class="token number">1</span>             
+   int   <span class="token number">0x80</span>              
+
+<span class="token keyword">section   .data</span>
+even_msg  db  <span class="token string">'是偶数!'</span> 
+len1  equ  <span class="token operator">$</span> <span class="token operator">-</span> even_msg 
+   
+odd_msg db  <span class="token string">'是奇数!'</span>    
+len2  equ  <span class="token operator">$</span> <span class="token operator">-</span> odd_msg
+</code></pre></div><p>跳转相关的标志位: 【⚠️ 关于标志位详细介绍后面篇章有介绍】</p> <table><thead><tr><th>11</th> <th>10</th> <th>9</th> <th>8</th> <th>7</th> <th>6</th> <th>5</th> <th>4</th> <th>3</th> <th>2</th> <th>1</th> <th>0</th></tr></thead> <tbody><tr><td>OF</td> <td>DF</td> <td>IF</td> <td>TF</td> <td>SF</td> <td>ZF</td> <td></td> <td>AF</td> <td></td> <td>PF</td> <td></td> <td>CF</td></tr> <tr><td>溢 出</td> <td>方向</td> <td>中断</td> <td>调试</td> <td>符 号</td> <td>非零</td> <td>未 用</td> <td>辅 助</td> <td>未 用</td> <td>奇 偶</td> <td>未 用</td> <td>进 位</td></tr></tbody></table> <p>部分跳转指令和标记位关系：</p> <table><thead><tr><th>程序控制类</th> <th>无条件转移</th> <th>JMP</th> <th>不影响标志位</th> <th></th></tr></thead> <tbody><tr><td>条 件 转 移</td> <td>单个 标志 位</td> <td>JS/JNS</td> <td>SF=1/0,则转移到目的地址</td> <td></td></tr> <tr><td>JZ/ JNZ</td> <td>ZF=1/0,则转移到目的地址</td> <td></td> <td></td> <td></td></tr> <tr><td>JP/JNP</td> <td>PF=1/0,则转移到目的地址</td> <td></td> <td></td> <td></td></tr> <tr><td>JB/JNB</td> <td>CF=1/0,则转移到目的地址</td> <td></td> <td></td> <td></td></tr> <tr><td>JO/JNO</td> <td>OF=1/0,则转移到目的地址</td> <td></td> <td></td> <td></td></tr> <tr><td>若干 标志 位的 逻辑 组合</td> <td>JA</td> <td>两个无符号数比较，A&gt;B</td> <td></td> <td></td></tr></tbody></table> <h3 id="or-指令"><a href="#or-指令" class="header-anchor">#</a> OR 指令</h3> <p>OR 指令用于通过执行按位或运算来支持逻辑表达式。</p> <p>例如</p> <p>4 or 3 结果 = 7</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code> mov    <span class="token register variable">al</span>, <span class="token number">4</span>             <span class="token comment">;0100</span>
+ mov    <span class="token register variable">bl</span>, <span class="token number">3</span>             <span class="token comment">;0011</span>
+ or     <span class="token register variable">al</span>, <span class="token register variable">bl</span>            <span class="token comment">;0100 | 0011 = 0111 </span>
+ add    <span class="token register variable">al</span>, byte <span class="token string">'0'</span>      <span class="token comment">;格式化</span>
+</code></pre></div><h3 id="xor-指令"><a href="#xor-指令" class="header-anchor">#</a> XOR 指令</h3> <p>异或运算：位不同为1，相同为0</p> <p>例如，</p> <p>4 xor 3 结果 = 7</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code> mov    <span class="token register variable">al</span>, <span class="token number">4</span>             <span class="token comment">;0100</span>
+ mov    <span class="token register variable">bl</span>, <span class="token number">3</span>             <span class="token comment">;0011</span>
+ or     <span class="token register variable">al</span>, <span class="token register variable">bl</span>            <span class="token comment">;0100 xor 0011 = 0111 </span>
+ add    <span class="token register variable">al</span>, byte <span class="token string">'0'</span>      <span class="token comment">;格式化</span>
+</code></pre></div><p>清零操作：</p> <p>将操作数与自身进行XOR会将操作数更改为0。这用于清除寄存器。</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>XOR     <span class="token register variable">EAX</span>, <span class="token register variable">EAX</span>
+</code></pre></div><h3 id="test-指令"><a href="#test-指令" class="header-anchor">#</a> TEST 指令</h3> <p>TEST 指令与AND运算的工作原理相同，但与AND指令不同的是，它不会更改第一个操作数。</p> <p>因此，可以使用test测试某个逻辑运算的结果：</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>AND    <span class="token register variable">AL</span>, <span class="token number">01H</span> <span class="token comment">;会修改AL的值</span>
+
+TEST    <span class="token register variable">AL</span>, <span class="token number">01H</span> <span class="token comment">;不会修改AL的值</span>
+</code></pre></div><h3 id="not-指令"><a href="#not-指令" class="header-anchor">#</a> NOT 指令</h3> <p>NOT 指令实现按位NOT运算。NOT操作将操作数中的位取反。操作数可以在寄存器中，也可以在存储器中。</p> <p>NOT 是单操作，接受一个参数</p> <p>例如，</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code> mov    <span class="token register variable">al</span>, <span class="token number">4</span>             <span class="token comment">;0100</span>
+ mov    <span class="token register variable">bl</span>, <span class="token number">3</span>             <span class="token comment">;0011</span>
+ or     <span class="token register variable">al</span>, <span class="token register variable">bl</span>            <span class="token comment">;al = 0100 | 0011 = 0111 </span>
+ not    <span class="token register variable">al</span> 			          <span class="token comment">;al = 0000 0111 取反 = 1111 1000</span>
+</code></pre></div><h2 id="条件"><a href="#条件" class="header-anchor">#</a> 条件</h2> <p>前面示例已经介绍过一些条件指令，比如 jmp 无条件跳转</p> <h3 id="条件-2"><a href="#条件-2" class="header-anchor">#</a> 条件</h3> <p>条件令可以更改程序中的控制流，分为有条件和无条件：</p> <p><strong>无条件跳转</strong> - JMP 就是最常见的，类似 go to</p> <p><strong>有条件跳转</strong> - 通过条件判断是否或者如何处理控制流向</p> <h3 id="无条件跳转"><a href="#无条件跳转" class="header-anchor">#</a> 无条件跳转</h3> <p>语法格式</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>JMP     label
+</code></pre></div><p>JMP指令：直接跳转到指定的过程，不做任何判断</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token label function">_start:</span>                     
+   ...
+   jmp   exit               <span class="token comment">; jmp 无条件跳转到 exit</span>
+
+<span class="token label function">exit:</span> <span class="token comment">;退出</span>
+   
+   mov   <span class="token register variable">eax</span>,<span class="token number">1</span>             
+   int   <span class="token number">0x80</span> 
+</code></pre></div><h3 id="条件跳转"><a href="#条件跳转" class="header-anchor">#</a> 条件跳转</h3> <p>如果在条件跳转中满足某些指定条件，则控制流将转移到目标指令。</p> <table><thead><tr><th style="text-align:left;">指令</th> <th style="text-align:left;">描述</th> <th style="text-align:left;">标志测试</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>JE/JZ</strong></td> <td style="text-align:left;">跳转等于或跳转零</td> <td style="text-align:left;">ZF</td></tr> <tr><td style="text-align:left;"><strong>JNE/JNZ</strong></td> <td style="text-align:left;">跳转不等于或跳转不为零</td> <td style="text-align:left;">ZF</td></tr> <tr><td style="text-align:left;"><strong>JG/JNLE</strong></td> <td style="text-align:left;">跳转大于或跳转不小于/等于</td> <td style="text-align:left;">OF，SF，ZF</td></tr> <tr><td style="text-align:left;"><strong>JGE/JNL</strong></td> <td style="text-align:left;">跳转大于/等于或不小于跳转</td> <td style="text-align:left;">OF，SF</td></tr> <tr><td style="text-align:left;"><strong>JL/JNGE</strong></td> <td style="text-align:left;">跳转小于或不大于/等于</td> <td style="text-align:left;">OF，SF</td></tr> <tr><td style="text-align:left;"><strong>JLE/JNG</strong></td> <td style="text-align:left;">跳少/等于或跳不大于</td> <td style="text-align:left;">OF，SF，ZF</td></tr></tbody></table> <p>以下是对用于逻辑运算的无符号数据使用的条件跳转指令-</p> <table><thead><tr><th style="text-align:left;">指令</th> <th style="text-align:left;">描述</th> <th style="text-align:left;">标志测试</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>JE/JZ</strong></td> <td style="text-align:left;">跳转等于或跳转零</td> <td style="text-align:left;">ZF</td></tr> <tr><td style="text-align:left;"><strong>JNE/JNZ</strong></td> <td style="text-align:left;">跳转不等于或跳转不为零</td> <td style="text-align:left;">ZF</td></tr> <tr><td style="text-align:left;"><strong>JA/JNBE</strong></td> <td style="text-align:left;">跳转向上或不低于/等于</td> <td style="text-align:left;">CF，ZF</td></tr> <tr><td style="text-align:left;"><strong>JAE/JNB</strong></td> <td style="text-align:left;">高于/等于或不低于</td> <td style="text-align:left;">CF</td></tr> <tr><td style="text-align:left;"><strong>JB/JNAE</strong></td> <td style="text-align:left;">跳到以下或跳到不高于/等于</td> <td style="text-align:left;">CF</td></tr> <tr><td style="text-align:left;"><strong>JBE/JNA</strong></td> <td style="text-align:left;">跳到下面/等于或不跳到上方</td> <td style="text-align:left;">AF，CF</td></tr></tbody></table> <p>以下条件跳转指令有特殊用途，并检查标志的值-</p> <table><thead><tr><th style="text-align:left;">指令</th> <th style="text-align:left;">描述</th> <th style="text-align:left;">标志测试</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>JXCZ</strong></td> <td style="text-align:left;">如果CX为零则跳转</td> <td style="text-align:left;">没有</td></tr> <tr><td style="text-align:left;"><strong>JC</strong></td> <td style="text-align:left;">如果携带则跳</td> <td style="text-align:left;">CF</td></tr> <tr><td style="text-align:left;"><strong>JNC</strong></td> <td style="text-align:left;">如果不携带则跳转</td> <td style="text-align:left;">CF</td></tr> <tr><td style="text-align:left;"><strong>JO</strong></td> <td style="text-align:left;">溢出时跳转</td> <td style="text-align:left;">OF</td></tr> <tr><td style="text-align:left;"><strong>JNO</strong></td> <td style="text-align:left;">如果没有溢出则跳转</td> <td style="text-align:left;">OF</td></tr> <tr><td style="text-align:left;"><strong>JP/JPE</strong></td> <td style="text-align:left;">跳校验或偶校验</td> <td style="text-align:left;">PF</td></tr> <tr><td style="text-align:left;"><strong>JNP/JPO</strong></td> <td style="text-align:left;">跳转无奇偶校验或跳转奇偶校验</td> <td style="text-align:left;">PF</td></tr> <tr><td style="text-align:left;"><strong>JS</strong></td> <td style="text-align:left;">跳跃符号（负值）</td> <td style="text-align:left;">SF</td></tr> <tr><td style="text-align:left;"><strong>JNS</strong></td> <td style="text-align:left;">跳转无符号（正值）</td> <td style="text-align:left;">SF</td></tr></tbody></table> <p>根据 CX、ECX 寄存器的值跳转:</p> <p>JCXZ(CX 为 0 则跳转)、JECXZ(ECX 为 0 则跳转);</p> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <p>CMP 比较是否相同的指令，通过相减等于0表示相同，否则不相同。</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>CMP     <span class="token register variable">AL</span>, <span class="token register variable">BL</span>  <span class="token comment">;比较他们是否相同,相同 ZF=0</span>
+JE      equal		<span class="token comment">;使用je：判断ZF标记等于0跳转</span>
+
+CMP     <span class="token register variable">AL</span>, <span class="token register variable">BH</span>
+JNE     not_equal   <span class="token comment">;使用jne：判断ZF标记不等于0跳转</span>
+
+<span class="token label function">not_equal:</span> 
+...
+
+<span class="token label function">equal:</span> 
+...
+</code></pre></div><h2 id="过程"><a href="#过程" class="header-anchor">#</a> 过程</h2> <p>可以理解为c 语言的函数</p> <p>前面示例 jmp、je等条件指令 跳转的就是 过程或子例程</p> <p>过程的语法：</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token label function">proc_name:</span>				 <span class="token comment">;过程名称</span>
+   procedure body  <span class="token comment">;过程主体</span>
+   ...
+   ret							<span class="token comment">;过程的结束由return语句指示</span>
+</code></pre></div><p>示例：</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token keyword">section .text</span>
+   <span class="token keyword">global _start      </span>
+        
+<span class="token label function">_start:</span>    
+   jmp name_1
+   
+ <span class="token label function">name_2:</span>
+   mov  <span class="token register variable">edx</span>,<span class="token number">4</span>           
+   mov  <span class="token register variable">ecx</span>, names<span class="token operator">+</span><span class="token number">8</span>     
+   mov  <span class="token register variable">ebx</span>,<span class="token number">1</span>          
+   mov  <span class="token register variable">eax</span>,<span class="token number">4</span>          
+   int  <span class="token number">0x80</span>  
+   jmp exit
+
+ <span class="token label function">name_1:</span>
+   mov  <span class="token register variable">edx</span>,<span class="token number">4</span>           
+   mov  <span class="token register variable">ecx</span>, names<span class="token operator">+</span><span class="token number">4</span>     
+   mov  <span class="token register variable">ebx</span>,<span class="token number">1</span>          
+   mov  <span class="token register variable">eax</span>,<span class="token number">4</span>          
+   int  <span class="token number">0x80</span>      
+   jmp name_2
+   
+<span class="token label function">exit:</span>
+   mov  <span class="token register variable">eax</span>,<span class="token number">1</span>           
+   int  <span class="token number">0x80</span>            
+
+<span class="token keyword">section .data</span>
+<span class="token keyword">global names</span>
+<span class="token label function">names:</span>
+DW  <span class="token string">'Lucy'</span>, <span class="token string">'Andy'</span>, <span class="token string">'Pete'</span>
+</code></pre></div><h2 id="循环"><a href="#循环" class="header-anchor">#</a> 循环</h2> <p>c语法中 while 等能很方便实现循环功能</p> <p>在汇编中可以通过loop 和jmp 等实现</p> <h3 id="循环-loop"><a href="#循环-loop" class="header-anchor">#</a> 循环 loop</h3> <p>loop指令的格式是：loop 标号</p> <p>通常我们用loop指令来实现循环功能，cx中存放循环次数。</p> <p>CPU执行loop指令的时候，要进行两步操作：</p> <blockquote><p>1、(cx)=(cx)-1；
+2、判断CX中的值，不为零则转至标号处执行程序，如果为零则向下执行。</p></blockquote> <p>示例：</p> <p>循环判断5次，每次都对ax 加一，最后cx=0时循环结束，</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code>	mov <span class="token register variable">ax</span>,<span class="token number">5</span>
+	mov <span class="token register variable">cx</span>,<span class="token number">5</span>
+<span class="token label function">loop_1:</span>		
+	inc <span class="token register variable">ax</span>
+			
+	loop loop_1
+</code></pre></div><p>1、标号：loop_1</p> <p>在汇编语言中，标号代表一个地址，程序中有一个标号loop_1。它实际上标识了一个 地址，</p> <p>这个地址处有一条指令：inc ax</p> <p>2、loop loop_1：</p> <p>CPU执行loop s的时候，要进行两步操作：</p> <p>① (cx)=(cx)-1；（loop 自动计算的）</p> <p>②判断cx中的值，不为0则转至标号s所标识的地址处执行，为零则执行下一条指令。</p> <p>3、在这段程序中第一次执行loop loop_1前，cx=5，ax=5</p> <p>第一次执行后，cx=4，ax=6</p> <p>最后一次 cx=0，ax=10</p> <p>4、用CX和loop指令相配合实现循环功能的3个要点：</p> <blockquote><p>1、在 CX中存放循环次数；
+2、loop指令中的标号所标识地址要在前面；
+3、要循环执行的程序段，要写在标号和loop指令的中间</p></blockquote> <h3 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h3> <p>从9到0打印：</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token keyword">section .text</span>
+   <span class="token keyword">global _start      </span>
+        
+<span class="token label function">_start:</span>               
+   mov <span class="token register variable">ecx</span>,<span class="token number">10</span>				<span class="token comment">;index 起始值</span>
+   mov <span class="token register variable">eax</span>, <span class="token string">'9'</span>			<span class="token comment">;起始值</span>
+        
+<span class="token label function">loop_dec:</span>
+   mov <span class="token operator">[</span>num<span class="token operator">]</span>, <span class="token register variable">eax</span>
+   mov <span class="token register variable">eax</span>, <span class="token number">4</span>
+   mov <span class="token register variable">ebx</span>, <span class="token number">1</span>
+   push <span class="token register variable">ecx</span>
+        
+   mov <span class="token register variable">ecx</span>, num        
+   mov <span class="token register variable">edx</span>, <span class="token number">1</span>        
+   int <span class="token number">0x80</span>
+        
+   mov <span class="token register variable">eax</span>, <span class="token operator">[</span>num<span class="token operator">]</span>
+   sub <span class="token register variable">eax</span>, <span class="token string">'0'</span>
+   dec <span class="token register variable">eax</span>					<span class="token comment">;递减</span>
+   add <span class="token register variable">eax</span>, <span class="token string">'0'</span>
+   pop <span class="token register variable">ecx</span>
+   loop loop_dec		<span class="token comment">;循环，每次自动对 ecx 自减，直到0结束循环</span>
+        
+   mov <span class="token register variable">eax</span>,<span class="token number">1</span>             
+   int <span class="token number">0x80</span>              
+<span class="token keyword">section .bss</span>
+num resb <span class="token number">1</span>
+</code></pre></div><p>结果:</p> <div class="language-nasm extra-class"><pre class="language-nasm"><code><span class="token number">9876543210</span>
+</code></pre></div></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/712a44/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">intel-32基础语法(上)</div></a> <a href="/pages/e593e1/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">intel-32基础语法(下)</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/712a44/" class="prev">intel-32基础语法(上)</a></span> <span class="next"><a href="/pages/e593e1/">intel-32基础语法(下)</a>→
+      </span></p></div></div></div> <!----></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.956f6e98.js" defer></script><script src="/assets/js/2.d54d51d6.js" defer></script><script src="/assets/js/92.8830c207.js" defer></script>
+  </body>
+</html>

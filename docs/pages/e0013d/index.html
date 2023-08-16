@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>内存泄露场景 | 知识导图</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/images/hlogo.png">
+    <meta name="description" content="复杂的知识体系需要一套精简的知识导图作参考和索引">
+    
+    <link rel="preload" href="/assets/css/0.styles.3623805a.css" as="style"><link rel="preload" href="/assets/js/app.956f6e98.js" as="script"><link rel="preload" href="/assets/js/2.d54d51d6.js" as="script"><link rel="preload" href="/assets/js/48.39927459.js" as="script"><link rel="prefetch" href="/assets/js/10.7d5d06ea.js"><link rel="prefetch" href="/assets/js/100.c52b0ea4.js"><link rel="prefetch" href="/assets/js/101.97dc2f7b.js"><link rel="prefetch" href="/assets/js/102.b5b9abc6.js"><link rel="prefetch" href="/assets/js/103.de0678e3.js"><link rel="prefetch" href="/assets/js/104.162a790f.js"><link rel="prefetch" href="/assets/js/105.4b96688c.js"><link rel="prefetch" href="/assets/js/11.73300a98.js"><link rel="prefetch" href="/assets/js/12.1574de4b.js"><link rel="prefetch" href="/assets/js/13.9e1cff29.js"><link rel="prefetch" href="/assets/js/14.9dd4e9b0.js"><link rel="prefetch" href="/assets/js/15.fb4a4e30.js"><link rel="prefetch" href="/assets/js/16.a9978a2f.js"><link rel="prefetch" href="/assets/js/17.d161c4a3.js"><link rel="prefetch" href="/assets/js/18.0a3f80f9.js"><link rel="prefetch" href="/assets/js/19.27c43cea.js"><link rel="prefetch" href="/assets/js/20.76b66c8b.js"><link rel="prefetch" href="/assets/js/21.3d69b68c.js"><link rel="prefetch" href="/assets/js/22.b8fc92f0.js"><link rel="prefetch" href="/assets/js/23.dbf3b98b.js"><link rel="prefetch" href="/assets/js/24.cb857455.js"><link rel="prefetch" href="/assets/js/25.6b10ac06.js"><link rel="prefetch" href="/assets/js/26.cbceffcf.js"><link rel="prefetch" href="/assets/js/27.bddb79bc.js"><link rel="prefetch" href="/assets/js/28.9b9d939d.js"><link rel="prefetch" href="/assets/js/29.127f1213.js"><link rel="prefetch" href="/assets/js/3.e19cb12c.js"><link rel="prefetch" href="/assets/js/30.60bccf99.js"><link rel="prefetch" href="/assets/js/31.34b286a8.js"><link rel="prefetch" href="/assets/js/32.991b2f63.js"><link rel="prefetch" href="/assets/js/33.e6f327b7.js"><link rel="prefetch" href="/assets/js/34.b69bbc21.js"><link rel="prefetch" href="/assets/js/35.bab297ed.js"><link rel="prefetch" href="/assets/js/36.8a119b34.js"><link rel="prefetch" href="/assets/js/37.d029e9f3.js"><link rel="prefetch" href="/assets/js/38.46eb20a4.js"><link rel="prefetch" href="/assets/js/39.d793e68f.js"><link rel="prefetch" href="/assets/js/4.dd3209f8.js"><link rel="prefetch" href="/assets/js/40.b7b51498.js"><link rel="prefetch" href="/assets/js/41.151e380a.js"><link rel="prefetch" href="/assets/js/42.b07e21d1.js"><link rel="prefetch" href="/assets/js/43.3e777f06.js"><link rel="prefetch" href="/assets/js/44.11fa5c7b.js"><link rel="prefetch" href="/assets/js/45.7052c909.js"><link rel="prefetch" href="/assets/js/46.40032702.js"><link rel="prefetch" href="/assets/js/47.5b51cc93.js"><link rel="prefetch" href="/assets/js/49.3448b4a9.js"><link rel="prefetch" href="/assets/js/5.54c64e18.js"><link rel="prefetch" href="/assets/js/50.b030173a.js"><link rel="prefetch" href="/assets/js/51.1bbf6ad8.js"><link rel="prefetch" href="/assets/js/52.8558681f.js"><link rel="prefetch" href="/assets/js/53.288a22ed.js"><link rel="prefetch" href="/assets/js/54.ce3b3e40.js"><link rel="prefetch" href="/assets/js/55.1317e68e.js"><link rel="prefetch" href="/assets/js/56.24e8e377.js"><link rel="prefetch" href="/assets/js/57.ab29406a.js"><link rel="prefetch" href="/assets/js/58.a2e3804d.js"><link rel="prefetch" href="/assets/js/59.6a3257e7.js"><link rel="prefetch" href="/assets/js/6.a78acc98.js"><link rel="prefetch" href="/assets/js/60.80e92dda.js"><link rel="prefetch" href="/assets/js/61.7cdefce5.js"><link rel="prefetch" href="/assets/js/62.080e9027.js"><link rel="prefetch" href="/assets/js/63.12fb6ff0.js"><link rel="prefetch" href="/assets/js/64.f472bfdc.js"><link rel="prefetch" href="/assets/js/65.0f2d77db.js"><link rel="prefetch" href="/assets/js/66.cf918f88.js"><link rel="prefetch" href="/assets/js/67.e2a894dc.js"><link rel="prefetch" href="/assets/js/68.d02214b4.js"><link rel="prefetch" href="/assets/js/69.da9c776f.js"><link rel="prefetch" href="/assets/js/7.26888c57.js"><link rel="prefetch" href="/assets/js/70.3accafd4.js"><link rel="prefetch" href="/assets/js/71.cf06ab59.js"><link rel="prefetch" href="/assets/js/72.07426e29.js"><link rel="prefetch" href="/assets/js/73.2ca0934c.js"><link rel="prefetch" href="/assets/js/74.6ccd29d1.js"><link rel="prefetch" href="/assets/js/75.8180abcb.js"><link rel="prefetch" href="/assets/js/76.6b08ec10.js"><link rel="prefetch" href="/assets/js/77.d4b5ae3e.js"><link rel="prefetch" href="/assets/js/78.b26c414a.js"><link rel="prefetch" href="/assets/js/79.2734e666.js"><link rel="prefetch" href="/assets/js/8.9ae79d10.js"><link rel="prefetch" href="/assets/js/80.5cf7acc5.js"><link rel="prefetch" href="/assets/js/81.74f2c69e.js"><link rel="prefetch" href="/assets/js/82.9fb21468.js"><link rel="prefetch" href="/assets/js/83.464889d9.js"><link rel="prefetch" href="/assets/js/84.26038405.js"><link rel="prefetch" href="/assets/js/85.92d110c1.js"><link rel="prefetch" href="/assets/js/86.f8b3b40c.js"><link rel="prefetch" href="/assets/js/87.68c7849a.js"><link rel="prefetch" href="/assets/js/88.be47d7d8.js"><link rel="prefetch" href="/assets/js/89.33c7ca04.js"><link rel="prefetch" href="/assets/js/9.c437635c.js"><link rel="prefetch" href="/assets/js/90.43c46931.js"><link rel="prefetch" href="/assets/js/91.27dbd9c9.js"><link rel="prefetch" href="/assets/js/92.8830c207.js"><link rel="prefetch" href="/assets/js/93.1d548ae4.js"><link rel="prefetch" href="/assets/js/94.ceac6b41.js"><link rel="prefetch" href="/assets/js/95.4f604719.js"><link rel="prefetch" href="/assets/js/96.090aa727.js"><link rel="prefetch" href="/assets/js/97.962db54a.js"><link rel="prefetch" href="/assets/js/98.6a0b73a3.js"><link rel="prefetch" href="/assets/js/99.9b257d4a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3623805a.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo2.png" alt="知识导图" class="logo"> <span class="site-name can-hide">知识导图</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/2f79a9/" class="nav-link">iOS知识</a></div><div class="nav-item"><a href="/pages/603316/" class="nav-link">计算机软件</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><!----> <span class="title" style="display:;">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.52im.net/index.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  即时通讯网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zhuanlan.zhihu.com/p/409277420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发常用网站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/pages/2f79a9/" class="nav-link">iOS知识</a></div><div class="nav-item"><a href="/pages/603316/" class="nav-link">计算机软件</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><!----> <span class="title" style="display:;">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.52im.net/index.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  即时通讯网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://zhuanlan.zhihu.com/p/409277420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发常用网站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>OC知识笔记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>iOS开发-上篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>iOS开发-中篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>iOS开发-下篇</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/cd1350/" class="sidebar-link">iOS基础概念</a></li><li><a href="/pages/54b2bf/" class="sidebar-link">头文件</a></li><li><a href="/pages/d62bbf/" class="sidebar-link">栈</a></li><li><a href="/pages/85e3a6/" class="sidebar-link">内存泄露</a></li><li><a href="/pages/e4d767/" class="sidebar-link">签名</a></li><li><a href="/pages/e1dd9e/" class="sidebar-link">测试</a></li><li><a href="/pages/fd7377/" class="sidebar-link">静态库</a></li><li><a href="/pages/0b0172/" class="sidebar-link">动态库</a></li><li><a href="/pages/1ff541/" class="sidebar-link">iOS静、动态库</a></li><li><a href="/pages/a9b7f2/" class="sidebar-link">iOS编译流程</a></li><li><a href="/pages/c91d54/" class="sidebar-link">启动优化</a></li><li><a href="/pages/1bfba8/" class="sidebar-link">包体积优化</a></li><li><a href="/pages/84eab3/" class="sidebar-link">卡顿优化</a></li><li><a href="/pages/d46a5e/" class="sidebar-link">架构方案</a></li><li><a href="/pages/5cc86d/" class="sidebar-link">组件化方案</a></li><li><a href="/pages/e0013d/" aria-current="page" class="active sidebar-link">内存泄露场景</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>iOS开发-三方库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>iOS开发-工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>iOS开发-杂谈</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><span data-v-06225672>iOS开发</span></li><li data-v-06225672><span data-v-06225672>OC知识笔记</span></li><li data-v-06225672><span data-v-06225672>iOS开发-下篇</span></li></ul> <div class="info" data-v-06225672><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-03-16</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">内存泄露场景<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h3 id="_1、解决循环引用的两种宏"><a href="#_1、解决循环引用的两种宏" class="header-anchor">#</a> 1、解决循环引用的两种宏</h3> <p>方式一：</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">/// 引用</span>
+#define WEAK_SELF __weak __<span class="token function">typeof</span><span class="token punctuation">(</span>&amp;*self<span class="token punctuation">)</span>weakSelf = self<span class="token punctuation">;</span>
+#define STRONG_SELF  __strong __<span class="token function">typeof</span><span class="token punctuation">(</span>&amp;*weakSelf<span class="token punctuation">)</span> strongSelf = weakSelf<span class="token punctuation">;</span>
+
+<span class="token comment">/// 检查是否为空</span>
+#define CHECK_WEAK_SELF if <span class="token punctuation">(</span>weakSelf <span class="token operator">==</span> nil<span class="token punctuation">)</span> <span class="token punctuation">{</span> return<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+#define CHECK_STRONG_SELF if <span class="token punctuation">(</span>strongSelf <span class="token operator">==</span> nil<span class="token punctuation">)</span> <span class="token punctuation">{</span> return<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre></div><p>使用示例：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>
+WEAK_SELF
+[self.view1 <span class="token property">xxActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>NSObject <span class="token operator">*</span> _Nonnull obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF
+    CHECK_STRONG_SELF
+
+    <span class="token comment">// 逻辑代码</span>
+    [strongSelf.view1 configData]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+</code></pre></div><p>方式二：</p> <p>参考 RAC 或者 SDWebImage 等库的实现，选择一个就好，不要重复</p> <p>以 RAC 宏为例：</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">/// 定义</span>
+#define <span class="token function">weakify</span><span class="token punctuation">(</span>...<span class="token punctuation">)</span> \
+    rac_keywordify \
+    metamacro_foreach_<span class="token function">cxt</span><span class="token punctuation">(</span>rac_weakify_<span class="token punctuation">,</span><span class="token punctuation">,</span> __weak<span class="token punctuation">,</span> __VA_ARGS__<span class="token punctuation">)</span>
+
+#define <span class="token function">strongify</span><span class="token punctuation">(</span>...<span class="token punctuation">)</span> \
+    rac_keywordify \
+    _<span class="token function">Pragma</span><span class="token punctuation">(</span><span class="token string">&quot;clang diagnostic push&quot;</span><span class="token punctuation">)</span> \
+    _<span class="token function">Pragma</span><span class="token punctuation">(</span><span class="token string">&quot;clang diagnostic ignored \&quot;-Wshadow\&quot;&quot;</span><span class="token punctuation">)</span> \
+    metamacro_<span class="token function">foreach</span><span class="token punctuation">(</span>rac_strongify_<span class="token punctuation">,</span><span class="token punctuation">,</span> __VA_ARGS__<span class="token punctuation">)</span> \
+    _<span class="token function">Pragma</span><span class="token punctuation">(</span><span class="token string">&quot;clang diagnostic pop&quot;</span><span class="token punctuation">)</span>
+    
+</code></pre></div><p>使用示例：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>id foo = [[NSObject alloc] init]<span class="token punctuation">;</span>
+    id bar = [[NSObject alloc] init]<span class="token punctuation">;</span>
+
+    @<span class="token function">weakify</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> foo<span class="token punctuation">,</span> bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// this block will not keep 'foo' or 'bar' alive</span>
+    BOOL <span class="token punctuation">(</span>^matchesFooOrBar<span class="token punctuation">)</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> = ^ BOOL <span class="token punctuation">(</span>id obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// but now, upon entry, 'foo' and 'bar' will stay alive until the block has</span>
+        <span class="token comment">// finished executing</span>
+        @<span class="token function">strongify</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> foo<span class="token punctuation">,</span> bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+       <span class="token comment">// 逻辑代码 (直接使用self)</span>
+   		 [self.view1 configData]<span class="token punctuation">;</span>
+        return [foo <span class="token property">isEqual</span><span class="token punctuation">:</span>obj] || [bar <span class="token property">isEqual</span><span class="token punctuation">:</span>obj]<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>⚠️  Block 内部重新声明的 self 和 block 外部的不是一个对象，只是名称相同，可以理解为block 内部定义了一个局部变量名为self的对象，而恰巧这个场景是允许的，优先取block内部的此对象。所以在内部并不会导致循环引用。</p> <h3 id="_2、常规使用block场景"><a href="#_2、常规使用block场景" class="header-anchor">#</a> 2、常规使用Block场景</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 使用场景</span>
+<span class="token atrule"><span class="token rule">@weakify</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+[self.moreButton <span class="token property">addTapActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>UIGestureRecognizer <span class="token operator">*</span> _Nonnull gestureRecoginzer<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+   @<span class="token function">strongify</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  
+    <span class="token comment">// self </span>
+    !self.didClickMoreBlock ?<span class="token punctuation">:</span> self.<span class="token function">didClickMoreBlock</span><span class="token punctuation">(</span>YES<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+<span class="token comment">// 使用场景</span>
+WEAK_SELF
+[self.moreButton <span class="token property">addTapActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>UIGestureRecognizer <span class="token operator">*</span> _Nonnull gestureRecoginzer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF
+    !strongSelf.didClickMoreBlock ?<span class="token punctuation">:</span> strongSelf.<span class="token function">didClickMoreBlock</span><span class="token punctuation">(</span>YES<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3、block内使用指针"><a href="#_3、block内使用指针" class="header-anchor">#</a> 3、Block内使用指针</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 声明变量方式</span>
+@interface xxxVC <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token selector">&lt;UITableViewDelegate, UITableViewDataSource&gt;
+</span><span class="token punctuation">{</span>
+    NSMutableArray *_dataArray<span class="token punctuation">;</span>
+    NSInteger _pageNum<span class="token punctuation">;</span>
+    NSInteger _pageSize<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 错误使用场景</span>
+WEAK_SELF
+[self.moreButton <span class="token property">addTapActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>UIGestureRecognizer <span class="token operator">*</span> _Nonnull gestureRecoginzer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF
+    ...
+    	[strongSelf-&gt;_dataArray xxx]<span class="token punctuation">;</span>
+    ...
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+=======================================
+<span class="token comment">// 原因： 因为非@property 声明的属性，只能通过 strongSelf-&gt;_dataArray 的方式，而 -&gt; 是直接通过内存地址访问实例变量的值，而不是点语法的通过属性访问器方法，这样在block延迟调用而self已经释放的情况下可能会导致直接访问内存地址异常</span>
+
+<span class="token comment">// 修改后</span>
+@property <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> strong<span class="token punctuation">)</span> NSMutableArray *dataArray<span class="token punctuation">;</span>
+
+<span class="token comment">// 使用属性访问器方法</span>
+[self.moreButton <span class="token property">addTapActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>UIGestureRecognizer <span class="token operator">*</span> _Nonnull gestureRecoginzer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF
+    ...
+    	[strongSelf.dataArray xxx]<span class="token punctuation">;</span>
+    ...
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_4、super-导致的内存泄露"><a href="#_4、super-导致的内存泄露" class="header-anchor">#</a> 4、super 导致的内存泄露</h3> <p>部分场景block中使用super也是会内存泄露的，所以尽量避免</p> <div class="language-scss extra-class"><pre class="language-scss"><code>
+[self.viasInputView <span class="token property">setBlock_viasInputViewEditedCompleted</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>AMapPOI <span class="token operator">*</span> _Nonnull startPoi<span class="token punctuation">,</span> AMapPOI <span class="token operator">*</span> _Nonnull endPoi<span class="token punctuation">,</span> NSArray <span class="token operator">*</span> _Nonnull viaPois<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF
+    ...
+    <span class="token comment">// 直接使用了super</span>
+    [super <span class="token property">sc_routerEventWithName</span><span class="token punctuation">:</span>@<span class="token string">&quot;xxxx&quot;</span> <span class="token property">userInfo</span><span class="token punctuation">:</span>nil]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+<span class="token comment">// 上述场景是实际项目中的内存泄露代码，</span>
+
+[self.viasInputView <span class="token property">setBlock_viasInputViewEditedCompleted</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>AMapPOI <span class="token operator">*</span> _Nonnull startPoi<span class="token punctuation">,</span> AMapPOI <span class="token operator">*</span> _Nonnull endPoi<span class="token punctuation">,</span> NSArray <span class="token operator">*</span> _Nonnull viaPois<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF
+    ...
+    <span class="token comment">// 改用strongSelf 方法调用</span>
+    [strongSelf <span class="token property">setupRouterEventWithName</span><span class="token punctuation">:</span>@<span class="token string">&quot;ViaEditedSuccessShowDesignView&quot;</span> <span class="token property">userInfo</span><span class="token punctuation">:</span>nil]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span>void<span class="token punctuation">)</span><span class="token property">setupRouterEventWithName</span><span class="token punctuation">:</span><span class="token punctuation">(</span>NSString *<span class="token punctuation">)</span>eventName <span class="token property">userInfo</span><span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary *<span class="token punctuation">)</span><span class="token selector">userInfo </span><span class="token punctuation">{</span>
+    [super <span class="token property">sc_routerEventWithName</span><span class="token punctuation">:</span>eventName <span class="token property">userInfo</span><span class="token punctuation">:</span>userInfo]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_5、addsubview-子view在block中调用了自己"><a href="#_5、addsubview-子view在block中调用了自己" class="header-anchor">#</a> 5、addSubview 子view在block中调用了自己</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>UIButton *leftBtn = [[UIButton alloc] <span class="token property">initWithFrame</span><span class="token punctuation">:</span><span class="token function">CGRectMake</span><span class="token punctuation">(</span>10<span class="token punctuation">,</span> 6<span class="token punctuation">,</span> 64<span class="token punctuation">,</span> 28<span class="token punctuation">)</span>]<span class="token punctuation">;</span>
+leftBtn.layer.masksToBounds = YES<span class="token punctuation">;</span>
+leftBtn.layer.cornerRadius = 14<span class="token punctuation">;</span>
+WEAK_SELF
+[leftBtn <span class="token property">addTapActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>UIGestureRecognizer <span class="token operator">*</span> _Nonnull gestureRecoginzer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    leftBtn.selected = YES<span class="token punctuation">;</span>
+    weakSelf.carSwitchIndex = 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+[self.view <span class="token property">addSubview</span><span class="token punctuation">:</span>leftBtn]<span class="token punctuation">;</span>
+
+
+<span class="token comment">// 上述场景 中addSubview 的对象在 block 中调用了自己，这种场景也是可能导致内存泄露的</span>
+
+<span class="token comment">// 修改： 使用 weak_leftBtn</span>
+
+<span class="token atrule"><span class="token rule">@weakify</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> leftBtn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+[leftBtn <span class="token property">addTapActionWithBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>UIGestureRecognizer <span class="token operator">*</span> _Nonnull gestureRecoginzer<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    @<span class="token function">strongify</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> leftBtn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+    leftBtn.selected = YES<span class="token punctuation">;</span>
+    self.carSwitchIndex = 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+[self.view <span class="token property">addSubview</span><span class="token punctuation">:</span>leftBtn]<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_6、-数组中包含对象使用block"><a href="#_6、-数组中包含对象使用block" class="header-anchor">#</a> 6、 数组中包含对象使用block</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>- <span class="token punctuation">(</span>UITableViewCell *<span class="token punctuation">)</span><span class="token property">tableView</span><span class="token punctuation">:</span><span class="token punctuation">(</span>UITableView *<span class="token punctuation">)</span>tableView <span class="token property">cellForRowAtIndexPath</span><span class="token punctuation">:</span><span class="token punctuation">(</span>NSIndexPath *<span class="token punctuation">)</span><span class="token selector">indexPath </span><span class="token punctuation">{</span>
+  UITableViewXXCell *cell = [tableView <span class="token property">dequeueReusableCellWithIdentifier</span><span class="token punctuation">:</span>@<span class="token string">&quot;cell&quot;</span>]<span class="token punctuation">;</span>
+  ...
+  
+  <span class="token comment">// cell 数组中包含对象使用block </span>
+  cell.rightButtons = @[[MGSwipeButton <span class="token property">buttonWithTitle</span><span class="token punctuation">:</span>@<span class="token string">&quot;删除&quot;</span> <span class="token property">backgroundColor</span><span class="token punctuation">:</span>UIColor.redColor <span class="token property">callback</span><span class="token punctuation">:</span>^<span class="token function">BOOL</span><span class="token punctuation">(</span>MGSwipeTableCell <span class="token operator">*</span> _Nonnull cell<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    if <span class="token punctuation">(</span>self.dataArray.count <span class="token operator">&lt;</span> 1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        self.tableView.mj_footer.hidden = YES<span class="token punctuation">;</span>
+        self.emptyView.hidden = NO<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>]]<span class="token punctuation">;</span>
+  
+ ...
+  
+  <span class="token comment">// 上述场景虽然不是属性直接使用，但是由于其数组依然是强引用，所以也是导致内存泄露的一个原因</span>
+  <span class="token comment">// 修改： 使用弱引用</span>
+  <span class="token atrule"><span class="token rule">@weakify</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	cell.rightButtons = @[[MGSwipeButton <span class="token property">buttonWithTitle</span><span class="token punctuation">:</span>@<span class="token string">&quot;删除&quot;</span> <span class="token property">backgroundColor</span><span class="token punctuation">:</span>UIColor.redColor <span class="token property">callback</span><span class="token punctuation">:</span>^<span class="token function">BOOL</span><span class="token punctuation">(</span>MGSwipeTableCell <span class="token operator">*</span> _Nonnull cell<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token atrule"><span class="token rule">@strongify</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    if <span class="token punctuation">(</span>self.dataArray.count <span class="token operator">&lt;</span> 1<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        self.tableView.mj_footer.hidden = YES<span class="token punctuation">;</span>
+        self.emptyView.hidden = NO<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>]]<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_7、block中使用含-self-的宏导致内存泄露"><a href="#_7、block中使用含-self-的宏导致内存泄露" class="header-anchor">#</a> 7、Block中使用含 self 的宏导致内存泄露</h3> <p>（这个肉眼比较难定位）</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 以下代码存在内存泄露</span>
+...
+[self.myFamilyVM <span class="token property">queryRelationTagListCompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	WEAK_SELF <span class="token comment">// 这里在block内部</span>
+  
+	[weakSelf.myFamilyVM <span class="token property">familyAddRelationTag</span><span class="token punctuation">:</span>tagStr <span class="token property">CompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		STRONG_SELF
+		[strongSelf.tableHeadView <span class="token property">needHidenSwitchButton</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+	...
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+
+<span class="token comment">// 原因：嵌套block中 WEAK_SELF 宏本身置于block中了，而WEAK_SELF 的 本质是包含self 的代码块，编译插入等于block中使用了self。从而导致内存泄露</span>
+<span class="token comment">// #define WEAK_SELF __weak __typeof(&amp;*self)weakSelf = self;</span>
+
+<span class="token comment">// 修改：</span>
+
+...
+WEAK_SELF <span class="token comment">// 应该放在最外层</span>
+[self.myFamilyVM <span class="token property">queryRelationTagListCompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	STRONG_SELF
+	[strongSelf.myFamilyVM <span class="token property">familyAddRelationTag</span><span class="token punctuation">:</span>tagStr <span class="token property">CompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		STRONG_SELF
+		[strongSelf.tableHeadView <span class="token property">needHidenSwitchButton</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+	...
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_8、嵌套block使用"><a href="#_8、嵌套block使用" class="header-anchor">#</a> 8、嵌套block使用</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>
+...
+WEAK_SELF 
+<span class="token comment">// 第一层block</span>
+[self.myFamilyVM <span class="token property">queryRelationTagListCompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	STRONG_SELF
+	...
+  
+  <span class="token comment">// 第二层block</span>
+  [strongSelf.myFamilyVM <span class="token property">familyAddRelationTag</span><span class="token punctuation">:</span>tagStr <span class="token property">CompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		... <span class="token comment">// 其它业务</span>
+    
+		[strongSelf.tableHeadView <span class="token property">needHidenSwitchButton</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+	...
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+<span class="token comment">// 原因：</span>
+<span class="token comment">// 上面的示例。 第二层block使用的是第一层 STRONG_SELF 宏 。这个情况什么时候会内存泄露呢</span>
+<span class="token comment">// 正常是没问题的，但是第二层回调的时候strongSelf 不一定在，这个时候业务逻辑就不对了</span>
+<span class="token comment">// 如果不确认是否存在耗时方法等业务逻辑，尽量嵌套block 都加上吧</span>
+
+<span class="token comment">// 修改：</span>
+
+WEAK_SELF 
+<span class="token comment">// 第一层block</span>
+[self.myFamilyVM <span class="token property">queryRelationTagListCompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	STRONG_SELF <span class="token comment">// 加上1</span>
+	...
+  
+  <span class="token comment">// 第二层block</span>
+  [strongSelf.myFamilyVM <span class="token property">familyAddRelationTag</span><span class="token punctuation">:</span>tagStr <span class="token property">CompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    STRONG_SELF <span class="token comment">// 加上2</span>
+    
+		... <span class="token comment">// 其它业务</span>
+    
+		[strongSelf.tableHeadView <span class="token property">needHidenSwitchButton</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+	...
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_9、block中使用-下划线变量"><a href="#_9、block中使用-下划线变量" class="header-anchor">#</a> 9、Block中使用 下划线变量</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>
+[self.myFamilyVM <span class="token property">familyAddRelationTag</span><span class="token punctuation">:</span>tagStr <span class="token property">CompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  [_tableHeadView <span class="token property">needHidenSwitchButton</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+<span class="token comment">// 原因：</span>
+<span class="token comment">// 上面的示例。 _tableHeadView 使用下划线，本质上还是self，所以要使用 weakSelf.tableHeadView  </span>
+
+<span class="token comment">// 修改：</span>
+
+WEAK_SELF
+[self.myFamilyVM <span class="token property">familyAddRelationTag</span><span class="token punctuation">:</span>tagStr <span class="token property">CompleteBlock</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>BOOL result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  [weakSelf.tableHeadView <span class="token property">needHidenSwitchButton</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>]<span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_10、target代理强持有导致循环引用"><a href="#_10、target代理强持有导致循环引用" class="header-anchor">#</a> 10、Target代理强持有导致循环引用</h3> <p>NSTimer 为例：</p> <div class="language-scss extra-class"><pre class="language-scss"><code>self.scrollTimer = [NSTimer <span class="token property">scheduledTimerWithTimeInterval</span><span class="token punctuation">:</span>timeInterval
+                                                        <span class="token property">target</span><span class="token punctuation">:</span>self
+                                                      <span class="token property">selector</span><span class="token punctuation">:</span>@<span class="token function">selector</span><span class="token punctuation">(</span><span class="token property">scrollTimerDidFire</span><span class="token punctuation">:</span><span class="token punctuation">)</span>
+                                                      <span class="token property">userInfo</span><span class="token punctuation">:</span>nil
+                                                       <span class="token property">repeats</span><span class="token punctuation">:</span>NO]<span class="token punctuation">;</span>
+                                                       
+[[NSRunLoop currentRunLoop] <span class="token property">addTimer</span><span class="token punctuation">:</span>self.scrollTimer <span class="token property">forMode</span><span class="token punctuation">:</span>NSRunLoopCommonModes]<span class="token punctuation">;</span>  
+
+
+<span class="token comment">// 原因：</span>
+<span class="token comment">// 上面的示例。iOS10.0以下系统时使用系统默认scheduledTimer方法都会被循环引用，就算是 target:传入 weakSelf 也是一样的</span>
+<span class="token comment">// 用户可以在DidDisaper  等方法进行关闭定时器，但是不可以在 dealloc 方法中销毁timer，时机太晚了，dealloc不会被调用。</span>
+
+<span class="token comment">// 修改：</span>
+
+<span class="token comment">// 对于 10 以上系统可以使用 block的方法</span>
+[NSTimer <span class="token property">scheduledTimerWithTimeInterval</span><span class="token punctuation">:</span>1 <span class="token property">block</span><span class="token punctuation">:</span>^<span class="token punctuation">(</span>NSTimer <span class="token operator">*</span> _Nonnull timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+ <span class="token punctuation">}</span> <span class="token property">repeats</span><span class="token punctuation">:</span>YES]<span class="token punctuation">;</span>
+
+
+<span class="token comment">// 兼容iOS10.0以下系统时,要自己处理，方式有很多种</span>
+
+<span class="token comment">// 1、进行一个 block 的 copy</span>
+#pragma mark <span class="token operator">-</span> <span class="token function">NSTimer</span><span class="token punctuation">(</span>private<span class="token punctuation">)</span> 兼容iOS10.0以下系统时使用
+<span class="token operator">+</span> <span class="token punctuation">(</span>NSTimer *<span class="token punctuation">)</span><span class="token property">weak_scheduledTimerWithTimeInterval</span><span class="token punctuation">:</span><span class="token punctuation">(</span>NSTimeInterval<span class="token punctuation">)</span>inerval <span class="token property">repeats</span><span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>repeats <span class="token property">block</span><span class="token punctuation">:</span><span class="token punctuation">(</span>void <span class="token punctuation">(</span>^<span class="token punctuation">)</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token selector">block </span><span class="token punctuation">{</span>
+    return [NSTimer <span class="token property">scheduledTimerWithTimeInterval</span><span class="token punctuation">:</span>inerval <span class="token property">target</span><span class="token punctuation">:</span>self <span class="token property">selector</span><span class="token punctuation">:</span><span class="token atrule"><span class="token rule">@selector</span><span class="token punctuation">(</span><span class="token property">handle</span><span class="token punctuation">:</span><span class="token punctuation">)</span> <span class="token property">userInfo</span><span class="token punctuation">:</span>[block copy] <span class="token property">repeats</span><span class="token punctuation">:</span>repeats]<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">+</span> <span class="token punctuation">(</span>void<span class="token punctuation">)</span><span class="token property">handle</span><span class="token punctuation">:</span><span class="token punctuation">(</span>NSTimer *<span class="token punctuation">)</span>timer</span> <span class="token punctuation">{</span>
+    <span class="token function">void</span><span class="token punctuation">(</span>^block<span class="token punctuation">)</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span> = timer.userInfo<span class="token punctuation">;</span>
+    if <span class="token punctuation">(</span>block<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">block</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+⚠️ 另外：
+1、兼容iOS10.0以下系统时使用，项目最低系统升级10以上时请使用系统方法
+2、scrollView中启动
+[[NSRunLoop currentRunLoop] <span class="token property">addTimer</span><span class="token punctuation">:</span>self.timer <span class="token property">forMode</span><span class="token punctuation">:</span>NSRunLoopCommonModes]<span class="token punctuation">;</span>
+
+3、请在dealloc中 invalidate 并置nil
+if <span class="token punctuation">(</span>_timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   [_timer invalidate]<span class="token punctuation">;</span>
+   _timer = nil<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 2、 使用weak delegate 方式，</span>
+<span class="token comment">// NSProxy 做中间代理等</span>
+
+<span class="token comment">// NSProxy 方式是 通过 invocation 消息转发方式处理</span>
+
+</code></pre></div><h3 id="_11、-单例方法导致内存泄露"><a href="#_11、-单例方法导致内存泄露" class="header-anchor">#</a> 11、 单例方法导致内存泄露</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>
+1、不是所有的单例都不释放的，部分情况的单例在短时间内持有了大量内存， 在不使用的时候建议适当清理
+2、单例不要持有UI对象，避免无法释放
+
+</code></pre></div><h3 id="_12-、mrc与arc混编"><a href="#_12-、mrc与arc混编" class="header-anchor">#</a> 12 、MRC与ARC混编</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>
+<span class="token comment">// 如果文件是指定  --fno-objc-arc 的 手动管理模式，那么代码就需要手动对对象进行 release。 不然就会内存泄露</span>
+
+<span class="token comment">// 这个场景现在比较少，一些老的项目中存在，MRC 文件代码往往因为ARC 已成习惯忘了手动进行是否，也就是手动调用 release</span>
+[xxx release]<span class="token punctuation">;</span>
+
+<span class="token comment">// 还有就是使用 autorelease</span>
+[[[xxx aloc] initWith xxx] autorelease]<span class="token punctuation">;</span>
+
+
+</code></pre></div><h3 id="_13-、corefoundation与foundation的桥接"><a href="#_13-、corefoundation与foundation的桥接" class="header-anchor">#</a> 13 、CoreFoundation与Foundation的桥接</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 桥接其实也是 混编 场景，也是容易导致内存泄露的一种方式，因为使用习惯的问题</span>
+
+1、ARC： 针对的是 Foundation （OC 语法）代码，进行了一个引用计数管理
+2、CF：而Core Foundation（CF）中的对象是用C语言实现的，分配给CF对象的内存需要手动释放，否则会造成内存泄漏
+3、__bridge 桥接：只做类型转换，不会改变对象的内存管理权逻辑
+			<span class="token comment">// 3.1 被桥接的对象是OC对象，那么桥接以后不需要手动释放</span>
+      NSString *aNSStr = [[NSString alloc] <span class="token property">initWithFormat</span><span class="token punctuation">:</span>@<span class="token string">&quot;test&quot;</span>]<span class="token punctuation">;</span>
+      CFStringRef aCFStr = <span class="token punctuation">(</span>__bridge CFStringRef<span class="token punctuation">)</span>aNSStr<span class="token punctuation">;</span>
+			<span class="token comment">// 3.2 被桥接的对象是CF对象，那么桥接以后需要手动释放</span>
+			CFStringRef aCFStr = <span class="token function">CFStringCreateWithCString</span><span class="token punctuation">(</span>NULL<span class="token punctuation">,</span> <span class="token string">&quot;test&quot;</span><span class="token punctuation">,</span> kCFStringEncodingUTF8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      NSString *aNSStr = <span class="token punctuation">(</span>__bridge NSString *<span class="token punctuation">)</span>aCFStr<span class="token punctuation">;</span>
+      <span class="token function">CFRelease</span><span class="token punctuation">(</span>aCFStr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里必须释放CF对象</span>
+
+4、__bridge_transfer 桥接：除了类型转换，还会把CF对象的所有权移交到OC对象
+
+			<span class="token comment">// 使用__bridge_transfer 桥接以后不需要手动释放</span>
+			CFStringRef aCFStr = <span class="token function">CFStringCreateWithCString</span><span class="token punctuation">(</span>NULL<span class="token punctuation">,</span> <span class="token string">&quot;test&quot;</span><span class="token punctuation">,</span> kCFStringEncodingUTF8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      4.1）NSString *aNSStr = <span class="token punctuation">(</span>__bridge_transfer NSString *<span class="token punctuation">)</span>aCFStr<span class="token punctuation">;</span>
+			<span class="token comment">// __bridge_transfer，等价于 CFBridgingRelease()</span>
+      4.2）NSString *aNSStr = <span class="token punctuation">(</span>NSString *<span class="token punctuation">)</span><span class="token function">CFBridgingRelease</span><span class="token punctuation">(</span>aCFStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+5、使用了 __bridge_retained 将 OC 桥接成CF （__bridge_retained，等价于<span class="token function">CFBridgingRetain</span><span class="token punctuation">(</span><span class="token punctuation">)</span>）
+			<span class="token comment">// __bridge_retained除了类型转换，还会把OC对象的所有权抢过来给CF对象。因此需要手动释放了</span>
+      NSString *aNSStr = [[NSString alloc] <span class="token property">initWithFormat</span><span class="token punctuation">:</span>@<span class="token string">&quot;test&quot;</span>]<span class="token punctuation">;</span>  
+      5.1）CFStringRef aCFStr = <span class="token punctuation">(</span>__bridge_retained CFStringRef<span class="token punctuation">)</span> aNSStr<span class="token punctuation">;</span>  
+      5.2）CFStringRef aCFStr = <span class="token punctuation">(</span>CFStringRef<span class="token punctuation">)</span><span class="token function">CFBridgingRetain</span><span class="token punctuation">(</span>aNSStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">CFRelease</span><span class="token punctuation">(</span>aCFStr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里必须释放CF对象</span>
+
+6、其他：
+在将CoreFoundation对象进行计数减少后，为避免再次访问该对象可能造成野指针访问，建议及时将对象置为NULL。
+对于CoreFoundation框架对象来说，不可重复使用CFRelease（未检测NULL）函数进行计数减少，过度释放时会发生崩溃。
+对于CGImageRef对象可以使用CGImageRelease函数（未检测NULL）
+对于CGFontRef对象可以使用CGFontRelease函数（会检测NULL）
+
+
+</code></pre></div><h3 id="_14-、malloc申请内存未-free导致内存泄漏"><a href="#_14-、malloc申请内存未-free导致内存泄漏" class="header-anchor">#</a> 14 、malloc申请内存未 free导致内存泄漏</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>很显然， malloc 也是C 方法，需要手动管理内存
+
+</code></pre></div><h3 id="_15-、nsurlsessiontask-使用"><a href="#_15-、nsurlsessiontask-使用" class="header-anchor">#</a> 15 、NSURLSessionTask 使用</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>NSURLSession *session = [NSURLSession sharedSession]<span class="token punctuation">;</span>
+NSURLSessionDataTask *dataTask = [session <span class="token property">dataTaskWithURL</span><span class="token punctuation">:</span>[NSURL <span class="token property">URLWithString</span><span class="token punctuation">:</span>@<span class="token string">&quot;http://www.baidu.com&quot;</span>]]<span class="token punctuation">;</span>
+
+生成NSURLSessionTask及其子类对象时，该对象会处于挂起状态，此时该对象会一直常驻内存
+需要为该对象调用cancel或resume方法 进行释放
+
+</code></pre></div><h3 id="_16-、分类使用-dealloc-打印日志"><a href="#_16-、分类使用-dealloc-打印日志" class="header-anchor">#</a> 16 、分类使用 dealloc 打印日志</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>⚠️ ⚠️⚠️⚠️ 分类里不要使用dealloc方法，不然可能会出现各种异常，，，，，
+
+</code></pre></div><h3 id="_17-、vc-中-dealloc-释放一些对象导致异常"><a href="#_17-、vc-中-dealloc-释放一些对象导致异常" class="header-anchor">#</a> 17 、VC 中 dealloc 释放一些对象导致异常</h3> <div class="language-scss extra-class"><pre class="language-scss"><code>有时候我们会遇到在dealloc 进行一些对象释放的代码，大部分是能正常运行，但是，有些就是可以的
+
+本人遇到一些，比如在 dealloc 中 使用 self 释放 一些 self.delegate 导致异常
+
+<span class="token comment">// 修复：</span>
+
+不要使用self ，改使用 下划线 _
+
+</code></pre></div><h3 id="_18、类方法导致的内存泄露"><a href="#_18、类方法导致的内存泄露" class="header-anchor">#</a> 18、类方法导致的内存泄露</h3> <p>正常使用类方法+block 不会导致循环引用，但是使用了静态变量或全局变量，就有可能会
+发生内存泄漏。</p> <div class="language-scss extra-class"><pre class="language-scss"><code>
+在iOS Objective-C中，类对象<span class="token function">Block</span><span class="token punctuation">(</span>Class Object Block<span class="token punctuation">)</span>也称为静态Block<span class="token punctuation">,</span>指的是在类
+方法中使用的Block。
+
+类对象Block的内存管理方式与实例对象Block不同，因为类对象Block不会引用实例变量，也
+就不会对self进行强引用。但是，如果在Block内部使用了静态变量或全局变量，就有可能会
+发生内存泄漏。
+
+具体来说，如果在类对象Block中使用了静态变量或全局变量，并且这些变量被Block所引
+用，那么就有可能会导致内存泄漏。这是因为，静态变量或全局变量的生命周期与应用程序
+的生命周期相同，如果Block被长期持有，就可能导致这些变量一直无法释放，
+为了避免这种情况发生，可以使用block修饰符来修饰静态变量或全局变量。_block修饰
+符可以使得Block内部对这些变量的引用变成弱引用，这样即使Block被长期持有，也不会导
+致这些变量无法释放。
+
+需要注意的是，在使用类对象Blockl时，一定要注意Block中对静态变量或全局变量的引用关
+系，避免出现内存泄漏问题。同时，在Block中使用block修饰符时，需要注意变量所在的
+作用域和Block所在的作用域，以免出现访问无效指针的情况。
+
+</code></pre></div></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/5cc86d/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">组件化方案</div></a> <a href="/pages/aa28db/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">AFNetworking</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/5cc86d/" class="prev">组件化方案</a></span> <span class="next"><a href="/pages/aa28db/">AFNetworking</a>→
+      </span></p></div></div></div> <!----></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.956f6e98.js" defer></script><script src="/assets/js/2.d54d51d6.js" defer></script><script src="/assets/js/48.39927459.js" defer></script>
+  </body>
+</html>
